@@ -37,6 +37,10 @@ PS：现在项目处于初期
 - Xcode 11+
 - Swift 5+
 
+## Thanks
+
+Logo Design by [@aduqin](https://dribbble.com/aduqin)
+
 ## License
 
 SwiftUI-WeChat is released under the MIT license. [See LICENSE](https://github.com/wxxsw/SwiftUI-WeChat/blob/master/LICENSE) for details.
