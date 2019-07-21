@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Extension",
+        "repositoryURL": "https://github.com/wxxsw/Extension",
+        "state": {
+          "branch": "master",
+          "revision": "166466494d138ff7f823d230112db50951426203",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

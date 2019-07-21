@@ -3,23 +3,40 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C45C86A22E19935005722B9 /* RootTabbedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C45C86922E19935005722B9 /* RootTabbedView.swift */; };
+		1C45C87C22E19D38005722B9 /* ChatHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C45C87B22E19D38005722B9 /* ChatHomeView.swift */; };
+		1C45C87E22E19D42005722B9 /* ContactHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C45C87D22E19D42005722B9 /* ContactHomeView.swift */; };
+		1C45C88022E19D4C005722B9 /* DiscoverHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C45C87F22E19D4C005722B9 /* DiscoverHomeView.swift */; };
+		1C45C88222E19D56005722B9 /* MeHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C45C88122E19D56005722B9 /* MeHomeView.swift */; };
+		1C45C88422E19DC0005722B9 /* RootTabbedItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C45C88322E19DC0005722B9 /* RootTabbedItemView.swift */; };
+		1CDFD33D22E1BFB80018D694 /* RootNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDFD33C22E1BFB80018D694 /* RootNavigationView.swift */; };
+		1CDFD33F22E1C2800018D694 /* ChatHomeSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDFD33E22E1C2800018D694 /* ChatHomeSearchView.swift */; };
+		1CDFD34222E1C9190018D694 /* ChatSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDFD34122E1C9190018D694 /* ChatSearchView.swift */; };
+		1CDFD34722E2BD710018D694 /* Extension in Frameworks */ = {isa = PBXBuildFile; productRef = 1CDFD34622E2BD710018D694 /* Extension */; };
 		1CFDB18C22DAD1FA00D22855 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CFDB18B22DAD1FA00D22855 /* AppDelegate.swift */; };
 		1CFDB18E22DAD1FA00D22855 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CFDB18D22DAD1FA00D22855 /* SceneDelegate.swift */; };
-		1CFDB19022DAD1FA00D22855 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CFDB18F22DAD1FA00D22855 /* ContentView.swift */; };
 		1CFDB19222DAD1FE00D22855 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CFDB19122DAD1FE00D22855 /* Assets.xcassets */; };
 		1CFDB19522DAD1FE00D22855 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CFDB19422DAD1FE00D22855 /* Preview Assets.xcassets */; };
 		1CFDB19822DAD1FE00D22855 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CFDB19622DAD1FE00D22855 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C45C86922E19935005722B9 /* RootTabbedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabbedView.swift; sourceTree = "<group>"; };
+		1C45C87B22E19D38005722B9 /* ChatHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatHomeView.swift; sourceTree = "<group>"; };
+		1C45C87D22E19D42005722B9 /* ContactHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactHomeView.swift; sourceTree = "<group>"; };
+		1C45C87F22E19D4C005722B9 /* DiscoverHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverHomeView.swift; sourceTree = "<group>"; };
+		1C45C88122E19D56005722B9 /* MeHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeHomeView.swift; sourceTree = "<group>"; };
+		1C45C88322E19DC0005722B9 /* RootTabbedItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabbedItemView.swift; sourceTree = "<group>"; };
+		1CDFD33C22E1BFB80018D694 /* RootNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigationView.swift; sourceTree = "<group>"; };
+		1CDFD33E22E1C2800018D694 /* ChatHomeSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatHomeSearchView.swift; sourceTree = "<group>"; };
+		1CDFD34122E1C9190018D694 /* ChatSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatSearchView.swift; sourceTree = "<group>"; };
 		1CFDB18822DAD1FA00D22855 /* SwiftUI-WeChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI-WeChat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CFDB18B22DAD1FA00D22855 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1CFDB18D22DAD1FA00D22855 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1CFDB18F22DAD1FA00D22855 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1CFDB19122DAD1FE00D22855 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1CFDB19422DAD1FE00D22855 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1CFDB19722DAD1FE00D22855 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -31,12 +48,128 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CDFD34722E2BD710018D694 /* Extension in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C45C86422E198BA005722B9 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				1C45C86E22E19C30005722B9 /* Chat */,
+				1C45C87222E19C72005722B9 /* Contact */,
+				1C45C87122E19C3E005722B9 /* Discover */,
+				1C45C87022E19C3B005722B9 /* Me */,
+				1C45C86822E19916005722B9 /* Root */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		1C45C86622E198CA005722B9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1CFDB19122DAD1FE00D22855 /* Assets.xcassets */,
+				1CFDB19922DAD1FE00D22855 /* Info.plist */,
+				1CFDB19622DAD1FE00D22855 /* LaunchScreen.storyboard */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1C45C86722E19902005722B9 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				1CFDB18B22DAD1FA00D22855 /* AppDelegate.swift */,
+				1CFDB18D22DAD1FA00D22855 /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		1C45C86822E19916005722B9 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				1CDFD33C22E1BFB80018D694 /* RootNavigationView.swift */,
+				1C45C88322E19DC0005722B9 /* RootTabbedItemView.swift */,
+				1C45C86922E19935005722B9 /* RootTabbedView.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		1C45C86E22E19C30005722B9 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				1C45C87322E19C9A005722B9 /* Home */,
+				1CDFD34022E1C90B0018D694 /* Search */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		1C45C87022E19C3B005722B9 /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				1C45C87622E19CA7005722B9 /* Home */,
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		1C45C87122E19C3E005722B9 /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				1C45C87522E19CA4005722B9 /* Home */,
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		1C45C87222E19C72005722B9 /* Contact */ = {
+			isa = PBXGroup;
+			children = (
+				1C45C87422E19C9F005722B9 /* Home */,
+			);
+			path = Contact;
+			sourceTree = "<group>";
+		};
+		1C45C87322E19C9A005722B9 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				1C45C87B22E19D38005722B9 /* ChatHomeView.swift */,
+				1CDFD33E22E1C2800018D694 /* ChatHomeSearchView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		1C45C87422E19C9F005722B9 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				1C45C87D22E19D42005722B9 /* ContactHomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		1C45C87522E19CA4005722B9 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				1C45C87F22E19D4C005722B9 /* DiscoverHomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		1C45C87622E19CA7005722B9 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				1C45C88122E19D56005722B9 /* MeHomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		1CDFD34022E1C90B0018D694 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				1CDFD34122E1C9190018D694 /* ChatSearchView.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
 		1CFDB17F22DAD1FA00D22855 = {
 			isa = PBXGroup;
 			children = (
@@ -56,13 +189,10 @@
 		1CFDB18A22DAD1FA00D22855 /* SwiftUI-WeChat */ = {
 			isa = PBXGroup;
 			children = (
-				1CFDB18B22DAD1FA00D22855 /* AppDelegate.swift */,
-				1CFDB18D22DAD1FA00D22855 /* SceneDelegate.swift */,
-				1CFDB18F22DAD1FA00D22855 /* ContentView.swift */,
-				1CFDB19122DAD1FE00D22855 /* Assets.xcassets */,
-				1CFDB19622DAD1FE00D22855 /* LaunchScreen.storyboard */,
-				1CFDB19922DAD1FE00D22855 /* Info.plist */,
+				1C45C86722E19902005722B9 /* AppDelegate */,
+				1C45C86422E198BA005722B9 /* Module */,
 				1CFDB19322DAD1FE00D22855 /* Preview Content */,
+				1C45C86622E198CA005722B9 /* Supporting Files */,
 			);
 			path = "SwiftUI-WeChat";
 			sourceTree = "<group>";
@@ -91,6 +221,9 @@
 			dependencies = (
 			);
 			name = "SwiftUI-WeChat";
+			packageProductDependencies = (
+				1CDFD34622E2BD710018D694 /* Extension */,
+			);
 			productName = "SwiftUI-WeChat";
 			productReference = 1CFDB18822DAD1FA00D22855 /* SwiftUI-WeChat.app */;
 			productType = "com.apple.product-type.application";
@@ -119,6 +252,9 @@
 				Base,
 			);
 			mainGroup = 1CFDB17F22DAD1FA00D22855;
+			packageReferences = (
+				1CDFD34522E2BD710018D694 /* XCRemoteSwiftPackageReference "Extension" */,
+			);
 			productRefGroup = 1CFDB18922DAD1FA00D22855 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -146,9 +282,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C45C87C22E19D38005722B9 /* ChatHomeView.swift in Sources */,
+				1C45C88222E19D56005722B9 /* MeHomeView.swift in Sources */,
 				1CFDB18C22DAD1FA00D22855 /* AppDelegate.swift in Sources */,
+				1CDFD33D22E1BFB80018D694 /* RootNavigationView.swift in Sources */,
+				1C45C87E22E19D42005722B9 /* ContactHomeView.swift in Sources */,
+				1CDFD33F22E1C2800018D694 /* ChatHomeSearchView.swift in Sources */,
 				1CFDB18E22DAD1FA00D22855 /* SceneDelegate.swift in Sources */,
-				1CFDB19022DAD1FA00D22855 /* ContentView.swift in Sources */,
+				1C45C86A22E19935005722B9 /* RootTabbedView.swift in Sources */,
+				1C45C88022E19D4C005722B9 /* DiscoverHomeView.swift in Sources */,
+				1C45C88422E19DC0005722B9 /* RootTabbedItemView.swift in Sources */,
+				1CDFD34222E1C9190018D694 /* ChatSearchView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,7 +440,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "me.gesen.SwiftUI-WeChat";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -316,7 +460,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "me.gesen.SwiftUI-WeChat";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -342,6 +486,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1CDFD34522E2BD710018D694 /* XCRemoteSwiftPackageReference "Extension" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/wxxsw/Extension";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1CDFD34622E2BD710018D694 /* Extension */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1CDFD34522E2BD710018D694 /* XCRemoteSwiftPackageReference "Extension" */;
+			productName = Extension;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1CFDB18022DAD1FA00D22855 /* Project object */;
 }
