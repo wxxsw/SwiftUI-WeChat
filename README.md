@@ -39,7 +39,7 @@ PS：现在项目处于初期
 
 ## Thanks
 
-Logo Design by [@aduqin](https://dribbble.com/aduqin)
+Banner Design by [@aduqin](https://dribbble.com/aduqin)
 
 ## License
 
