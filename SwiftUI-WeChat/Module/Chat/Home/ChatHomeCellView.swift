@@ -11,7 +11,9 @@ import SwiftUI
 struct ChatHomeCellView: View {
     var body: some View {
         HStack {
-            Image("")
+            NavigationLink(destination: ContactHomeView()) {
+                Text("a")
+            }
         }
     }
 }

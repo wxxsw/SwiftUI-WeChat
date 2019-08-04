@@ -9,6 +9,15 @@
           "revision": "166466494d138ff7f823d230112db50951426203",
           "version": null
         }
+      },
+      {
+        "package": "VideoPlayer",
+        "repositoryURL": "https://github.com/wxxsw/VideoPlayer",
+        "state": {
+          "branch": "master",
+          "revision": "333c2145c235c094e634e9ea07fe3800dedd665c",
+          "version": null
+        }
       }
     ]
   },

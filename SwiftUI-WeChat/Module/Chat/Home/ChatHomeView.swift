@@ -8,10 +8,11 @@
 
 import SwiftUI
 
-struct ChatHomeView : View {
+struct ChatHomeView : View {    
     var body: some View {
         List {
             ChatHomeSearchView()
+            ChatHomeCellView()
         }
         .background(Color(hex: 0xF1F1F1))
     }

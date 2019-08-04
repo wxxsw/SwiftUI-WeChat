@@ -10,7 +10,9 @@ import SwiftUI
 
 struct ContactHomeView : View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello World!"/*@END_MENU_TOKEN@*/)
+        NavigationLink(destination: ContactHomeView()) {
+            Text(/*@START_MENU_TOKEN@*/"Hello World!"/*@END_MENU_TOKEN@*/)
+        }
     }
 }
 
