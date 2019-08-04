@@ -30,7 +30,7 @@ struct ChatHomeSearchView : View {
         }
         .background(Color.white)
         .cornerRadius(6)
-        .listRowBackground(Color("background"))
+        .listRowBackground(Color("navigation"))
         .listRowInsets(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
         .sheet(isPresented: $isSearchPresented, content: { ChatSearchView() })
     }
