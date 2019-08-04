@@ -12,8 +12,6 @@ struct ChatHomeView : View {
     var body: some View {
         List {
             ChatHomeSearchView()
-                .listRowBackground(Color("background"))
-                .listRowInsets(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
         }
         .background(Color(hex: 0xF1F1F1))
     }

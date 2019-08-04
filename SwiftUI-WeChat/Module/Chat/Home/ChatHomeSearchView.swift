@@ -9,21 +9,30 @@
 import SwiftUI
 
 struct ChatHomeSearchView : View {
+    @State var isSearchPresented = false
+    
     var body: some View {
-        PresentationLink(destination: ChatSearchView()) {
-            Spacer()
-            HStack(alignment: .bottom, spacing: 2) {
+        Button(action: { self.isSearchPresented.toggle() }) {
+            VStack {
                 Spacer()
-                Image("chat_home_search_icon")
-                Text("搜索")
-                    .font(.system(size: 16))
+                HStack(spacing: 4) {
+                    Spacer()
+                    Image(systemName: "magnifyingglass")
+                        .resizable()
+                        .frame(width: 13, height: 13)
+                    Text("搜索")
+                        .font(.system(size: 16))
+                    Spacer()
+                }
+                .foregroundColor(Color(hex: 0x8F8F93))
                 Spacer()
             }
-            .foregroundColor(Color(hex: 0x8F8F93))
-            Spacer()
         }
         .background(Color.white)
         .cornerRadius(6)
+        .listRowBackground(Color("background"))
+        .listRowInsets(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
+        .sheet(isPresented: $isSearchPresented, content: { ChatSearchView() })
     }
 }
 

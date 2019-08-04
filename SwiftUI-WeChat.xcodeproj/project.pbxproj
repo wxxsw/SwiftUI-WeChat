@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C2CB11A22F68C1B00B99E6A /* ChatHomeCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2CB11922F68C1B00B99E6A /* ChatHomeCellView.swift */; };
 		1C45C86A22E19935005722B9 /* RootTabbedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C45C86922E19935005722B9 /* RootTabbedView.swift */; };
 		1C45C87C22E19D38005722B9 /* ChatHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C45C87B22E19D38005722B9 /* ChatHomeView.swift */; };
 		1C45C87E22E19D42005722B9 /* ContactHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C45C87D22E19D42005722B9 /* ContactHomeView.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C2CB11922F68C1B00B99E6A /* ChatHomeCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatHomeCellView.swift; sourceTree = "<group>"; };
 		1C45C86922E19935005722B9 /* RootTabbedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabbedView.swift; sourceTree = "<group>"; };
 		1C45C87B22E19D38005722B9 /* ChatHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatHomeView.swift; sourceTree = "<group>"; };
 		1C45C87D22E19D42005722B9 /* ContactHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactHomeView.swift; sourceTree = "<group>"; };
@@ -132,8 +134,9 @@
 		1C45C87322E19C9A005722B9 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				1C45C87B22E19D38005722B9 /* ChatHomeView.swift */,
+				1C2CB11922F68C1B00B99E6A /* ChatHomeCellView.swift */,
 				1CDFD33E22E1C2800018D694 /* ChatHomeSearchView.swift */,
+				1C45C87B22E19D38005722B9 /* ChatHomeView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C45C87C22E19D38005722B9 /* ChatHomeView.swift in Sources */,
+				1C2CB11A22F68C1B00B99E6A /* ChatHomeCellView.swift in Sources */,
 				1C45C88222E19D56005722B9 /* MeHomeView.swift in Sources */,
 				1CFDB18C22DAD1FA00D22855 /* AppDelegate.swift in Sources */,
 				1CDFD33D22E1BFB80018D694 /* RootNavigationView.swift in Sources */,
