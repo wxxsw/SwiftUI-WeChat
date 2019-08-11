@@ -9,10 +9,14 @@
 import SwiftUI
 
 struct RootNavigationView : View {
+    
+    @EnvironmentObject var root: Root
+    
     var body: some View {
-//        NavigationView {
-            RootTabbedView()
-//        }
+        NavigationView {
+            RootTabView()
+        }
+        .sheet(isPresented: $root.isSearchPresented, content: { SearchView() })
     }
 }
 

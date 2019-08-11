@@ -1,5 +1,5 @@
 //
-//  RootTabbedItemView.swift
+//  RootTabItemView.swift
 //  SwiftUI-WeChat
 //
 //  Created by Gesen on 2019/7/20.
@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct RootTabbedItemView : View {
+struct RootTabItemView : View {
     
     enum Style: Int {
         case chat

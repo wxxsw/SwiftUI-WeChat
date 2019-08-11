@@ -1,5 +1,5 @@
 //
-//  ChatHomeCellView.swift
+//  HomeCellView.swift
 //  SwiftUI-WeChat
 //
 //  Created by Gesen on 2019/8/4.
@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct ChatHomeCellView: View {
+struct HomeCellView: View {
     var body: some View {
         HStack(spacing: 12) {
             Image("avatar")
@@ -27,22 +27,22 @@ struct ChatHomeCellView: View {
                         .font(.system(size: 12))
                         .foregroundColor(.gray)
                 }
-                    
+                
                 Text("[视频]")
                     .font(.system(size: 15))
-                    .foregroundColor(.gray)
+                    .foregroundColor(.secondary)
             }
         }
-        .listRowBackground(Color("background"))
+        .listRowBackground(Color("cell"))
         .listRowInsets(EdgeInsets(top: 12, leading: 16, bottom: 12, trailing: 16))
     }
 }
 
 #if DEBUG
-struct ChatHomeCellView_Previews: PreviewProvider {
+struct HomeCellView_Previews: PreviewProvider {
     static var previews: some View {
         List {
-            ChatHomeCellView()
+            HomeCellView()
         }
     }
 }

@@ -1,5 +1,5 @@
 //
-//  ChatSearchView.swift
+//  MeView.swift
 //  SwiftUI-WeChat
 //
 //  Created by Gesen on 2019/7/20.
@@ -8,16 +8,22 @@
 
 import SwiftUI
 
-struct ChatSearchView : View {
+struct MeView : View {
+    
+    @EnvironmentObject var tab: RootTab
+    
     var body: some View {
         Text("待开发")
+        .onAppear {
+            self.tab.navigationTitle = Text("我的")
+        }
     }
 }
 
 #if DEBUG
-struct ChatSearchView_Previews : PreviewProvider {
+struct MeView_Previews : PreviewProvider {
     static var previews: some View {
-        ChatSearchView()
+        MeView()
     }
 }
 #endif

@@ -1,5 +1,5 @@
 //
-//  DiscoverHomeView.swift
+//  SearchView.swift
 //  SwiftUI-WeChat
 //
 //  Created by Gesen on 2019/7/20.
@@ -8,16 +8,16 @@
 
 import SwiftUI
 
-struct DiscoverHomeView : View {
+struct SearchView : View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello World!"/*@END_MENU_TOKEN@*/)
+        Text("待开发")
     }
 }
 
 #if DEBUG
-struct DiscoverHomeView_Previews : PreviewProvider {
+struct SearchView_Previews : PreviewProvider {
     static var previews: some View {
-        DiscoverHomeView()
+        SearchView()
     }
 }
 #endif
