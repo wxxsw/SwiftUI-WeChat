@@ -10,7 +10,7 @@
 
 - [Overview](#overview)
 - [Progress](#progress)
-- [Screenshots](#screenshot)
+- [Screenshots](#screenshots)
 - [Requirements](#requirements)
 - [License](#license)
 
