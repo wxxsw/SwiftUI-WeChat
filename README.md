@@ -20,16 +20,17 @@
 
 ## Progress
 
-界面|命名|状态
+界面|位置|状态
 ---|---|---
-标签栏|RootTabView|完成底部标签栏样式、切换
-首页|HomeView|完成搜索框样式，开发中
-聊天界面|ChatView|待开发
-搜索界面|SearchView|待开发
-联系人界面|ContactView|待开发
-发现界面|DiscoverView|待开发
-朋友圈界面|TimelineView|待开发
-我的界面|MeView|待开发
+导航栏|Module/Root/RootNavigationView|✅
+标签栏|Module/Root/RootTabView|✅
+首页|Module/Home/HomeView|🔨
+聊天界面|Module/Chat/ChatView|待开发
+搜索界面|Module/Search/SearchView|待开发
+联系人界面|Module/Contact/ContactView|待开发
+发现界面|Module/Discover/DiscoverView|待开发
+朋友圈界面|Module/Timeline/TimelineView|待开发
+我的界面|Module/Me/MeView|待开发
 
 ## Screenshots
 
