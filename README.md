@@ -22,20 +22,20 @@
 
 界面|命名|状态
 ---|---|---
-标签栏|RootTabbedView|完成底部标签栏样式、切换
-首页|ChatHomeView|完成搜索框样式，开发中
+标签栏|RootTabView|完成底部标签栏样式、切换
+首页|HomeView|完成搜索框样式，开发中
 聊天界面|ChatView|待开发
-聊天搜索界面|ChatSearchView|待开发
-联系人界面|ContactHomeView|待开发
-发现界面|DiscoverHomeView|待开发
+搜索界面|SearchView|待开发
+联系人界面|ContactView|待开发
+发现界面|DiscoverView|待开发
 朋友圈界面|TimelineView|待开发
-我的界面|MeHomeView|待开发
+我的界面|MeView|待开发
 
 ## Screenshots
 
-ChatHome|-
+Home|-
 ---|---
-![ChatHomeView](https://github.com/wxxsw/SwiftUI-WeChat/blob/master/Images/screenshot_chat_home.png)|-
+![HomeView](https://github.com/wxxsw/SwiftUI-WeChat/blob/master/Images/screenshot_chat_home.png)|-
 
 
 ## Requirements
