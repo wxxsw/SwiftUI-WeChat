@@ -33,10 +33,9 @@
 
 ## Screenshots
 
-Home|-
+Light Mode|Dark Mode
 ---|---
-![HomeView](https://github.com/wxxsw/SwiftUI-WeChat/blob/master/Images/screenshot_chat_home.png)|-
-
+![HomeView](https://github.com/wxxsw/SwiftUI-WeChat/blob/master/Images/screenshot_home_light.png)|![HomeView](https://github.com/wxxsw/SwiftUI-WeChat/blob/master/Images/screenshot_home_dark.png)
 
 ## Requirements
 
