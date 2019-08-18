@@ -13,14 +13,18 @@ struct HomeView : View {
     @EnvironmentObject var tab: RootTab
     
     var body: some View {
-        List {
-            HomeSearchCellView()
-//            NavigationLink(destination: ChatView()) {
+        ScrollView {
+            VStack(spacing: 0) {
+                HomeSearchCellView()
+                Separator(inset: .zero)
                 HomeCellView()
-//            }
+                Separator()
+                HomeCellView()
+            }
         }
         .onAppear {
             self.tab.navigationTitle = Text("微信")
+            self.tab.navigationTrailing = AnyView(Image(systemName: "plus.circle"))
         }
     }
 }

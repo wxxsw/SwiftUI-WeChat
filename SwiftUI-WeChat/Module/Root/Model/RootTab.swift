@@ -13,4 +13,7 @@ final class RootTab: ObservableObject {
     /// 导航标题
     @Published var navigationTitle = Text("")
     
+    /// 导航尾部控件
+    @Published var navigationTrailing: AnyView? = nil
+    
 }

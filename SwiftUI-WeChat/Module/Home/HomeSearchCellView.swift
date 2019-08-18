@@ -29,11 +29,12 @@ struct HomeSearchCellView : View {
                 }
                 Spacer()
             }
+            .background(Color("home_search_corner_background"))
+            .cornerRadius(6)
+            .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
         }
-        .background(Color("home_search_corner_background"))
-        .cornerRadius(6)
-        .listRowBackground(Color("home_search_cell_background"))
-        .listRowInsets(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
+        .background(Color("root_navigation_background"))
+        .listRowInsets(EdgeInsets())
     }
     
 }

@@ -31,6 +31,7 @@ struct RootTabView : View {
         }
         .accentColor(.green)
         .navigationBarTitle(tab.navigationTitle, displayMode: .inline)
+        .navigationBarItems(trailing: tab.navigationTrailing)
     }
 }
 

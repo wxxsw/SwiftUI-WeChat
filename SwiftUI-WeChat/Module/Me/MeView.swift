@@ -16,6 +16,7 @@ struct MeView : View {
         Text("待开发")
         .onAppear {
             self.tab.navigationTitle = Text("我的")
+            self.tab.navigationTrailing = nil
         }
     }
 }

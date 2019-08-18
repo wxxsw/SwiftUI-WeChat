@@ -16,6 +16,7 @@ struct DiscoverView : View {
         Text("待开发")
         .onAppear {
             self.tab.navigationTitle = Text("发现")
+            self.tab.navigationTrailing = nil
         }
     }
 }

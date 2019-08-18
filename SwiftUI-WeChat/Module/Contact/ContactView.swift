@@ -16,6 +16,7 @@ struct ContactView : View {
         Text("待开发")
         .onAppear {
             self.tab.navigationTitle = Text("联系人")
+            self.tab.navigationTrailing = nil
         }
     }
 }
