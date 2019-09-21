@@ -9,7 +9,6 @@
 </p>
 
 - [Overview](#overview)
-- [Documentation](#documentation)
 - [Progress](#progress)
 - [Screenshots](#screenshots)
 - [Requirements](#requirements)
@@ -20,10 +19,6 @@
 - 此项目仅为 SwiftUI 学习交流项目，本人希望通过此项目不断跟进 SwiftUI 技术发展，前期完成微信的界面效果，后期尽量实现接近微信的交互效果，最终达到无限接近微信的体验，并通过这种方式完全掌握 SwiftUI。
 
 - 此项目是一个业余项目，计划会一直更新维护到 SwiftUI 和 iOS 13 普及，每周末更新。若你也喜欢 SwiftUI，也欢迎你参与进来，提问题、意见建议或贡献代码都好，希望可以和大家一同学习，交流进步。
-
-## Documentation
-
-- [通过 NavigationLink 离开首页后，自动隐藏 TabBar 的方法](https://github.com/wxxsw/SwiftUI-WeChat/blob/master/Documentation/HideBottomBarWhenPushed.md)
 
 ## Progress
 
