@@ -15,4 +15,9 @@ struct Chat: Codable {
         case group
     }
     
+    let icon: String?
+    let name: String?
+    let desc: String?
+    let time: Date
+    
 }

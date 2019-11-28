@@ -10,28 +10,27 @@ import SwiftUI
 
 struct RootTabView : View {
     
-    @EnvironmentObject var tab: RootTab
+    @EnvironmentObject var root: Root
     
-    @State private var index: Int = 0
+    @State private var selection: Int = 0
     
     var body: some View {
-        TabView(selection: $index) {
-            HomeView()
-                .tabItem { RootTabItemView(index: $index, style: .chat) }
+        TabView(selection: $selection) {
+            NavigationView { HomeView() }
+                .tabItem { RootTabItemView(index: $selection, style: .chat) }
                 .tag(0)
-            ContactView()
-                .tabItem { RootTabItemView(index: $index, style: .contact) }
+            NavigationView { ContactView() }
+                .tabItem { RootTabItemView(index: $selection, style: .contact) }
                 .tag(1)
-            DiscoverView()
-                .tabItem { RootTabItemView(index: $index, style: .discover) }
+            NavigationView { DiscoverView() }
+                .tabItem { RootTabItemView(index: $selection, style: .discover) }
                 .tag(2)
-            MeView()
-                .tabItem { RootTabItemView(index: $index, style: .me) }
+            NavigationView { MeView() }
+                .tabItem { RootTabItemView(index: $selection, style: .me) }
                 .tag(3)
         }
         .accentColor(.green)
-        .navigationBarTitle(tab.navigationTitle, displayMode: .inline)
-        .navigationBarItems(trailing: tab.navigationTrailing)
+        .sheet(isPresented: $root.isSearchPresented, content: { SearchView() })
     }
 }
 
@@ -42,3 +41,51 @@ struct RootTabView_Previews : PreviewProvider {
     }
 }
 #endif
+
+struct RootTabItemView : View {
+    
+    enum Style: Int {
+        case chat
+        case contact
+        case discover
+        case me
+        
+        var image: UIImage {
+            switch self {
+            case .chat:     return UIImage(named: "root_tab_chat")!
+            case .contact:  return UIImage(named: "root_tab_contact")!
+            case .discover: return UIImage(named: "root_tab_discover")!
+            case .me:       return UIImage(named: "root_tab_me")!
+            }
+        }
+        
+        var selectedImage: UIImage {
+            switch self {
+            case .chat:     return UIImage(named: "root_tab_chat_selected")!
+            case .contact:  return UIImage(named: "root_tab_contact_selected")!
+            case .discover: return UIImage(named: "root_tab_discover_selected")!
+            case .me:       return UIImage(named: "root_tab_me_selected")!
+            }
+        }
+        
+        var text: String {
+            switch self {
+            case .chat:     return "微信"
+            case .contact:  return "通讯录"
+            case .discover: return "发现"
+            case .me:       return "我"
+            }
+        }
+    }
+    
+    @Binding var index: Int
+    
+    let style: Style
+    
+    var body: some View {
+        VStack {
+            Image(uiImage: index == style.rawValue ? style.selectedImage : style.image)
+            Text(style.text)
+        }
+    }
+}

@@ -9,15 +9,9 @@
 import SwiftUI
 
 struct ContactView : View {
-    
-    @EnvironmentObject var tab: RootTab
-    
     var body: some View {
         Text("待开发")
-        .onAppear {
-            self.tab.navigationTitle = Text("联系人")
-            self.tab.navigationTrailing = nil
-        }
+            .navigationBarTitle(Text("联系人"), displayMode: .inline)
     }
 }
 

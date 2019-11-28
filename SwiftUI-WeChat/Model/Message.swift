@@ -1,18 +1,17 @@
 //
-//  Home.swift
+//  Message.swift
 //  SwiftUI-WeChat
 //
-//  Created by Gesen on 2019/8/18.
+//  Created by Gesen on 2019/11/20.
 //  Copyright © 2019 Gesen. All rights reserved.
 //
 
 import Foundation
 
-struct Home {
+struct Message: Codable {
     
-    let icon: String?
-    let name: String?
     let desc: String?
     let time: Date
     
 }
+
