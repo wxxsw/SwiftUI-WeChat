@@ -28,6 +28,7 @@
 - 使用 SF Symbols
 - 使用 Swift Package Manager 管理依赖
 - 支持 Dark Mode
+- 特殊处理、知识点包含注释
 - 持续更新...
 
 ## Progress
