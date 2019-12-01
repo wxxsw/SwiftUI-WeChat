@@ -70,12 +70,7 @@ private struct Cell: View {
             Divider()
                 .padding(EdgeInsets(top: 0, leading: 76, bottom: 0, trailing: 0))
             
-            NavigationLink(destination: ChatView()) {
-                EmptyView()
-            }
-            .frame(width: 0, height: 0)
-            .opacity(0)
+            EmptyNavigationLink(destination: ChatView())
         }
-        .background(Color("cell"))
     }
 }

@@ -17,21 +17,21 @@ struct RootTabView : View {
     var body: some View {
         TabView(selection: $selection) {
             NavigationView { HomeView() }
-                .tabItem { RootTabItemView(index: $selection, style: .chat) }
+                .tabItem { ItemView(index: $selection, style: .chat) }
                 .tag(0)
             NavigationView { ContactView() }
-                .tabItem { RootTabItemView(index: $selection, style: .contact) }
+                .tabItem { ItemView(index: $selection, style: .contact) }
                 .tag(1)
             NavigationView { DiscoverView() }
-                .tabItem { RootTabItemView(index: $selection, style: .discover) }
+                .tabItem { ItemView(index: $selection, style: .discover) }
                 .tag(2)
             NavigationView { MeView() }
-                .tabItem { RootTabItemView(index: $selection, style: .me) }
+                .tabItem { ItemView(index: $selection, style: .me) }
                 .tag(3)
         }
-        .accentColor(.green)
-        .edgesIgnoringSafeArea(.top)
-        .sheet(isPresented: $root.isSearchPresented, content: { SearchView() })
+        .accentColor(.green) // 选中某个 Tab 时，Item 的高亮颜色
+        .edgesIgnoringSafeArea(.top) // 为了导航栏可以延伸到状态栏后面
+        .sheet(isPresented: $root.isSearchPresented, content: { SearchView() }) // 这样处理弹出界面，是因为如果在具体的界面处理会出现弹出一次后无法弹出第二次
     }
 }
 
@@ -43,7 +43,7 @@ struct RootTabView_Previews : PreviewProvider {
 }
 #endif
 
-struct RootTabItemView : View {
+private struct ItemView : View {
     
     enum Style: Int {
         case chat

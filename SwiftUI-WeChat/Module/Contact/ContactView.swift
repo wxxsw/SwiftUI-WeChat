@@ -73,17 +73,12 @@ private struct MemberCell: View {
             }
             .padding(EdgeInsets(top: 10, leading: 18, bottom: 10, trailing: 18))
             
-            if !isLast {
+            if !isLast { // 最后一行不增加分割线
                 Divider()
                     .padding(EdgeInsets(top: 0, leading: 76, bottom: 0, trailing: 0))
             }
             
-            NavigationLink(destination: ProfileView()) {
-                EmptyView()
-            }
-            .frame(width: 0, height: 0)
-            .opacity(0)
+            EmptyNavigationLink(destination: ProfileView())
         }
-        .background(Color("cell"))
     }
 }
