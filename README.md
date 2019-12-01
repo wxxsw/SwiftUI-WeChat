@@ -9,6 +9,7 @@
 </p>
 
 - [Overview](#overview)
+- [Features](#features)
 - [Progress](#progress)
 - [Screenshots](#screenshots)
 - [Requirements](#requirements)
