@@ -38,12 +38,12 @@
 ---|---|---
 标签栏|Module/Root/RootTabView|✅
 首页|Module/Home/HomeView|✅
-联系人界面|Module/Contact/ContactView|🔨
+联系人界面|Module/Contact/ContactView|✅
+发现界面|Module/Discover/DiscoverView|🔨
+我的界面|Module/Me/MeView|待开发
 聊天界面|Module/Chat/ChatView|待开发
 搜索界面|Module/Search/SearchView|待开发
-发现界面|Module/Discover/DiscoverView|待开发
 朋友圈界面|Module/Timeline/TimelineView|待开发
-我的界面|Module/Me/MeView|待开发
 其它|...|待开发
 
 ## Screenshots
