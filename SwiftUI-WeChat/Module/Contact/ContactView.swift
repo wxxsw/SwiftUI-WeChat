@@ -15,11 +15,14 @@ struct ContactView : View {
         List {
             Group {
                 SearchEntryView()
+                Cell(icon: "contact_new_friend", title: "新的朋友", style: .system, isLast: true)
                 ForEach(contacts) { contact in
                     Section(header: SectionHeader(title: contact.id)) {
                         ForEach(contact.members) { member in
-                            MemberCell(
-                                member: member,
+                            Cell(
+                                icon: member.icon,
+                                title: member.name,
+                                style: .member,
                                 isLast: member.id == contact.members.last?.id
                             )
                         }
@@ -54,20 +57,28 @@ private struct SectionHeader: View {
     }
 }
 
-private struct MemberCell: View {
-    let member: Member
+private struct Cell: View {
+    
+    enum Style {
+        case system
+        case member
+    }
+    
+    let icon: String
+    let title: String
+    let style: Style
     let isLast: Bool
     
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             HStack(spacing: 14) {
-                Image(member.icon)
+                Image(icon)
                     .renderingMode(.original)
                     .resizable()
                     .frame(width: 44, height: 44)
-                    .cornerRadius(8)
+                    .cornerRadius(style == .system ? 4 : 6)
 
-                Text(member.name)
+                Text(title)
                     .font(.system(size: 18))
                     .foregroundColor(.primary)
             }
