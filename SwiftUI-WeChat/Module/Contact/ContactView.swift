@@ -31,7 +31,7 @@ struct ContactView : View {
             }
             .listRowInsets(EdgeInsets())
         }
-        .navigationBarTitle(Text("联系人"), displayMode: .inline)
+        .navigationBarTitle("联系人", displayMode: .inline)
         .navigationBarItems(trailing: Image(systemName: "person.badge.plus"))
     }
 }

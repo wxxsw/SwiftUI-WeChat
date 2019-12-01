@@ -21,7 +21,7 @@ struct HomeView : View {
             }
             .listRowInsets(EdgeInsets())
         }
-        .navigationBarTitle(Text("微信"), displayMode: .inline)
+        .navigationBarTitle("微信", displayMode: .inline)
         .navigationBarItems(trailing: Image(systemName: "plus.circle"))
     }
 }
