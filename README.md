@@ -20,6 +20,16 @@
 
 - 此项目是一个业余项目，计划会一直更新维护到 SwiftUI 和 iOS 13 普及，每周末更新。若你也喜欢 SwiftUI，也欢迎你参与进来，提问题、意见建议或贡献代码都好，希望可以和大家一同学习，交流进步。
 
+## Features
+
+- 全部基于 SwiftUI 实现（除了第三方依赖）
+- 使用 List 而不是 ScrollView
+- 使用 TabView 嵌套 NavigationView
+- 使用 SF Symbols
+- 使用 Swift Package Manager 管理依赖
+- 支持 Dark Mode
+- 持续更新...
+
 ## Progress
 
 界面|位置|状态
