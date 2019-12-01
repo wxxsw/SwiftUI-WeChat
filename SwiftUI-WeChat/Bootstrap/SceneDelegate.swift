@@ -17,7 +17,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
+        // 因无法控制列表分割线，所以先去掉，全部由自己控制
         UITableView.appearance().separatorStyle = .none
+        
+        // 统一导航栏样式
+        UINavigationBar.appearance().shadowImage = UIImage()
+        UINavigationBar.appearance().barTintColor = UIColor(named: "light_gray")
         
         if let windowScene = scene as? UIWindowScene {
             let rootView = RootTabView()
