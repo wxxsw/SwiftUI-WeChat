@@ -20,7 +20,7 @@ struct SearchEntryView: View {
                     Image(systemName: "magnifyingglass")
                         .resizable()
                         .frame(width: 13, height: 13)
-                        .foregroundColor(.gray)
+                        .foregroundColor(.secondary)
                     Text("搜索")
                         .font(.system(size: 16))
                         .foregroundColor(.secondary)
