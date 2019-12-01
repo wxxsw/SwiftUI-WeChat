@@ -9,12 +9,17 @@
 import SwiftUI
 
 struct HomeView : View {
+    let chats: [Chat] = mock(name: "chats")
+    
     var body: some View {
         List {
-            Section {
-                HomeSearchCellView()
-                HomeCellView()
+            Group {
+                SearchEntryView()
+                ForEach(chats) { chat in
+                    Cell(chat: chat)
+                }
             }
+            .listRowInsets(EdgeInsets())
         }
         .navigationBarTitle(Text("微信"), displayMode: .inline)
         .navigationBarItems(trailing: Image(systemName: "plus.circle"))
@@ -31,41 +36,13 @@ struct HomeView_Previews : PreviewProvider {
 }
 #endif
 
-struct HomeSearchCellView : View {
-    @EnvironmentObject var root: Root
+private struct Cell: View {
+    let chat: Chat
     
     var body: some View {
-        Button(action: { self.root.isSearchPresented.toggle() }) {
-            VStack {
-                Spacer()
-                HStack(spacing: 4) {
-                    Spacer()
-                    Image(systemName: "magnifyingglass")
-                        .resizable()
-                        .frame(width: 13, height: 13)
-                        .foregroundColor(.gray)
-                    Text("搜索")
-                        .font(.system(size: 16))
-                        .foregroundColor(.secondary)
-                    Spacer()
-                }
-                Spacer()
-            }
-            .background(Color("home_search_corner_background"))
-            .cornerRadius(6)
-            .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
-        }
-        .background(Color("root_navigation_background"))
-        .listRowInsets(EdgeInsets())
-    }
-    
-}
-
-struct HomeCellView: View {
-    var body: some View {
-        NavigationLink(destination: ChatView()) {
+        VStack(spacing: 0) {
             HStack(spacing: 12) {
-                Image("swiftui")
+                Image(chat.icon)
                     .renderingMode(.original)
                     .resizable()
                     .frame(width: 48, height: 48)
@@ -73,23 +50,32 @@ struct HomeCellView: View {
 
                 VStack(alignment: .leading, spacing: 6) {
                     HStack(alignment: .top) {
-                        Text("SwiftUI")
+                        Text(chat.name)
                             .font(.system(size: 18, weight: .bold))
                             .foregroundColor(.primary)
                         Spacer()
-                        Text("16:00")
+                        Text(chat.time)
                             .font(.system(size: 12))
                             .foregroundColor(.gray)
                     }
 
-                    Text("[视频]")
+                    Text(chat.desc)
+                        .lineLimit(1)
                         .font(.system(size: 15))
                         .foregroundColor(.secondary)
                 }
             }
             .padding(EdgeInsets(top: 12, leading: 16, bottom: 12, trailing: 16))
+            
+            Divider()
+                .padding(EdgeInsets(top: 0, leading: 76, bottom: 0, trailing: 0))
+            
+            NavigationLink(destination: ChatView()) {
+                EmptyView()
+            }
+            .frame(width: 0, height: 0)
+            .opacity(0)
         }
         .background(Color("cell"))
-        .listRowInsets(EdgeInsets())
     }
 }

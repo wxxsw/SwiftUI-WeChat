@@ -30,6 +30,7 @@ struct RootTabView : View {
                 .tag(3)
         }
         .accentColor(.green)
+        .edgesIgnoringSafeArea(.top)
         .sheet(isPresented: $root.isSearchPresented, content: { SearchView() })
     }
 }

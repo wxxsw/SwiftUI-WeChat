@@ -1,0 +1,89 @@
+{
+    "data": [
+        {
+            "id": "C",
+            "members": [
+                {
+                    "id": "3",
+                    "icon": "mock_avatar3",
+                    "name": "产品经理"
+                },
+                {
+                    "id": "7",
+                    "icon": "mock_avatar7",
+                    "name": "吃货"
+                }
+            ]
+        },
+        {
+            "id": "F",
+            "members": [
+                {
+                    "id": "4",
+                    "icon": "mock_avatar4",
+                    "name": "房东"
+                }
+            ]
+        },
+        {
+            "id": "G",
+            "members": [
+                {
+                    "id": "6",
+                    "icon": "mock_avatar6",
+                    "name": "公主"
+                }
+            ]
+        },
+        {
+            "id": "S",
+            "members": [
+                {
+                    "id": "1",
+                    "icon": "mock_avatar1",
+                    "name": "SwiftUI"
+                },
+                {
+                    "id": "10",
+                    "icon": "mock_avatar10",
+                    "name": "森仔"
+                }
+            ]
+        },
+        {
+            "id": "W",
+            "members": [
+                {
+                    "id": "5",
+                    "icon": "mock_avatar5",
+                    "name": "王同学"
+                },
+                {
+                    "id": "8",
+                    "icon": "mock_avatar8",
+                    "name": "无名"
+                }
+            ]
+        },
+        {
+            "id": "X",
+            "members": [
+                {
+                    "id": "2",
+                    "icon": "mock_avatar2",
+                    "name": "小甜甜"
+                }
+            ]
+        },
+        {
+            "id": "X",
+            "members": [
+                {
+                    "id": "9",
+                    "icon": "mock_avatar9",
+                    "name": "中国好韭菜"
+                }
+            ]
+        }
+    ]
+}

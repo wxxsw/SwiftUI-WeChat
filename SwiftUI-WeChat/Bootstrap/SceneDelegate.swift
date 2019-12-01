@@ -17,8 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
-        UITableView.appearance().separatorInset = .init(top: 0, left: 72, bottom: 0, right: 0)
-        UITableView.appearance().separatorColor = UIColor(named: "separator")
+        UITableView.appearance().separatorStyle = .none
         
         if let windowScene = scene as? UIWindowScene {
             let rootView = RootTabView()
