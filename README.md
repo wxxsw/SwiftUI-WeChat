@@ -41,8 +41,8 @@
 标签栏|Module/Root/RootTabView|✅
 首页|Module/Home/HomeView|✅
 联系人界面|Module/Contact/ContactView|✅
-发现界面|Module/Discover/DiscoverView|🔨
-我的界面|Module/Me/MeView|待开发
+发现界面|Module/Discover/DiscoverView|✅
+我的界面|Module/Me/MeView|🔨
 聊天界面|Module/Chat/ChatView|待开发
 搜索界面|Module/Search/SearchView|待开发
 朋友圈界面|Module/Timeline/TimelineView|待开发
@@ -54,6 +54,7 @@ Light Mode|Dark Mode
 ---|---
 ![HomeView](https://github.com/wxxsw/SwiftUI-WeChat/blob/master/Images/screenshot_home_light_1201.png)|![HomeView](https://github.com/wxxsw/SwiftUI-WeChat/blob/master/Images/screenshot_home_dark_1201.png)
 ![ContactView](https://github.com/wxxsw/SwiftUI-WeChat/blob/master/Images/screenshot_contact_light_1201.png)|![ContactView](https://github.com/wxxsw/SwiftUI-WeChat/blob/master/Images/screenshot_contact_dark_1201.png)
+![DiscoverView](https://github.com/wxxsw/SwiftUI-WeChat/blob/master/Images/screenshot_discover_light_1201.png)|![DiscoverView](https://github.com/wxxsw/SwiftUI-WeChat/blob/master/Images/screenshot_discover_dark_1201.png)
 
 ## Requirements
 
