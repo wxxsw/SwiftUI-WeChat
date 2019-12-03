@@ -10,8 +10,8 @@
 
 - [Overview](#overview)
 - [Features](#features)
-- [Progress](#progress)
 - [Screenshots](#screenshots)
+- [Progress](#progress)
 - [Requirements](#requirements)
 - [License](#license)
 
@@ -34,6 +34,15 @@
 - 特殊处理、知识点包含注释
 - 持续更新...
 
+## Screenshots
+
+Light Mode|Dark Mode
+---|---
+![HomeView](https://github.com/wxxsw/SwiftUI-WeChat/blob/master/Images/screenshot_home_light.png?1201)|![HomeView](https://github.com/wxxsw/SwiftUI-WeChat/blob/master/Images/screenshot_home_dark.png?1201)
+![ContactView](https://github.com/wxxsw/SwiftUI-WeChat/blob/master/Images/screenshot_contact_light.png?1201)|![ContactView](https://github.com/wxxsw/SwiftUI-WeChat/blob/master/Images/screenshot_contact_dark.png?1201)
+![DiscoverView](https://github.com/wxxsw/SwiftUI-WeChat/blob/master/Images/screenshot_discover_light.png?1201)|![DiscoverView](https://github.com/wxxsw/SwiftUI-WeChat/blob/master/Images/screenshot_discover_dark.png?1201)
+![MeView](https://github.com/wxxsw/SwiftUI-WeChat/blob/master/Images/screenshot_me_light.png?1203)|![MeView](https://github.com/wxxsw/SwiftUI-WeChat/blob/master/Images/screenshot_me_dark.png?1203)
+
 ## Progress
 
 界面|位置|状态
@@ -48,21 +57,15 @@
 朋友圈界面|Module/Timeline/TimelineView|待开发
 其它|...|待开发
 
-## Screenshots
-
-Light Mode|Dark Mode
----|---
-![HomeView](https://github.com/wxxsw/SwiftUI-WeChat/blob/master/Images/screenshot_home_light_1201.png)|![HomeView](https://github.com/wxxsw/SwiftUI-WeChat/blob/master/Images/screenshot_home_dark_1201.png)
-![ContactView](https://github.com/wxxsw/SwiftUI-WeChat/blob/master/Images/screenshot_contact_light_1201.png)|![ContactView](https://github.com/wxxsw/SwiftUI-WeChat/blob/master/Images/screenshot_contact_dark_1201.png)
-![DiscoverView](https://github.com/wxxsw/SwiftUI-WeChat/blob/master/Images/screenshot_discover_light_1201.png)|![DiscoverView](https://github.com/wxxsw/SwiftUI-WeChat/blob/master/Images/screenshot_discover_dark_1201.png)
-
 ## Requirements
 
 - iOS 13+
 - Xcode 11+
 - Swift 5.1+
 
-## Thanks
+## Contributors
+
+Create by [Gesen](https://github.com/wxxsw)
 
 Banner Design by [@aduqin](https://dribbble.com/aduqin)
 
