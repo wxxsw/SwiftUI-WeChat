@@ -6,11 +6,12 @@
     },
     {
       "idiom" : "universal",
+      "filename" : "weixinzhifu.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "阿白酱.png",
+      "filename" : "weixinzhifu-2.png",
       "scale" : "3x"
     }
   ],

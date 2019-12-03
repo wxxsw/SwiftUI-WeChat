@@ -24,7 +24,7 @@
 		1C8EE81B239111AD00BD60BE /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8EE81A239111AD00BD60BE /* ProfileView.swift */; };
 		1C8EE81D2391121B00BD60BE /* contacts.json in Resources */ = {isa = PBXBuildFile; fileRef = 1C8EE81C2391121B00BD60BE /* contacts.json */; };
 		1C8EE81F239115DA00BD60BE /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8EE81E239115DA00BD60BE /* Member.swift */; };
-		1C8EE828239365A900BD60BE /* EmptyNavigationLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8EE827239365A900BD60BE /* EmptyNavigationLink.swift */; };
+		1C8EE82C23950C9B00BD60BE /* me.json in Resources */ = {isa = PBXBuildFile; fileRef = 1C8EE82B23950C9B00BD60BE /* me.json */; };
 		1CDFD34222E1C9190018D694 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDFD34122E1C9190018D694 /* SearchView.swift */; };
 		1CDFD34722E2BD710018D694 /* Extension in Frameworks */ = {isa = PBXBuildFile; productRef = 1CDFD34622E2BD710018D694 /* Extension */; };
 		1CFDB18C22DAD1FA00D22855 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CFDB18B22DAD1FA00D22855 /* AppDelegate.swift */; };
@@ -51,7 +51,7 @@
 		1C8EE81A239111AD00BD60BE /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		1C8EE81C2391121B00BD60BE /* contacts.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = contacts.json; sourceTree = "<group>"; };
 		1C8EE81E239115DA00BD60BE /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
-		1C8EE827239365A900BD60BE /* EmptyNavigationLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyNavigationLink.swift; sourceTree = "<group>"; };
+		1C8EE82B23950C9B00BD60BE /* me.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = me.json; sourceTree = "<group>"; };
 		1CDFD34122E1C9190018D694 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		1CFDB18822DAD1FA00D22855 /* SwiftUI-WeChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI-WeChat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CFDB18B22DAD1FA00D22855 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +108,7 @@
 			children = (
 				1C36808323094FA600B9DCF5 /* chats.json */,
 				1C8EE81C2391121B00BD60BE /* contacts.json */,
+				1C8EE82B23950C9B00BD60BE /* me.json */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -210,14 +211,6 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
-		1C8EE8262393659400BD60BE /* Helper */ = {
-			isa = PBXGroup;
-			children = (
-				1C8EE827239365A900BD60BE /* EmptyNavigationLink.swift */,
-			);
-			path = Helper;
-			sourceTree = "<group>";
-		};
 		1CDFD34022E1C90B0018D694 /* Search */ = {
 			isa = PBXGroup;
 			children = (
@@ -248,7 +241,6 @@
 			children = (
 				1C45C86722E19902005722B9 /* Bootstrap */,
 				1C8EE811239103E200BD60BE /* Function */,
-				1C8EE8262393659400BD60BE /* Helper */,
 				1C081A6822F698F20077B811 /* Model */,
 				1C45C86422E198BA005722B9 /* Module */,
 				1C36807E23094D5C00B9DCF5 /* Preview Content */,
@@ -327,6 +319,7 @@
 				1C8EE81D2391121B00BD60BE /* contacts.json in Resources */,
 				1C36808423094FA600B9DCF5 /* chats.json in Resources */,
 				1CFDB19822DAD1FE00D22855 /* LaunchScreen.storyboard in Resources */,
+				1C8EE82C23950C9B00BD60BE /* me.json in Resources */,
 				1CFDB19522DAD1FE00D22855 /* Preview Assets.xcassets in Resources */,
 				1CFDB19222DAD1FE00D22855 /* Assets.xcassets in Resources */,
 			);
@@ -346,7 +339,6 @@
 				1CFDB18C22DAD1FA00D22855 /* AppDelegate.swift in Sources */,
 				1C8EE813239103EE00BD60BE /* MockFunction.swift in Sources */,
 				1C45C87E22E19D42005722B9 /* ContactView.swift in Sources */,
-				1C8EE828239365A900BD60BE /* EmptyNavigationLink.swift in Sources */,
 				1C8EE81F239115DA00BD60BE /* Member.swift in Sources */,
 				1C1E7F3422FEB11500F1D2BF /* Root.swift in Sources */,
 				1C8EE81B239111AD00BD60BE /* ProfileView.swift in Sources */,

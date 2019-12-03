@@ -88,8 +88,7 @@ private struct Cell: View {
                 Divider()
                     .padding(EdgeInsets(top: 0, leading: 76, bottom: 0, trailing: 0))
             }
-            
-            EmptyNavigationLink(destination: ProfileView())
         }
+        .navigationLink(destination: ProfileView())
     }
 }
