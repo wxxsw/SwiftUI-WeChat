@@ -9,10 +9,10 @@
 import SwiftUI
 
 struct SearchEntryView: View {
-    @EnvironmentObject var root: Root
+    @State private var isSearchPresented: Bool = false
     
     var body: some View {
-        Button(action: { self.root.isSearchPresented.toggle() }) {
+        Button(action: { self.isSearchPresented.toggle() }) {
             VStack {
                 Spacer()
                 HStack(spacing: 4) {
@@ -33,6 +33,7 @@ struct SearchEntryView: View {
             .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
         }
         .background(Color("light_gray"))
+        .sheet(isPresented: $isSearchPresented, content: { SearchView() })
     }
 }
 

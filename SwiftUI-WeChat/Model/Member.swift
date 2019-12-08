@@ -10,6 +10,7 @@ import Foundation
 
 struct Member: Codable, Identifiable {
     
+    let background: String?
     let id: String
     let icon: String
     let name: String

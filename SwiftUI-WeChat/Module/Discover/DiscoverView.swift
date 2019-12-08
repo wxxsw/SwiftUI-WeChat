@@ -13,7 +13,9 @@ struct DiscoverView : View {
         ScrollView {
             VStack(spacing: 0) {
                 Group {
-                    Cell(icon: "discover_album", title: "朋友圈")
+                    NavigationLink(destination: MomentView()) {
+                        Cell(icon: "discover_moment", title: "朋友圈")
+                    }
                     Line()
                 }
                 Group {
@@ -66,13 +68,16 @@ private struct Cell: View {
         VStack(spacing: 0) {
             HStack(spacing: 12) {
                 Image(icon)
+                    .renderingMode(.original)
                 
                 Text(title)
                     .font(.system(size: 16))
+                    .foregroundColor(.primary)
                 
                 Spacer()
                 
                 Image("cell_detail_indicator")
+                    .renderingMode(.original)
             }
             .padding()
         }

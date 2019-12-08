@@ -10,8 +10,6 @@ import SwiftUI
 
 struct RootTabView : View {
     
-    @EnvironmentObject var root: Root
-    
     @State private var selection: Int = 0
     
     var body: some View {
@@ -31,7 +29,6 @@ struct RootTabView : View {
         }
         .accentColor(.green) // 选中某个 Tab 时，Item 的高亮颜色
         .edgesIgnoringSafeArea(.top) // 为了导航栏可以延伸到状态栏后面
-        .sheet(isPresented: $root.isSearchPresented, content: { SearchView() }) // 这样处理弹出界面，是因为如果在具体的界面处理会出现弹出一次后无法弹出第二次
     }
 }
 

@@ -26,7 +26,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         if let windowScene = scene as? UIWindowScene {
             let rootView = RootTabView()
-                .environmentObject(Root())
             
             window = UIWindow(windowScene: windowScene)
             window!.rootViewController = UIHostingController(rootView: rootView)

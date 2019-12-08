@@ -19,7 +19,7 @@ struct HomeView : View {
                     Cell(chat: chat)
                 }
             }
-            .listRowInsets(EdgeInsets())
+            .listRowInsets(.zero)
         }
         .navigationBarTitle("微信", displayMode: .inline)
         .navigationBarItems(trailing: Image(systemName: "plus.circle"))

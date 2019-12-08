@@ -1,7 +1,8 @@
 {
     "data": {
+        "background": "mock_background",
         "id": "sen_baby",
         "icon": "mock_avatar10",
-        "name": "森仔",
+        "name": "森仔"
     }
 }
