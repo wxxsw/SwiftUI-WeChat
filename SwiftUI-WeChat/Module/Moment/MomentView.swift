@@ -33,15 +33,32 @@ private struct Header: View {
     let member: Member = mock(name: "me")
     
     var body: some View {
-        ZStack {
-            Image(member.background ?? "mock_background")
-                .resizable()
-                .aspectRatio(contentMode: ContentMode.fill)
-                .frame(height: 300)
-                .clipped()
+        ZStack(alignment: .bottomTrailing) {
+            VStack(spacing: 0) {
+                Image(member.background ?? "mock_background")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(height: 300)
+                    .clipped()
+                
+                Rectangle()
+                    .foregroundColor(.clear)
+                    .frame(height: 20)
+            }
             
-            Image(member.icon)
-                .frame(width: 70, height: 70)
+            HStack(spacing: 20) {
+                Text(member.name)
+                    .foregroundColor(.white)
+                    .font(.system(size: 20, weight: .bold))
+                    .shadow(radius: 2)
+                    .alignmentGuide(VerticalAlignment.center) { d in 20 }
+                
+                Image(member.icon)
+                    .resizable()
+                    .cornerRadius(6)
+                    .frame(width: 70, height: 70)
+                    .padding(.trailing, 12)
+            }
         }
     }
 }
