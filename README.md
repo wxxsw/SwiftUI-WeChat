@@ -18,20 +18,21 @@
 
 ## Overview
 
-- 此项目仅为 SwiftUI 学习交流项目，本人希望通过此项目不断跟进 SwiftUI 技术发展，前期完成微信的界面效果，后期尽量实现接近微信的交互效果，最终达到无限接近微信的体验，并通过这种方式完全掌握 SwiftUI。
+- 此项目仅为 SwiftUI 学习交流，非商业项目，本人通过此项目不断跟进 SwiftUI 技术发展，最终达到无限接近微信的体验，并通过这种方式完全掌握 SwiftUI。
 
-- 此项目是一个业余项目，计划会一直更新维护到 SwiftUI 和 iOS 13 普及，每周末更新。若你也喜欢 SwiftUI，欢迎你提出意见建议、贡献代码，希望可以和大家一同学习，交流进步。
+- 此项目是一个业余项目，计划会一直更新维护到 SwiftUI 和 iOS 13 普及，每周末更新。如果您对实现有疑问，或者有更好的看法，欢迎提 issue 与我交流探讨。
 
 - 如果喜欢请 ★ Star
 
 ## Features
 
 - 全部基于 SwiftUI 实现
-- 使用 List 而不是 ScrollView
-- 使用 TabView 嵌套 NavigationView
-- 使用 Swift Package Manager 管理依赖
-- 支持 Dark Mode
+- 实现二级页面隐藏 TabView
+- 实现 List 的自定义样式（包括消除 NavigationLink 的样式）
+- 通过 modifier 控制状态栏样式
+- 完全支持 Dark Mode
 - 特殊处理、知识点包含注释
+- 使用 Swift Package Manager
 
 ## Screenshots
 
