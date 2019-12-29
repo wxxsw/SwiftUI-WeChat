@@ -26,14 +26,12 @@
 
 ## Features
 
-- 全部基于 SwiftUI 实现（除了第三方依赖）
+- 全部基于 SwiftUI 实现
 - 使用 List 而不是 ScrollView
 - 使用 TabView 嵌套 NavigationView
-- 使用 SF Symbols
 - 使用 Swift Package Manager 管理依赖
 - 支持 Dark Mode
 - 特殊处理、知识点包含注释
-- 持续更新...
 
 ## Screenshots
 
