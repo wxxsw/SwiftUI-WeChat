@@ -20,6 +20,7 @@ struct MomentView: View {
         .navigationBarHidden(true)
         .navigationBarTitle("朋友圈", displayMode: .inline)
         .navigationBarItems(trailing: Image(systemName: "camera"))
+        .statusBar(style: .lightContent)
     }
     
     @EnvironmentObject var appState: AppState

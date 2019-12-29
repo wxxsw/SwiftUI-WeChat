@@ -7,40 +7,20 @@
 //
 
 import SwiftUI
+import Combine
 
-struct StatusBarStyleModifier: ViewModifier {
+class HostingController<Content: View>: UIHostingController<HostingMiddle<Content>> {
+    private var appState = AppState()
+    private var cancellableSet: Set<AnyCancellable> = []
     
-    let style: UIStatusBarStyle
-
-    func body(content: Content) -> some View {
-        var recoveryStyle: UIStatusBarStyle?
-        
-        return content
-            .onAppear {
-                recoveryStyle = self.appState.preferredStatusBarStyle
-                self.appState.preferredStatusBarStyle = self.style
-            }
-            .onDisappear {
-                self.appState.preferredStatusBarStyle = recoveryStyle ?? .default
-            }
+    init(rootView: Content) {
+        super.init(rootView: HostingMiddle(appState: appState, content: rootView))
     }
     
-    @EnvironmentObject var appState: AppState
-}
-
-extension View {
-    
-    func statusBar(style: UIStatusBarStyle) -> Self {
-        self
-        .modifier(StatusBarStyleModifier())
+    @objc required dynamic init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
-}
-
-class HostingController<Content: View>: UIHostingController<Content> {
-    
-    @EnvironmentObject var appState: AppState
-
     override var preferredStatusBarStyle: UIStatusBarStyle {
         appState.preferredStatusBarStyle
     }
@@ -48,6 +28,19 @@ class HostingController<Content: View>: UIHostingController<Content> {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        appState.objectWillChange
+            .sink { [unowned self] in self.setNeedsStatusBarAppearanceUpdate() }
+            .store(in: &cancellableSet)
     }
 
+}
+
+struct HostingMiddle<Content: View>: View {
+    let appState: AppState
+    let content: Content
+    
+    var body: some View {
+        content
+            .environmentObject(appState)
+    }
 }
