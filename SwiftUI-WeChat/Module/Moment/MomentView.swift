@@ -9,8 +9,6 @@
 import SwiftUI
 
 struct MomentView: View {
-    @State var test: Bool = false
-    
     var body: some View {
         List {
             Group {
@@ -18,14 +16,30 @@ struct MomentView: View {
             }
             .listRowInsets(.zero)
         }
+        .edgesIgnoringSafeArea(.top)
+        .navigationBarHidden(true)
         .navigationBarTitle("朋友圈", displayMode: .inline)
         .navigationBarItems(trailing: Image(systemName: "camera"))
     }
+    
+    @EnvironmentObject var appState: AppState
 }
 
 struct MomentView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView { MomentView() }
+        MomentView()
+    }
+}
+
+private struct Navigtion: View {
+    var body: some View {
+        HStack {
+            Button(action: {
+                print("back")
+            }) {
+                Text("<")
+            }
+        }
     }
 }
 

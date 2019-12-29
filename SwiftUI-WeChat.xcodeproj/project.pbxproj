@@ -17,6 +17,8 @@
 		1C45C88022E19D4C005722B9 /* DiscoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C45C87F22E19D4C005722B9 /* DiscoverView.swift */; };
 		1C45C88222E19D56005722B9 /* MeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C45C88122E19D56005722B9 /* MeView.swift */; };
 		1C4C5C0D22FEC3C200AED61E /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4C5C0C22FEC3C200AED61E /* ChatView.swift */; };
+		1C59B97F23B6F4140001541C /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C59B97E23B6F4140001541C /* HostingController.swift */; };
+		1C59B98423B6F7C10001541C /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C59B98323B6F7C10001541C /* AppState.swift */; };
 		1C8EE813239103EE00BD60BE /* MockFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8EE812239103EE00BD60BE /* MockFunction.swift */; };
 		1C8EE81623910F4000BD60BE /* SearchEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8EE81523910F4000BD60BE /* SearchEntryView.swift */; };
 		1C8EE8182391112B00BD60BE /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8EE8172391112B00BD60BE /* Contact.swift */; };
@@ -44,6 +46,8 @@
 		1C45C87F22E19D4C005722B9 /* DiscoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverView.swift; sourceTree = "<group>"; };
 		1C45C88122E19D56005722B9 /* MeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeView.swift; sourceTree = "<group>"; };
 		1C4C5C0C22FEC3C200AED61E /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		1C59B97E23B6F4140001541C /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
+		1C59B98323B6F7C10001541C /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		1C8EE812239103EE00BD60BE /* MockFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFunction.swift; sourceTree = "<group>"; };
 		1C8EE81523910F4000BD60BE /* SearchEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEntryView.swift; sourceTree = "<group>"; };
 		1C8EE8172391112B00BD60BE /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
@@ -143,6 +147,7 @@
 			children = (
 				1CFDB18B22DAD1FA00D22855 /* AppDelegate.swift */,
 				1CFDB18D22DAD1FA00D22855 /* SceneDelegate.swift */,
+				1C59B97E23B6F4140001541C /* HostingController.swift */,
 			);
 			path = Bootstrap;
 			sourceTree = "<group>";
@@ -195,6 +200,14 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		1C59B98223B6F7B60001541C /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				1C59B98323B6F7C10001541C /* AppState.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
 		1C8EE811239103E200BD60BE /* Function */ = {
 			isa = PBXGroup;
 			children = (
@@ -240,6 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				1C45C86722E19902005722B9 /* Bootstrap */,
+				1C59B98223B6F7B60001541C /* Config */,
 				1C8EE811239103E200BD60BE /* Function */,
 				1C081A6822F698F20077B811 /* Model */,
 				1C45C86422E198BA005722B9 /* Module */,
@@ -342,10 +356,12 @@
 			files = (
 				1C081A6F22F69CF80077B811 /* Chat.swift in Sources */,
 				1C45C87C22E19D38005722B9 /* HomeView.swift in Sources */,
+				1C59B98423B6F7C10001541C /* AppState.swift in Sources */,
 				1C45C88222E19D56005722B9 /* MeView.swift in Sources */,
 				1C4C5C0D22FEC3C200AED61E /* ChatView.swift in Sources */,
 				1CFDB18C22DAD1FA00D22855 /* AppDelegate.swift in Sources */,
 				1C8EE813239103EE00BD60BE /* MockFunction.swift in Sources */,
+				1C59B97F23B6F4140001541C /* HostingController.swift in Sources */,
 				1C45C87E22E19D42005722B9 /* ContactView.swift in Sources */,
 				1C8EE81F239115DA00BD60BE /* Member.swift in Sources */,
 				1C8EE81B239111AD00BD60BE /* ProfileView.swift in Sources */,
@@ -494,14 +510,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "SwiftUI-WeChat/Preview\\ Content";
-				DEVELOPMENT_TEAM = DBTR8NXFB4;
+				DEVELOPMENT_TEAM = KWMR494226;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "SwiftUI-WeChat/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "me.gesen.SwiftUI-WeChat";
+				PRODUCT_BUNDLE_IDENTIFIER = me.gesen.SwiftUIWeChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -514,14 +530,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "SwiftUI-WeChat/Preview\\ Content";
-				DEVELOPMENT_TEAM = DBTR8NXFB4;
+				DEVELOPMENT_TEAM = KWMR494226;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "SwiftUI-WeChat/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "me.gesen.SwiftUI-WeChat";
+				PRODUCT_BUNDLE_IDENTIFIER = me.gesen.SwiftUIWeChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
