@@ -48,8 +48,14 @@ struct DiscoverView : View {
             .background(Color("cell"))
         }
         .background(Color("light_gray"))
-        .navigationBarTitle("发现", displayMode: .inline)
+        .onAppear {
+            self.root.tabNavigationHidden = false
+            self.root.tabNavigationTitle = "发现"
+            self.root.tabNavigationBarTrailingItems = .init(EmptyView())
+        }
     }
+    
+    @EnvironmentObject var root: RootViewModel
 }
 
 #if DEBUG

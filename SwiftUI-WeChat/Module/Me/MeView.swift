@@ -40,9 +40,14 @@ struct MeView : View {
             .background(Color("cell"))
         }
         .background(Color("light_gray"))
-        .navigationBarTitle("")
-        .navigationBarHidden(true)
+        .onAppear {
+            self.root.tabNavigationHidden = true
+            self.root.tabNavigationTitle = ""
+            self.root.tabNavigationBarTrailingItems = .init(EmptyView())
+        }
     }
+    
+    @EnvironmentObject var root: RootViewModel
 }
 
 #if DEBUG

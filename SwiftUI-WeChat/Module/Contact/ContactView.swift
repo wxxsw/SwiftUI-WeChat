@@ -31,9 +31,14 @@ struct ContactView : View {
             }
             .listRowInsets(.zero)
         }
-        .navigationBarTitle("联系人", displayMode: .inline)
-        .navigationBarItems(trailing: Image(systemName: "person.badge.plus"))
+        .onAppear {
+            self.root.tabNavigationHidden = false
+            self.root.tabNavigationTitle = "联系人"
+            self.root.tabNavigationBarTrailingItems = .init(Image(systemName: "person.badge.plus"))
+        }
     }
+    
+    @EnvironmentObject var root: RootViewModel
 }
 
 #if DEBUG

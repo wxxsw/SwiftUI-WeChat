@@ -9,18 +9,33 @@
 import SwiftUI
 
 struct MomentView: View {
+    @State private var navigationOpacity: Double = 0
+    
     var body: some View {
-        List {
-            Group {
-                Header()
+        GeometryReader { geometry in
+            ZStack(alignment: .top) {
+                List {
+                    Group {
+                        Header()
+                            // TODO: 优化为滚动渐变
+                            .onAppear { self.navigationOpacity = 0 }
+                            .onDisappear { self.navigationOpacity = 1 }
+                        
+                        ForEach(0 ..< 20) { _ in
+                            Cell()
+                        }
+                    }
+                    .listRowInsets(.zero)
+                }
+                Navigation(opacity: self.$navigationOpacity)
+                    .frame(height: geometry.safeAreaInsets.top + 44)
             }
-            .listRowInsets(.zero)
         }
         .edgesIgnoringSafeArea(.top)
         .navigationBarHidden(true)
         .navigationBarTitle("朋友圈", displayMode: .inline)
         .navigationBarItems(trailing: Image(systemName: "camera"))
-        .statusBar(style: .lightContent)
+        .statusBar(style: navigationOpacity > 0.5 ? .default : .lightContent)
     }
     
     @EnvironmentObject var appState: AppState
@@ -29,18 +44,35 @@ struct MomentView: View {
 struct MomentView_Previews: PreviewProvider {
     static var previews: some View {
         MomentView()
+            .environmentObject(AppState())
     }
 }
 
-private struct Navigtion: View {
+private struct Navigation: View {
+    @Binding var opacity: Double
+    
     var body: some View {
-        HStack {
-            Button(action: {
-                print("back")
-            }) {
-                Text("<")
+        ZStack(alignment: .bottom) {
+            Rectangle()
+                .foregroundColor(Color("light_gray").opacity(opacity))
+            
+            HStack {
+                Button(action: { print("back") }) {
+                    Image("back")
+                }
+                .padding()
+                
+                Spacer()
+                
+                Button(action: { print("camera") }) {
+                    Image(systemName: "camera.fill")
+                }
+                .padding()
             }
+            .accentColor(Color(white: 1 - opacity))
+            .frame(height: 44)
         }
+        .frame(maxWidth: .infinity)
     }
 }
 
@@ -75,5 +107,11 @@ private struct Header: View {
                     .padding(.trailing, 12)
             }
         }
+    }
+}
+
+private struct Cell: View {
+    var body: some View {
+        Text("asd")
     }
 }

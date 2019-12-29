@@ -25,7 +25,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         UINavigationBar.appearance().barTintColor = UIColor(named: "light_gray")
         
         if let windowScene = scene as? UIWindowScene {
-            let rootView = RootTabView()
+            let rootView = RootView()
             
             window = UIWindow(windowScene: windowScene)
             window!.rootViewController = HostingController(rootView: rootView)

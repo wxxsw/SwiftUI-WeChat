@@ -21,9 +21,14 @@ struct HomeView : View {
             }
             .listRowInsets(.zero)
         }
-        .navigationBarTitle("微信", displayMode: .inline)
-        .navigationBarItems(trailing: Image(systemName: "plus.circle"))
+        .onAppear {
+            self.root.tabNavigationHidden = false
+            self.root.tabNavigationTitle = "微信"
+            self.root.tabNavigationBarTrailingItems = .init(Image(systemName: "plus.circle"))
+        }
     }
+    
+    @EnvironmentObject var root: RootViewModel
 }
 
 #if DEBUG

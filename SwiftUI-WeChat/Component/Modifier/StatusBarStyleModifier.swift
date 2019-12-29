@@ -10,6 +10,7 @@ import SwiftUI
 
 extension View {
     
+    /// 控制状态栏样式
     func statusBar(style: UIStatusBarStyle) -> ModifiedContent<Self, StatusBarStyleModifier> {
         modifier(StatusBarStyleModifier(style: style))
     }
@@ -19,16 +20,12 @@ struct StatusBarStyleModifier: ViewModifier {
     let style: UIStatusBarStyle
 
     func body(content: Content) -> some View {
-        var recoveryStyle: UIStatusBarStyle?
+        if self.style != self.appState.preferredStatusBarStyle {
+            self.appState.preferredStatusBarStyle = self.style
+        }
         
         return content
-            .onAppear {
-                recoveryStyle = self.appState.preferredStatusBarStyle
-                self.appState.preferredStatusBarStyle = self.style
-            }
-            .onDisappear {
-                self.appState.preferredStatusBarStyle = recoveryStyle ?? .default
-            }
+            .onDisappear { self.appState.preferredStatusBarStyle = .default }
     }
     
     @EnvironmentObject var appState: AppState
