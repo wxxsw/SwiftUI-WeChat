@@ -10,11 +10,15 @@ import SwiftUI
 import Combine
 
 class HostingController<Content: View>: UIHostingController<HostingMiddle<Content>> {
-    private var appState = AppState()
+    private var appStyle = AppStyle()
     private var cancellableSet: Set<AnyCancellable> = []
     
     init(rootView: Content) {
-        super.init(rootView: HostingMiddle(appState: appState, content: rootView))
+        super.init(rootView: HostingMiddle(appStyle: appStyle, content: rootView))
+        
+        appStyle.objectWillChange
+            .sink { [weak self] in self?.setNeedsStatusBarAppearanceUpdate() }
+            .store(in: &cancellableSet)
     }
     
     @objc required dynamic init?(coder aDecoder: NSCoder) {
@@ -22,25 +26,17 @@ class HostingController<Content: View>: UIHostingController<HostingMiddle<Conten
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
-        appState.preferredStatusBarStyle
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        appState.objectWillChange
-            .sink { [unowned self] in self.setNeedsStatusBarAppearanceUpdate() }
-            .store(in: &cancellableSet)
+        appStyle.preferredStatusBarStyle
     }
 
 }
 
 struct HostingMiddle<Content: View>: View {
-    let appState: AppState
+    let appStyle: AppStyle
     let content: Content
     
     var body: some View {
         content
-            .environmentObject(appState)
+            .environmentObject(appStyle)
     }
 }

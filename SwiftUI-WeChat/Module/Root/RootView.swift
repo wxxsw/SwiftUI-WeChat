@@ -9,29 +9,29 @@
 import SwiftUI
 
 struct RootView: View {
-    @ObservedObject var root = RootViewModel()
+    @ObservedObject var model = RootViewModel()
     
     var body: some View {
         NavigationView {
-            TabView(selection: $root.tabSelection) {
+            TabView(selection: $model.tabSelection) {
                 HomeView()
-                    .tabItem { Item(index: $root.tabSelection, style: .chat) }
+                    .tabItem { Item(index: $model.tabSelection, style: .chat) }
                     .tag(0)
                 ContactView()
-                    .tabItem { Item(index: $root.tabSelection, style: .contact) }
+                    .tabItem { Item(index: $model.tabSelection, style: .contact) }
                     .tag(1)
                 DiscoverView()
-                    .tabItem { Item(index: $root.tabSelection, style: .discover) }
+                    .tabItem { Item(index: $model.tabSelection, style: .discover) }
                     .tag(2)
                 MeView()
-                    .tabItem { Item(index: $root.tabSelection, style: .me) }
+                    .tabItem { Item(index: $model.tabSelection, style: .me) }
                     .tag(3)
             }
             .accentColor(.green) // 选中某个 Tab 时，Item 的高亮颜色
-            .environmentObject(root)
-            .navigationBarHidden(root.tabNavigationHidden)
-            .navigationBarItems(trailing: root.tabNavigationBarTrailingItems)
-            .navigationBarTitle(root.tabNavigationTitle, displayMode: .inline)
+            .navigationBarHidden(model.tabNavigationHidden)
+            .navigationBarItems(trailing: model.tabNavigationBarTrailingItems)
+            .navigationBarTitle(model.tabNavigationTitle, displayMode: .inline)
+            .environmentObject(model)
         }
     }
 }

@@ -23,5 +23,4 @@ class RootViewModel: ObservableObject {
     /// 标签栏界面导航右侧按钮
     @Published var tabNavigationBarTrailingItems: AnyView = .init(EmptyView())
     
-    
 }

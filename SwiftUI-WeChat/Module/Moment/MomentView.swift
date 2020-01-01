@@ -9,25 +9,19 @@
 import SwiftUI
 
 struct MomentView: View {
-    @State private var navigationOpacity: Double = 0
-    
     var body: some View {
         GeometryReader { geometry in
             ZStack(alignment: .top) {
                 List {
                     Group {
                         Header()
-                            // TODO: 优化为滚动渐变
-                            .onAppear { self.navigationOpacity = 0 }
-                            .onDisappear { self.navigationOpacity = 1 }
-                        
                         ForEach(0 ..< 20) { _ in
                             Cell()
                         }
                     }
                     .listRowInsets(.zero)
                 }
-                Navigation(opacity: self.$navigationOpacity)
+                Navigation(opacity: 0)
                     .frame(height: geometry.safeAreaInsets.top + 44)
             }
         }
@@ -35,29 +29,35 @@ struct MomentView: View {
         .navigationBarHidden(true)
         .navigationBarTitle("朋友圈", displayMode: .inline)
         .navigationBarItems(trailing: Image(systemName: "camera"))
-        .statusBar(style: navigationOpacity > 0.5 ? .default : .lightContent)
+        .onAppear { self.appStyle.preferredStatusBarStyle = .lightContent }
     }
     
-    @EnvironmentObject var appState: AppState
+    @EnvironmentObject var appStyle: AppStyle
 }
 
 struct MomentView_Previews: PreviewProvider {
     static var previews: some View {
         MomentView()
-            .environmentObject(AppState())
+            .environmentObject(AppStyle())
     }
 }
 
 private struct Navigation: View {
-    @Binding var opacity: Double
+    let opacity: Double
     
     var body: some View {
         ZStack(alignment: .bottom) {
             Rectangle()
-                .foregroundColor(Color("light_gray").opacity(opacity))
+                .foregroundColor(
+                    Color("light_gray")
+                        .opacity(opacity)
+                )
             
             HStack {
-                Button(action: { print("back") }) {
+                Button(action: {
+                    self.appStyle.preferredStatusBarStyle = .default
+                    self.presentationMode.wrappedValue.dismiss()
+                }) {
                     Image("back")
                 }
                 .padding()
@@ -74,6 +74,9 @@ private struct Navigation: View {
         }
         .frame(maxWidth: .infinity)
     }
+    
+    @EnvironmentObject var appStyle: AppStyle
+    @Environment(\.presentationMode) var presentationMode
 }
 
 private struct Header: View {
