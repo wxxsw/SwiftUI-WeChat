@@ -127,16 +127,15 @@ private struct Cell: View {
                 .cornerRadius(4)
             
             VStack(alignment: .leading, spacing: 10) {
-                VStack(alignment: .leading, spacing: 6) {
-                    Text(moment.author.name)
-                        .foregroundColor(Color("link"))
-                        .font(.system(size: 16, weight: .medium))
-                    
-                    if moment.text != nil {
-                        Text(moment.text!)
-                            .font(.system(size: 15))
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                    }
+                Text(moment.author.name)
+                    .foregroundColor(Color("link"))
+                    .font(.system(size: 16, weight: .medium))
+                    .padding(.bottom, -6)
+                
+                if moment.text != nil {
+                    Text(moment.text!)
+                        .font(.system(size: 15))
+                        .frame(maxWidth: .infinity, alignment: .leading)
                 }
                 
                 if moment.images != nil {
@@ -149,6 +148,16 @@ private struct Cell: View {
                 
                 if moment.video != nil {
                     SingleVideo(video: moment.video!)
+                }
+                
+                HStack {
+                    Text(moment.time)
+                        .foregroundColor(.secondary)
+                        .font(.system(size: 14))
+                    
+                    Spacer()
+                    
+                    Image("moment_comment")
                 }
             }
         }
@@ -187,7 +196,7 @@ private struct ImageGrid: View {
     }
     
     func rowBody(row: Int, isLast: Bool) -> some View {
-        HStack {
+        HStack(spacing: 6) {
             ForEach(0 ..< (isLast ? lastRowCols : self.cols)) { col in
                 Image(self.images[row * self.cols + col].cover)
                     .resizable()
