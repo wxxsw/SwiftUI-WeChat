@@ -120,47 +120,51 @@ private struct Cell: View {
     let moment: Moment
     
     var body: some View {
-        VStack(alignment: .leading) {
-            Text(moment.author.name)
+        HStack(alignment: .top, spacing: 12) {
+            Image(moment.author.icon)
+                .resizable()
+                .frame(width: 42, height: 42)
+                .cornerRadius(4)
             
-            if moment.text != nil {
-                Text(moment.text!)
-            }
-            
-            if moment.images != nil {
-                if moment.images!.count == 1 {
-                    SingleImage(image: moment.images![0])
-                } else {
-                    ImageGrid(images: moment.images!)
+            VStack(alignment: .leading, spacing: 10) {
+                VStack(alignment: .leading, spacing: 6) {
+                    Text(moment.author.name)
+                        .foregroundColor(Color("link"))
+                        .font(.system(size: 16, weight: .medium))
+                    
+                    if moment.text != nil {
+                        Text(moment.text!)
+                            .font(.system(size: 15))
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                    }
+                }
+                
+                if moment.images != nil {
+                    if moment.images!.count == 1 {
+                        SingleImage(image: moment.images![0])
+                    } else {
+                        ImageGrid(images: moment.images!)
+                    }
+                }
+                
+                if moment.video != nil {
+                    SingleVideo(video: moment.video!)
                 }
             }
-            
-            if moment.video != nil {
-                SingleVideo(video: moment.video!)
-            }
         }
+        .padding(12)
     }
 }
 
 private struct SingleImage: View {
     let image: Media
-    let size: CGSize
     
     var body: some View {
+        // 按照最大区域 180x180 等比缩放
         Image(image.cover)
             .resizable()
-            .frame(width: size.width, height: size.height)
-    }
-    
-    init(image: Media) {
-        self.image = image
-        
-        // 按照最大区域 180x180 等比缩放
-        if image.width > image.height {
-            size = CGSize(width: 180, height: image.height * 180 / image.width)
-        } else {
-            size = CGSize(width: image.width * 180 / image.height, height: 180)
-        }
+            .aspectRatio(CGSize(width: image.width, height: image.height), contentMode: .fit)
+            .frame(maxWidth: 180, maxHeight: 180, alignment: .leading)
     }
 }
 
@@ -197,7 +201,6 @@ private struct ImageGrid: View {
 
 private struct SingleVideo: View {
     let video: Media
-    let size: CGSize
     
     /// 控制开始播放 / 控制停止播放
     @State private var isPlay: Bool = false
@@ -211,25 +214,18 @@ private struct SingleVideo: View {
                 .onStateChanged { state in
                     self.isPlaying = state == .playing
                 }
+                // 可见时播放，不可见时暂停
                 .onAppear { self.isPlay = true }
                 .onDisappear { self.isPlay = false }
             
             if !isPlaying {
+                // 非播放状态下显示封面图
                 Image(video.cover)
                     .resizable()
             }
         }
-        .frame(width: size.width, height: size.height)
-    }
-    
-    init(video: Media) {
-        self.video = video
-        
         // 按照最大区域 225x225 等比缩放
-        if video.width > video.height {
-            size = CGSize(width: 225, height: video.height * 225 / video.width)
-        } else {
-            size = CGSize(width: video.width * 225 / video.height, height: 225)
-        }
+        .aspectRatio(CGSize(width: video.width, height: video.height), contentMode: .fit)
+        .frame(maxWidth: 225, maxHeight: 225, alignment: .leading)
     }
 }
