@@ -6,7 +6,7 @@
         "repositoryURL": "https://github.com/wxxsw/Extension",
         "state": {
           "branch": "master",
-          "revision": "67ea016a0c9c254149e849f961336b5374595ef0",
+          "revision": "28ffaf647394e8c582905bc4c1698c34456df7ca",
           "version": null
         }
       },
@@ -15,7 +15,7 @@
         "repositoryURL": "https://github.com/wxxsw/VideoPlayer",
         "state": {
           "branch": "master",
-          "revision": "8c56db84ec9a1bd7d9e189d8e9f8628b6e02e937",
+          "revision": "ba848b6b53bd513dacb098b08777bcfd960f4937",
           "version": null
         }
       }
