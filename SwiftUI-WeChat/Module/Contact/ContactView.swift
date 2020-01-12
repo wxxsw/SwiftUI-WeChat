@@ -44,9 +44,8 @@ struct ContactView : View {
 #if DEBUG
 struct ContactView_Previews : PreviewProvider {
     static var previews: some View {
-        NavigationView {
-            ContactView()
-        }
+        ContactView()
+            .environmentObject(RootViewModel())
     }
 }
 #endif

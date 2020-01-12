@@ -53,7 +53,8 @@ struct MeView : View {
 #if DEBUG
 struct MeView_Previews : PreviewProvider {
     static var previews: some View {
-        NavigationView { MeView() }
+        MeView()
+            .environmentObject(RootViewModel())
     }
 }
 #endif

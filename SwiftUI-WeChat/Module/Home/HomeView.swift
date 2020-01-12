@@ -34,9 +34,8 @@ struct HomeView : View {
 #if DEBUG
 struct HomeView_Previews : PreviewProvider {
     static var previews: some View {
-        NavigationView {
-            HomeView()
-        }
+        HomeView()
+            .environmentObject(RootViewModel())
     }
 }
 #endif
