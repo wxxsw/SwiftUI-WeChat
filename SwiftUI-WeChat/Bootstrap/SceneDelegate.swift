@@ -18,18 +18,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = scene as? UIWindowScene else { return }
         
-        // 因无法控制列表分割线，所以先去掉，全部由自己控制
-        UITableView.appearance().separatorStyle = .none
-        
-        // 统一导航栏样式
-        UINavigationBar.appearance().shadowImage = UIImage()
-        UINavigationBar.appearance().barTintColor = UIColor(named: "light_gray")
-        
-        let rootView = RootView()
-        
-        window = UIWindow(windowScene: windowScene)
-        window!.rootViewController = HostingController(rootView: rootView)
-        window!.makeKeyAndVisible()
+        configureAppearance()
+        configureWindow(windowScene: windowScene)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {}
@@ -44,3 +34,24 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 }
 
+private extension SceneDelegate {
+    
+    func configureAppearance() {
+        
+        // 因无法控制列表分割线，所以先去掉，全部由自己控制
+        UITableView.appearance().separatorStyle = .none
+        
+        // 统一导航栏样式
+        UINavigationBar.appearance().shadowImage = UIImage()
+        UINavigationBar.appearance().barTintColor = UIColor(named: "light_gray")
+    }
+    
+    func configureWindow(windowScene: UIWindowScene) {
+        let rootView = RootView()
+        
+        window = UIWindow(windowScene: windowScene)
+        window!.rootViewController = HostingController(rootView: rootView)
+        window!.makeKeyAndVisible()
+    }
+    
+}
