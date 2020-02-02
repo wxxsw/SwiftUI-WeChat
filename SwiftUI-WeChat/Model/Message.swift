@@ -14,4 +14,3 @@ struct Message: Codable {
     let time: Date
     
 }
-
