@@ -16,6 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+        guard let windowScene = scene as? UIWindowScene else { return }
         
         // 因无法控制列表分割线，所以先去掉，全部由自己控制
         UITableView.appearance().separatorStyle = .none
@@ -24,13 +25,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         UINavigationBar.appearance().shadowImage = UIImage()
         UINavigationBar.appearance().barTintColor = UIColor(named: "light_gray")
         
-        if let windowScene = scene as? UIWindowScene {
-            let rootView = RootView()
-            
-            window = UIWindow(windowScene: windowScene)
-            window!.rootViewController = HostingController(rootView: rootView)
-            window!.makeKeyAndVisible()
-        }
+        let rootView = RootView()
+        
+        window = UIWindow(windowScene: windowScene)
+        window!.rootViewController = HostingController(rootView: rootView)
+        window!.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {}
