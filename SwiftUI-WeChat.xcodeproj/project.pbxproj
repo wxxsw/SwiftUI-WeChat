@@ -39,6 +39,7 @@
 		1CFDB19522DAD1FE00D22855 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CFDB19422DAD1FE00D22855 /* Preview Assets.xcassets */; };
 		1CFDB19822DAD1FE00D22855 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CFDB19622DAD1FE00D22855 /* LaunchScreen.storyboard */; };
 		1CFDE7F923978CAE00CB348B /* MomentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CFDE7F823978CAE00CB348B /* MomentView.swift */; };
+		A3D300C023E7C28100DF4E89 /* MomentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D300BF23E7C28000DF4E89 /* MomentCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		1CFDB19722DAD1FE00D22855 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1CFDB19922DAD1FE00D22855 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1CFDE7F823978CAE00CB348B /* MomentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomentView.swift; sourceTree = "<group>"; };
+		A3D300BF23E7C28000DF4E89 /* MomentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomentCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -290,6 +292,7 @@
 		1CFDE7F723978C9700CB348B /* Moment */ = {
 			isa = PBXGroup;
 			children = (
+				A3D300BF23E7C28000DF4E89 /* MomentCell.swift */,
 				1CFDE7F823978CAE00CB348B /* MomentView.swift */,
 			);
 			path = Moment;
@@ -397,6 +400,7 @@
 				1CFDB18E22DAD1FA00D22855 /* SceneDelegate.swift in Sources */,
 				1C45C86A22E19935005722B9 /* RootView.swift in Sources */,
 				1C45C88022E19D4C005722B9 /* DiscoverView.swift in Sources */,
+				A3D300C023E7C28100DF4E89 /* MomentCell.swift in Sources */,
 				1C3664032385427D00B67AEF /* Message.swift in Sources */,
 				1C8EE8182391112B00BD60BE /* Contact.swift in Sources */,
 				1CDFD34222E1C9190018D694 /* SearchView.swift in Sources */,
