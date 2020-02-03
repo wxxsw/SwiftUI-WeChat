@@ -18,7 +18,7 @@
                 {"cover": "mock_moment_1_8", "width": 1764, "height": 887},
                 {"cover": "mock_moment_1_9", "width": 1300, "height": 867}
             ],
-            "likes": ["蒂姆·库克"],
+            "likes": ["Swift", "Combine", "Android", "Flutter", "UIKit", "RxSwift", "ReactNative"],
             "text": "SwiftUI is a modern way to declare user interfaces for any Apple platform. Create beautiful, dynamic apps faster than ever before.",
             "time": "11 分钟前"
         },

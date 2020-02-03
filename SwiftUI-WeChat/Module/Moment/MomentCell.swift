@@ -14,21 +14,13 @@ struct MomentCell: View {
     
     var body: some View {
         HStack(alignment: .top, spacing: 12) {
-            Image(moment.author.icon)
-                .resizable()
-                .frame(width: 42, height: 42)
-                .cornerRadius(4)
+            Avatar(icon: moment.author.icon)
             
             VStack(alignment: .leading, spacing: 10) {
-                Text(moment.author.name)
-                    .foregroundColor(Color("link"))
-                    .font(.system(size: 16, weight: .medium))
-                    .padding(.bottom, -6)
+                Name(name: moment.author.name)
                 
                 if moment.text != nil {
-                    Text(moment.text!)
-                        .font(.system(size: 15))
-                        .frame(maxWidth: .infinity, alignment: .leading)
+                    TextContent(text: moment.text!)
                 }
                 
                 if moment.images != nil {
@@ -40,17 +32,33 @@ struct MomentCell: View {
                 }
                 
                 if moment.video != nil {
-                    SingleVideo(video: moment.video!)
+                    Video(video: moment.video!)
                 }
                 
                 HStack {
-                    Text(moment.time)
-                        .foregroundColor(.secondary)
-                        .font(.system(size: 14))
+                    Time(time: moment.time)
                     
                     Spacer()
                     
                     Image("moment_comment")
+                }
+                
+                if moment.likes != nil || moment.comments != nil {
+                    VStack(spacing: 0) {
+                        if moment.likes != nil {
+                            Likes(likes: moment.likes!)
+                        }
+                        
+                        if moment.likes != nil && moment.comments != nil {
+                            Divider()
+                        }
+                        
+//                        if moment.comments != nil {
+//                            Comments(comments: moment.comments!)
+//                        }
+                    }
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .background(Color("moment_comment_background"))
                 }
             }
         }
@@ -63,6 +71,38 @@ struct MomentCell_Previews: PreviewProvider {
         let moments: [Moment] = mock(name: "moments")
         return MomentCell(moment: moments[0])
             .previewLayout(.sizeThatFits)
+    }
+}
+
+private struct Avatar: View {
+    let icon: String
+    
+    var body: some View {
+        Image(icon)
+            .resizable()
+            .frame(width: 42, height: 42)
+            .cornerRadius(4)
+    }
+}
+
+private struct Name: View {
+    let name: String
+    
+    var body: some View {
+        Text(name)
+            .foregroundColor(Color("link"))
+            .font(.system(size: 16, weight: .medium))
+            .padding(.bottom, -6)
+    }
+}
+
+private struct TextContent: View {
+    let text: String
+    
+    var body: some View {
+        Text(text)
+            .font(.system(size: 15))
+            .frame(maxWidth: .infinity, alignment: .leading)
     }
 }
 
@@ -109,7 +149,7 @@ private struct ImageGrid: View {
     }
 }
 
-private struct SingleVideo: View {
+private struct Video: View {
     let video: Media
     
     /// 控制开始播放 / 控制停止播放
@@ -137,5 +177,56 @@ private struct SingleVideo: View {
         // 按照最大区域 225x225 等比缩放
         .aspectRatio(CGSize(width: video.width, height: video.height), contentMode: .fit)
         .frame(maxWidth: 225, maxHeight: 225, alignment: .leading)
+    }
+}
+
+private struct Time: View {
+    let time: String
+    
+    var body: some View {
+        Text(time)
+            .foregroundColor(.secondary)
+            .font(.system(size: 14))
+    }
+}
+
+private struct Likes: View {
+    let likes: [String]
+    
+    var likesText: some View {
+        var text = Text("    ") // 空格是为了给心形留位置
+        
+        for (i, like) in likes.enumerated() {
+            if i > 0 { text = text + Text(", ") }
+            
+            text = text + Text(like)
+                .font(.system(size: 14, weight: .medium))
+                .foregroundColor(Color("link"))
+        }
+        
+        return text
+    }
+    
+    var body: some View {
+        ZStack(alignment: .topLeading) {
+            likesText
+
+            // 固定位置，即便文字有多行，心形位置也不会变
+            Image("moment_like")
+                .resizable()
+                .frame(width: 12, height: 12)
+                .offset(y: 5)
+        }
+        .padding(.init(top: 4, leading: 14, bottom: 4, trailing: 14))
+    }
+}
+
+private struct Comments: View {
+    let comments: [Comment]
+    
+    var body: some View {
+        ForEach(comments) { comment in
+            Text("\(comment.name)：\(comment.content)")
+        }
     }
 }
