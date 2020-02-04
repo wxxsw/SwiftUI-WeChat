@@ -20,13 +20,13 @@ struct DiscoverView : View {
                 }
                 Group {
                     Cell(icon: "discover_qrcode", title: "扫一扫")
-                    Divider().padding(.leading, 52)
+                    Separator().padding(.leading, 52)
                     Cell(icon: "discover_shake", title: "摇一摇")
                     Line()
                 }
                 Group {
                     Cell(icon: "discover_see", title: "看一看")
-                    Divider().padding(.leading, 52)
+                    Separator().padding(.leading, 52)
                     Cell(icon: "discover_search", title: "搜一搜")
                     Line()
                 }
@@ -36,7 +36,7 @@ struct DiscoverView : View {
                 }
                 Group {
                     Cell(icon: "discover_shop", title: "购物")
-                    Divider().padding(.leading, 52)
+                    Separator().padding(.leading, 52)
                     Cell(icon: "discover_game", title: "游戏")
                     Line()
                 }

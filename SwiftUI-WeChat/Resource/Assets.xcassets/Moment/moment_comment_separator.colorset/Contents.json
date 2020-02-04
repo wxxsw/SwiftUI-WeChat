@@ -9,10 +9,10 @@
       "color" : {
         "color-space" : "srgb",
         "components" : {
-          "red" : "0x43",
+          "red" : "0xD8",
           "alpha" : "1.000",
-          "blue" : "0x8D",
-          "green" : "0x5D"
+          "blue" : "0xD8",
+          "green" : "0xD8"
         }
       }
     },
@@ -25,13 +25,8 @@
         }
       ],
       "color" : {
-        "color-space" : "srgb",
-        "components" : {
-          "red" : "0x48",
-          "alpha" : "1.000",
-          "blue" : "0xFB",
-          "green" : "0xB7"
-        }
+        "platform" : "ios",
+        "reference" : "separatorColor"
       }
     }
   ]

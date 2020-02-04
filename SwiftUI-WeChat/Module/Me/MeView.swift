@@ -24,11 +24,11 @@ struct MeView : View {
                 }
                 Group {
                     Cell(icon: "me_favorite", title: "收藏")
-                    Divider().padding(.leading, 52)
+                    Separator().padding(.leading, 52)
                     Cell(icon: "me_photo_album", title: "相册")
-                    Divider().padding(.leading, 52)
+                    Separator().padding(.leading, 52)
                     Cell(icon: "me_bank_card", title: "卡包")
-                    Divider().padding(.leading, 52)
+                    Separator().padding(.leading, 52)
                     Cell(icon: "me_emoji", title: "表情")
                     Line()
                 }

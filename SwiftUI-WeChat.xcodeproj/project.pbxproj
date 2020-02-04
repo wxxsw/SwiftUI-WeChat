@@ -39,6 +39,7 @@
 		1CFDB19522DAD1FE00D22855 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CFDB19422DAD1FE00D22855 /* Preview Assets.xcassets */; };
 		1CFDB19822DAD1FE00D22855 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CFDB19622DAD1FE00D22855 /* LaunchScreen.storyboard */; };
 		1CFDE7F923978CAE00CB348B /* MomentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CFDE7F823978CAE00CB348B /* MomentView.swift */; };
+		A37BECFB23E91B10005C68F0 /* Separator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37BECFA23E91B10005C68F0 /* Separator.swift */; };
 		A3D300C023E7C28100DF4E89 /* MomentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D300BF23E7C28000DF4E89 /* MomentCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +76,7 @@
 		1CFDB19722DAD1FE00D22855 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1CFDB19922DAD1FE00D22855 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1CFDE7F823978CAE00CB348B /* MomentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomentView.swift; sourceTree = "<group>"; };
+		A37BECFA23E91B10005C68F0 /* Separator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Separator.swift; sourceTree = "<group>"; };
 		A3D300BF23E7C28000DF4E89 /* MomentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomentCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -225,13 +227,6 @@
 			path = Config;
 			sourceTree = "<group>";
 		};
-		1C59B98523B887DF0001541C /* Component */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Component;
-			sourceTree = "<group>";
-		};
 		1C8EE811239103E200BD60BE /* Function */ = {
 			isa = PBXGroup;
 			children = (
@@ -277,7 +272,7 @@
 			isa = PBXGroup;
 			children = (
 				1C45C86722E19902005722B9 /* Bootstrap */,
-				1C59B98523B887DF0001541C /* Component */,
+				A37BECF923E91AF5005C68F0 /* Component */,
 				1C59B98223B6F7B60001541C /* Config */,
 				1C8EE811239103E200BD60BE /* Function */,
 				1C081A6822F698F20077B811 /* Model */,
@@ -296,6 +291,14 @@
 				1CFDE7F823978CAE00CB348B /* MomentView.swift */,
 			);
 			path = Moment;
+			sourceTree = "<group>";
+		};
+		A37BECF923E91AF5005C68F0 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				A37BECFA23E91B10005C68F0 /* Separator.swift */,
+			);
+			path = Component;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -403,6 +406,7 @@
 				A3D300C023E7C28100DF4E89 /* MomentCell.swift in Sources */,
 				1C3664032385427D00B67AEF /* Message.swift in Sources */,
 				1C8EE8182391112B00BD60BE /* Contact.swift in Sources */,
+				A37BECFB23E91B10005C68F0 /* Separator.swift in Sources */,
 				1CDFD34222E1C9190018D694 /* SearchView.swift in Sources */,
 				1C8EE81623910F4000BD60BE /* SearchEntryView.swift in Sources */,
 			);

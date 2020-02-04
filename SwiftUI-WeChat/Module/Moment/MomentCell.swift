@@ -44,25 +44,26 @@ struct MomentCell: View {
                 }
                 
                 if moment.likes != nil || moment.comments != nil {
-                    VStack(spacing: 0) {
+                    VStack(alignment: .leading, spacing: 0) {
                         if moment.likes != nil {
                             Likes(likes: moment.likes!)
                         }
                         
                         if moment.likes != nil && moment.comments != nil {
-                            Divider()
+                            Separator(color: Color("moment_comment_separator"))
                         }
                         
-//                        if moment.comments != nil {
-//                            Comments(comments: moment.comments!)
-//                        }
+                        if moment.comments != nil {
+                            Comments(comments: moment.comments!)
+                        }
                     }
-                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .frame(maxWidth: .infinity)
                     .background(Color("moment_comment_background"))
+                    .cornerRadius(3)
                 }
             }
         }
-        .padding(12)
+        .padding(.init(top: 12, leading: 12, bottom: 14, trailing: 12))
     }
 }
 
@@ -193,7 +194,21 @@ private struct Time: View {
 private struct Likes: View {
     let likes: [String]
     
-    var likesText: some View {
+    var body: some View {
+        ZStack(alignment: .topLeading) {
+            makeLikesText()
+                .fixedSize(horizontal: false, vertical: true)
+
+            // 固定位置，即便文字有多行，心形位置也不会变
+            Image("moment_like")
+                .resizable()
+                .frame(width: 12, height: 12)
+                .offset(y: 5)
+        }
+        .padding(.init(top: 4, leading: 14, bottom: 4, trailing: 14))
+    }
+    
+    func makeLikesText() -> Text {
         var text = Text("    ") // 空格是为了给心形留位置
         
         for (i, like) in likes.enumerated() {
@@ -206,27 +221,26 @@ private struct Likes: View {
         
         return text
     }
-    
-    var body: some View {
-        ZStack(alignment: .topLeading) {
-            likesText
-
-            // 固定位置，即便文字有多行，心形位置也不会变
-            Image("moment_like")
-                .resizable()
-                .frame(width: 12, height: 12)
-                .offset(y: 5)
-        }
-        .padding(.init(top: 4, leading: 14, bottom: 4, trailing: 14))
-    }
 }
 
 private struct Comments: View {
     let comments: [Comment]
     
     var body: some View {
-        ForEach(comments) { comment in
-            Text("\(comment.name)：\(comment.content)")
+        VStack(alignment: .leading, spacing: 4) {
+            ForEach(comments) { comment in
+                self.makeCommentText(comment: comment)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
         }
+        .padding(.init(top: 6, leading: 12, bottom: 6, trailing: 12))
+    }
+    
+    func makeCommentText(comment: Comment) -> Text {
+        Text(comment.name)
+            .font(.system(size: 14, weight: .medium))
+            .foregroundColor(Color("link")) +
+        Text("：\(comment.content)")
+            .font(.system(size: 14))
     }
 }

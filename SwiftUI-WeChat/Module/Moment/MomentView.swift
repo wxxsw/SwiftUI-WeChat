@@ -18,7 +18,10 @@ struct MomentView: View {
                     Group {
                         Header()
                         ForEach(self.moments) { moment in
-                            MomentCell(moment: moment)
+                            VStack(spacing: 0) {
+                                MomentCell(moment: moment)
+                                Separator()
+                            }
                         }
                     }
                     .listRowInsets(.zero)

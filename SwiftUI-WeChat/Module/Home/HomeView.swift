@@ -71,8 +71,7 @@ private struct Cell: View {
             }
             .padding(EdgeInsets(top: 12, leading: 16, bottom: 12, trailing: 16))
             
-            Divider()
-                .padding(EdgeInsets(top: 0, leading: 76, bottom: 0, trailing: 0))
+            Separator().padding(.leading, 76)
         }
         .navigationLink(destination: ChatView())
     }
