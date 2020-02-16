@@ -11,11 +11,20 @@
         }
       },
       {
+        "package": "GSPlayer",
+        "repositoryURL": "https://github.com/wxxsw/GSPlayer.git",
+        "state": {
+          "branch": null,
+          "revision": "97584e9a7d8207fe0b01babebe1c0aa7eb8fda16",
+          "version": "0.2.9"
+        }
+      },
+      {
         "package": "VideoPlayer",
         "repositoryURL": "https://github.com/wxxsw/VideoPlayer",
         "state": {
           "branch": "master",
-          "revision": "ba848b6b53bd513dacb098b08777bcfd960f4937",
+          "revision": "e4fae3687715a12820b28fa3a3b19d733572ea8b",
           "version": null
         }
       }

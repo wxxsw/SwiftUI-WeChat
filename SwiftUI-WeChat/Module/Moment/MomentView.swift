@@ -60,7 +60,6 @@ private struct Navigation: View {
             
             HStack {
                 Button(action: {
-                    self.appStyle.preferredStatusBarStyle = .default
                     self.presentationMode.wrappedValue.dismiss()
                 }) {
                     Image("back")
@@ -80,7 +79,6 @@ private struct Navigation: View {
         .frame(maxWidth: .infinity)
     }
     
-    @EnvironmentObject var appStyle: AppStyle
     @Environment(\.presentationMode) var presentationMode
 }
 

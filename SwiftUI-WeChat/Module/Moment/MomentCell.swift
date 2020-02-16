@@ -154,20 +154,23 @@ private struct Video: View {
     let video: Media
     
     /// 控制开始播放 / 控制停止播放
-    @State private var isPlay: Bool = false
+    @State private var play: Bool = false
     
     /// 播放中 / 非播放状态（例如缓冲、错误、暂停等）
     @State private var isPlaying: Bool = false
     
     var body: some View {
         ZStack {
-            VideoPlayer(url: URL(string: video.url!)!, isPlay: $isPlay)
+            VideoPlayer(url: URL(string: video.url!)!, play: $play)
                 .onStateChanged { state in
-                    self.isPlaying = state == .playing
+                    switch state {
+                    case .playing:  self.isPlaying = true
+                    default:        self.isPlaying = false
+                    }
                 }
                 // 可见时播放，不可见时暂停
-                .onAppear { self.isPlay = true }
-                .onDisappear { self.isPlay = false }
+                .onAppear { self.play = true }
+                .onDisappear { self.play = false }
             
             if !isPlaying {
                 // 非播放状态下显示封面图
