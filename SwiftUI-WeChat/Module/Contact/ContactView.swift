@@ -75,18 +75,18 @@ private struct Cell: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
-            HStack(spacing: 14) {
+            HStack(spacing: 12) {
                 Image(icon)
                     .renderingMode(.original)
                     .resizable()
-                    .frame(width: 44, height: 44)
+                    .frame(width: 40, height: 40)
                     .cornerRadius(style == .system ? 4 : 6)
 
                 Text(title)
-                    .font(.system(size: 18))
+                    .font(.system(size: 16))
                     .foregroundColor(.primary)
             }
-            .padding(EdgeInsets(top: 10, leading: 18, bottom: 10, trailing: 18))
+            .padding(EdgeInsets(top: 10, leading: 16, bottom: 10, trailing: 16))
             
             if !isLast { // 最后一行不增加分割线
                 Separator().padding(.leading, 76)

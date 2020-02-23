@@ -52,15 +52,15 @@ private struct Cell: View {
                     .frame(width: 48, height: 48)
                     .cornerRadius(8)
 
-                VStack(alignment: .leading, spacing: 6) {
+                VStack(alignment: .leading, spacing: 5) {
                     HStack(alignment: .top) {
                         Text(chat.name)
-                            .font(.system(size: 18, weight: .bold))
+                            .font(.system(size: 16, weight: .regular))
                             .foregroundColor(.primary)
                         Spacer()
                         Text(chat.time)
-                            .font(.system(size: 12))
-                            .foregroundColor(.gray)
+                            .font(.system(size: 10))
+                            .foregroundColor(.secondary)
                     }
 
                     Text(chat.desc)

@@ -11,19 +11,25 @@ import SwiftUI
 struct RootView: View {
     @ObservedObject var model = RootViewModel()
     
+    // 作为属性可以避免每次切换都重新初始化四个界面的结构以及数据
+    let homeView = HomeView()
+    let contactView = ContactView()
+    let discoverView = DiscoverView()
+    let meView = MeView()
+    
     var body: some View {
         NavigationView {
             TabView(selection: $model.tabSelection) {
-                HomeView()
+                homeView
                     .tabItem { Item(index: $model.tabSelection, style: .chat) }
                     .tag(0)
-                ContactView()
+                contactView
                     .tabItem { Item(index: $model.tabSelection, style: .contact) }
                     .tag(1)
-                DiscoverView()
+                discoverView
                     .tabItem { Item(index: $model.tabSelection, style: .discover) }
                     .tag(2)
-                MeView()
+                meView
                     .tabItem { Item(index: $model.tabSelection, style: .me) }
                     .tag(3)
             }
