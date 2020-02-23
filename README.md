@@ -50,7 +50,7 @@ Light Mode|Dark Mode
 
 界面|位置|状态
 ---|---|---
-标签栏|Module/Root/RootTabView|✅
+标签栏|Module/Root/RootView|✅
 首页|Module/Home/HomeView|✅
 聊天|Module/Chat/ChatView|待开发
 联系人|Module/Contact/ContactView|✅
