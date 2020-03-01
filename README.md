@@ -31,10 +31,9 @@
 - 全部基于 SwiftUI 实现
 - 二级页面隐藏 TabView
 - 实现 List 的自定义样式（包括消除 NavigationLink 的样式）
-- 朋友圈图片宫格、视频在线播放
+- 朋友圈图片宫格、视频在线播放、滚动导航栏变化
 - 完全支持 Dark Mode
 - 特殊处理、知识点包含注释
-- 使用 Swift Package Manager
 
 ## Screenshots
 
