@@ -13,31 +13,37 @@ struct MomentView: View {
     
     var body: some View {
         GeometryReader { proxy in
-            List {
-                Group {
-                    Header()
-                        .anchorPreference(key: NavigationKey.self, value: .bottom) { [$0] }
-                    
-                    ForEach(self.moments) { moment in
-                        VStack(spacing: 0) {
-                            MomentCell(moment: moment)
-                            Separator()
+            ZStack {
+                VStack {
+                    Color.black.frame(height: 300) // 下拉时露出的黑色背景
+                    Spacer() // 避免到底部上拉出现黑色背景
+                }
+                
+                List {
+                    Group {
+                        Header()
+                            .anchorPreference(key: NavigationKey.self, value: .bottom) { [$0] }
+                        
+                        ForEach(self.moments) { moment in
+                            VStack(spacing: 0) {
+                                MomentCell(moment: moment)
+                                Separator()
+                            }
                         }
                     }
+                    .listRowInsets(.zero)
                 }
-                .listRowInsets(.zero)
-            }
-            .overlayPreferenceValue(NavigationKey.self) { value in
-                VStack {
-                    self.navigation(proxy: proxy, value: value)
-                    Spacer()
+                .overlayPreferenceValue(NavigationKey.self) { value in
+                    VStack {
+                        self.navigation(proxy: proxy, value: value)
+                        Spacer()
+                    }
                 }
             }
         }
         .edgesIgnoringSafeArea(.top)
         .navigationBarHidden(true)
         .navigationBarTitle("朋友圈", displayMode: .inline)
-        .navigationBarItems(trailing: Image(systemName: "camera"))
         .onDisappear { UIApplication.shared.setStatusBar(style: .default) }
     }
     
@@ -46,7 +52,7 @@ struct MomentView: View {
         let progress: CGFloat
         
         if let anchor = value.first {
-            progress = max(0, min(1, (-proxy[anchor].y + height) / 44))
+            progress = max(0, min(1, (-proxy[anchor].y + height + 20) / 44))
         } else {
             progress = 1
         }
@@ -94,12 +100,17 @@ private struct Navigation: View {
                 Spacer()
                 
                 Button(action: { print("camera") }) {
-                    Image(systemName: "camera.fill")
+                    Image(systemName: progress > 0.4 ? "camera" : "camera.fill")
                 }
                 .padding()
             }
             .accentColor(Color(white: 1 - progress))
             .frame(height: 44)
+            
+            Text("朋友圈")
+                .font(.system(size: 16, weight: .semibold))
+                .opacity(progress)
+                .frame(height: 44, alignment: .center)
         }
         .frame(maxWidth: .infinity)
     }

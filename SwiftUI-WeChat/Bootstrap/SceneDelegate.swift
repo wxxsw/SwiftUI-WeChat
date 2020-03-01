@@ -37,7 +37,8 @@ private extension SceneDelegate {
     
     func configureAppearance() {
         
-        // 因无法控制列表分割线，所以先去掉，全部由自己控制
+        // 统一列表样式，因无法控制列表分割线及背景色，所以先去掉，全部由自己控制
+        UITableView.appearance().backgroundColor = .clear
         UITableView.appearance().separatorStyle = .none
         
         // 统一导航栏样式
