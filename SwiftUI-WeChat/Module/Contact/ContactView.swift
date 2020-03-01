@@ -12,24 +12,31 @@ struct ContactView : View {
     let contacts: [Contact] = mock(name: "contacts")
     
     var body: some View {
-        List {
-            Group {
-                SearchEntryView()
-                Cell(icon: "contact_new_friend", title: "新的朋友", style: .system, isLast: true)
-                ForEach(contacts) { contact in
-                    Section(header: SectionHeader(title: contact.id)) {
-                        ForEach(contact.members) { member in
-                            Cell(
-                                icon: member.icon,
-                                title: member.name,
-                                style: .member,
-                                isLast: member.id == contact.members.last?.id
-                            )
+        ZStack {
+            VStack {
+                Color("light_gray").frame(height: 300) // 下拉时露出的灰色背景
+                Spacer() // 避免到底部上拉出现背景
+            }
+                
+            List {
+                Group {
+                    SearchEntryView()
+                    Cell(icon: "contact_new_friend", title: "新的朋友", style: .system, isLast: true)
+                    ForEach(contacts) { contact in
+                        Section(header: SectionHeader(title: contact.id)) {
+                            ForEach(contact.members) { member in
+                                Cell(
+                                    icon: member.icon,
+                                    title: member.name,
+                                    style: .member,
+                                    isLast: member.id == contact.members.last?.id
+                                )
+                            }
                         }
                     }
                 }
+                .listRowInsets(.zero)
             }
-            .listRowInsets(.zero)
         }
         .onAppear {
             self.root.tabNavigationHidden = false

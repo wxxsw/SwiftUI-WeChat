@@ -12,14 +12,21 @@ struct HomeView : View {
     let chats: [Chat] = mock(name: "chats")
     
     var body: some View {
-        List {
-            Group {
-                SearchEntryView()
-                ForEach(chats) { chat in
-                    Cell(chat: chat)
-                }
+        ZStack {
+            VStack {
+                Color("light_gray").frame(height: 300) // 下拉时露出的灰色背景
+                Spacer() // 避免到底部上拉出现背景
             }
-            .listRowInsets(.zero)
+            
+            List {
+                Group {
+                    SearchEntryView()
+                    ForEach(chats) { chat in
+                        Cell(chat: chat)
+                    }
+                }
+                .listRowInsets(.zero)
+            }
         }
         .onAppear {
             self.root.tabNavigationHidden = false

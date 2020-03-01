@@ -43,7 +43,7 @@ private extension SceneDelegate {
         
         // 统一导航栏样式
         UINavigationBar.appearance().shadowImage = UIImage()
-        UINavigationBar.appearance().barTintColor = UIColor(named: "light_gray")
+        UINavigationBar.appearance().barTintColor = UIColor(named: "navigation")
     }
     
     func configureWindow(windowScene: UIWindowScene) {

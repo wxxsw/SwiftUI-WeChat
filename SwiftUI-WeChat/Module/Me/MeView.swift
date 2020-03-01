@@ -12,34 +12,40 @@ struct MeView : View {
     let me: Member = mock(name: "me")
     
     var body: some View {
-        ScrollView {
-            VStack(spacing: 0) {
-                Group {
-                    Header(member: me)
-                    Line()
-                }
-                Group {
-                    Cell(icon: "me_pay", title: "支付")
-                    Line()
-                }
-                Group {
-                    Cell(icon: "me_favorite", title: "收藏")
-                    Separator().padding(.leading, 52)
-                    Cell(icon: "me_photo_album", title: "相册")
-                    Separator().padding(.leading, 52)
-                    Cell(icon: "me_bank_card", title: "卡包")
-                    Separator().padding(.leading, 52)
-                    Cell(icon: "me_emoji", title: "表情")
-                    Line()
-                }
-                Group {
-                    Cell(icon: "me_setting", title: "设置")
-                    Line()
-                }
+        ZStack {
+            VStack {
+                Color("cell").frame(height: 300) // 下拉时露出的白色背景
+                Color("light_gray") // 其余区域是灰色背景
             }
-            .background(Color("cell"))
+            
+            ScrollView {
+                VStack(spacing: 0) {
+                    Group {
+                        Header(member: me)
+                        Line()
+                    }
+                    Group {
+                        Cell(icon: "me_pay", title: "支付")
+                        Line()
+                    }
+                    Group {
+                        Cell(icon: "me_favorite", title: "收藏")
+                        Separator().padding(.leading, 52)
+                        Cell(icon: "me_photo_album", title: "相册")
+                        Separator().padding(.leading, 52)
+                        Cell(icon: "me_bank_card", title: "卡包")
+                        Separator().padding(.leading, 52)
+                        Cell(icon: "me_emoji", title: "表情")
+                        Line()
+                    }
+                    Group {
+                        Cell(icon: "me_setting", title: "设置")
+                        Line()
+                    }
+                }
+                .background(Color("cell"))
+            }
         }
-        .background(Color("light_gray"))
         .onAppear {
             self.root.tabNavigationHidden = true
             self.root.tabNavigationTitle = ""

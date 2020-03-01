@@ -111,7 +111,7 @@ private struct Navigation: View {
                 }
                 .padding()
             }
-            .accentColor(Color(white: 1 - progress))
+            .accentColor(Color(white: colorScheme == .light ? 1 - progress : 1))
             .frame(height: 44)
             
             Text("朋友圈")
@@ -122,6 +122,7 @@ private struct Navigation: View {
         .frame(maxWidth: .infinity)
     }
     
+    @Environment(\.colorScheme) var colorScheme
     @Environment(\.presentationMode) var presentationMode
 }
 
