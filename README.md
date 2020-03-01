@@ -29,11 +29,11 @@
 ## Features
 
 - 全部基于 SwiftUI 实现
-- 二级页面隐藏 TabView
-- 实现 List 的自定义样式（包括消除 NavigationLink 的样式）
-- 朋友圈图片宫格、视频在线播放、滚动导航栏变化
-- 完全支持 Dark Mode
+- 首页切换时导航栏变化，二级页面隐藏 TabView
+- 动态列表使用 List，自定义样式（包括消除 NavigationLink 的样式）
+- 朋友圈图片宫格、视频在线播放、滚动列表时导航栏跟随变化
 - 特殊处理、知识点包含注释
+- 完全支持 Dark Mode
 
 ## Screenshots
 
