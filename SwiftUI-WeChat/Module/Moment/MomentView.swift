@@ -12,50 +12,75 @@ struct MomentView: View {
     let moments: [Moment] = mock(name: "moments")
     
     var body: some View {
-        GeometryReader { geometry in
-            ZStack(alignment: .top) {
-                List {
-                    Group {
-                        Header()
-                        ForEach(self.moments) { moment in
-                            VStack(spacing: 0) {
-                                MomentCell(moment: moment)
-                                Separator()
-                            }
+        GeometryReader { proxy in
+            List {
+                Group {
+                    Header()
+                        .anchorPreference(key: NavigationKey.self, value: .bottom) { [$0] }
+                    
+                    ForEach(self.moments) { moment in
+                        VStack(spacing: 0) {
+                            MomentCell(moment: moment)
+                            Separator()
                         }
                     }
-                    .listRowInsets(.zero)
                 }
-                Navigation(opacity: 0)
-                    .frame(height: geometry.safeAreaInsets.top + 44)
+                .listRowInsets(.zero)
+            }
+            .overlayPreferenceValue(NavigationKey.self) { value in
+                VStack {
+                    self.navigation(proxy: proxy, value: value)
+                    Spacer()
+                }
             }
         }
         .edgesIgnoringSafeArea(.top)
         .navigationBarHidden(true)
         .navigationBarTitle("朋友圈", displayMode: .inline)
         .navigationBarItems(trailing: Image(systemName: "camera"))
-        .onAppear { self.appStyle.preferredStatusBarStyle = .lightContent }
+        .onDisappear { UIApplication.shared.setStatusBar(style: .default) }
     }
     
-    @EnvironmentObject var appStyle: AppStyle
+    func navigation(proxy: GeometryProxy, value: [Anchor<CGPoint>]) -> some View {
+        let height = proxy.safeAreaInsets.top + 44
+        let progress: CGFloat
+        
+        if let anchor = value.first {
+            progress = max(0, min(1, (-proxy[anchor].y + height) / 44))
+        } else {
+            progress = 1
+        }
+
+        UIApplication.shared.setStatusBar(style: progress > 0.3 ? .default : .lightContent)
+        
+        return Navigation(progress: Double(progress))
+            .frame(height: height)
+    }
 }
 
 struct MomentView_Previews: PreviewProvider {
     static var previews: some View {
         MomentView()
-            .environmentObject(AppStyle())
+    }
+}
+
+private struct NavigationKey: PreferenceKey {
+    static var defaultValue: [Anchor<CGPoint>] = []
+    
+    static func reduce(value: inout Value, nextValue: () -> Value) {
+        value.append(contentsOf: nextValue())
     }
 }
 
 private struct Navigation: View {
-    let opacity: Double
+    let progress: Double
     
     var body: some View {
         ZStack(alignment: .bottom) {
             Rectangle()
                 .foregroundColor(
                     Color("light_gray")
-                        .opacity(opacity)
+                        .opacity(progress)
                 )
             
             HStack {
@@ -73,7 +98,7 @@ private struct Navigation: View {
                 }
                 .padding()
             }
-            .accentColor(Color(white: 1 - opacity))
+            .accentColor(Color(white: 1 - progress))
             .frame(height: 44)
         }
         .frame(maxWidth: .infinity)

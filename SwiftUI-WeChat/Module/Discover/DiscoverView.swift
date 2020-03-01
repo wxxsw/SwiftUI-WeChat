@@ -49,14 +49,12 @@ struct DiscoverView : View {
         }
         .background(Color("light_gray"))
         .onAppear {
-            self.appStyle.preferredStatusBarStyle = .default
             self.root.tabNavigationHidden = false
             self.root.tabNavigationTitle = "发现"
             self.root.tabNavigationBarTrailingItems = .init(EmptyView())
         }
     }
     
-    @EnvironmentObject var appStyle: AppStyle
     @EnvironmentObject var root: RootViewModel
 }
 
