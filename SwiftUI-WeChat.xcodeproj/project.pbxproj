@@ -18,6 +18,10 @@
 		1C45C88222E19D56005722B9 /* MeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C45C88122E19D56005722B9 /* MeView.swift */; };
 		1C4C5C0D22FEC3C200AED61E /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4C5C0C22FEC3C200AED61E /* ChatView.swift */; };
 		1C59B97F23B6F4140001541C /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C59B97E23B6F4140001541C /* HostingController.swift */; };
+		1C5A05F32414D4BE008D3377 /* StatusBarStyleEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5A05F22414D4BE008D3377 /* StatusBarStyleEnvironment.swift */; };
+		1C5A05F62414D514008D3377 /* EdgeInsets++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5A05F52414D514008D3377 /* EdgeInsets++.swift */; };
+		1C5A05F82414D53B008D3377 /* View++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5A05F72414D53B008D3377 /* View++.swift */; };
+		1C5A05FB2414D579008D3377 /* Refresh in Frameworks */ = {isa = PBXBuildFile; productRef = 1C5A05FA2414D579008D3377 /* Refresh */; };
 		1C8EE813239103EE00BD60BE /* MockFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8EE812239103EE00BD60BE /* MockFunction.swift */; };
 		1C8EE81623910F4000BD60BE /* SearchEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8EE81523910F4000BD60BE /* SearchEntryView.swift */; };
 		1C8EE8182391112B00BD60BE /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8EE8172391112B00BD60BE /* Contact.swift */; };
@@ -27,7 +31,6 @@
 		1C8EE82C23950C9B00BD60BE /* me.json in Resources */ = {isa = PBXBuildFile; fileRef = 1C8EE82B23950C9B00BD60BE /* me.json */; };
 		1CC78C0923B8A7180062F736 /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC78C0823B8A7180062F736 /* RootViewModel.swift */; };
 		1CDFD34222E1C9190018D694 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDFD34122E1C9190018D694 /* SearchView.swift */; };
-		1CDFD34722E2BD710018D694 /* Extension in Frameworks */ = {isa = PBXBuildFile; productRef = 1CDFD34622E2BD710018D694 /* Extension */; };
 		1CF58D9123BCA471006E4D03 /* moments.json in Resources */ = {isa = PBXBuildFile; fileRef = 1CF58D9023BCA471006E4D03 /* moments.json */; };
 		1CF58DB523BDB390006E4D03 /* Moment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF58DB423BDB390006E4D03 /* Moment.swift */; };
 		1CF58DB723BDB601006E4D03 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF58DB623BDB601006E4D03 /* Media.swift */; };
@@ -53,6 +56,9 @@
 		1C45C88122E19D56005722B9 /* MeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeView.swift; sourceTree = "<group>"; };
 		1C4C5C0C22FEC3C200AED61E /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		1C59B97E23B6F4140001541C /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
+		1C5A05F22414D4BE008D3377 /* StatusBarStyleEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarStyleEnvironment.swift; sourceTree = "<group>"; };
+		1C5A05F52414D514008D3377 /* EdgeInsets++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EdgeInsets++.swift"; sourceTree = "<group>"; };
+		1C5A05F72414D53B008D3377 /* View++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View++.swift"; sourceTree = "<group>"; };
 		1C8EE812239103EE00BD60BE /* MockFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFunction.swift; sourceTree = "<group>"; };
 		1C8EE81523910F4000BD60BE /* SearchEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEntryView.swift; sourceTree = "<group>"; };
 		1C8EE8172391112B00BD60BE /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
@@ -83,7 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1CDFD34722E2BD710018D694 /* Extension in Frameworks */,
+				1C5A05FB2414D579008D3377 /* Refresh in Frameworks */,
 				1C081A6D22F69A690077B811 /* VideoPlayer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -217,12 +223,40 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		1C8EE811239103E200BD60BE /* Function */ = {
+		1C5A05EF2414D448008D3377 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				A37BECF923E91AF5005C68F0 /* Component */,
+				1C5A05F12414D4AB008D3377 /* Environment */,
+				1C5A05F42414D4EB008D3377 /* Extension */,
+				1C5A05F02414D457008D3377 /* Mock */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		1C5A05F02414D457008D3377 /* Mock */ = {
 			isa = PBXGroup;
 			children = (
 				1C8EE812239103EE00BD60BE /* MockFunction.swift */,
 			);
-			path = Function;
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		1C5A05F12414D4AB008D3377 /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				1C5A05F22414D4BE008D3377 /* StatusBarStyleEnvironment.swift */,
+			);
+			path = Environment;
+			sourceTree = "<group>";
+		};
+		1C5A05F42414D4EB008D3377 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				1C5A05F52414D514008D3377 /* EdgeInsets++.swift */,
+				1C5A05F72414D53B008D3377 /* View++.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		1C8EE819239111A200BD60BE /* Profile */ = {
@@ -262,8 +296,7 @@
 			isa = PBXGroup;
 			children = (
 				1C45C86722E19902005722B9 /* Bootstrap */,
-				A37BECF923E91AF5005C68F0 /* Component */,
-				1C8EE811239103E200BD60BE /* Function */,
+				1C5A05EF2414D448008D3377 /* Helper */,
 				1C081A6822F698F20077B811 /* Model */,
 				1C45C86422E198BA005722B9 /* Module */,
 				1C36807E23094D5C00B9DCF5 /* Preview Content */,
@@ -307,8 +340,8 @@
 			);
 			name = "SwiftUI-WeChat";
 			packageProductDependencies = (
-				1CDFD34622E2BD710018D694 /* Extension */,
 				1C081A6C22F69A690077B811 /* VideoPlayer */,
+				1C5A05FA2414D579008D3377 /* Refresh */,
 			);
 			productName = "SwiftUI-WeChat";
 			productReference = 1CFDB18822DAD1FA00D22855 /* SwiftUI-WeChat.app */;
@@ -339,8 +372,8 @@
 			);
 			mainGroup = 1CFDB17F22DAD1FA00D22855;
 			packageReferences = (
-				1CDFD34522E2BD710018D694 /* XCRemoteSwiftPackageReference "Extension" */,
 				1C081A6B22F69A690077B811 /* XCRemoteSwiftPackageReference "VideoPlayer" */,
+				1C5A05F92414D579008D3377 /* XCRemoteSwiftPackageReference "Refresh" */,
 			);
 			productRefGroup = 1CFDB18922DAD1FA00D22855 /* Products */;
 			projectDirPath = "";
@@ -390,11 +423,14 @@
 				1CFDE7F923978CAE00CB348B /* MomentView.swift in Sources */,
 				1CFDB18E22DAD1FA00D22855 /* SceneDelegate.swift in Sources */,
 				1C45C86A22E19935005722B9 /* RootView.swift in Sources */,
+				1C5A05F32414D4BE008D3377 /* StatusBarStyleEnvironment.swift in Sources */,
+				1C5A05F62414D514008D3377 /* EdgeInsets++.swift in Sources */,
 				1C45C88022E19D4C005722B9 /* DiscoverView.swift in Sources */,
 				A3D300C023E7C28100DF4E89 /* MomentCell.swift in Sources */,
 				1C3664032385427D00B67AEF /* Message.swift in Sources */,
 				1C8EE8182391112B00BD60BE /* Contact.swift in Sources */,
 				A37BECFB23E91B10005C68F0 /* Separator.swift in Sources */,
+				1C5A05F82414D53B008D3377 /* View++.swift in Sources */,
 				1CDFD34222E1C9190018D694 /* SearchView.swift in Sources */,
 				1C8EE81623910F4000BD60BE /* SearchEntryView.swift in Sources */,
 			);
@@ -600,9 +636,9 @@
 				kind = branch;
 			};
 		};
-		1CDFD34522E2BD710018D694 /* XCRemoteSwiftPackageReference "Extension" */ = {
+		1C5A05F92414D579008D3377 /* XCRemoteSwiftPackageReference "Refresh" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/wxxsw/Extension";
+			repositoryURL = "https://github.com/wxxsw/Refresh";
 			requirement = {
 				branch = master;
 				kind = branch;
@@ -616,10 +652,10 @@
 			package = 1C081A6B22F69A690077B811 /* XCRemoteSwiftPackageReference "VideoPlayer" */;
 			productName = VideoPlayer;
 		};
-		1CDFD34622E2BD710018D694 /* Extension */ = {
+		1C5A05FA2414D579008D3377 /* Refresh */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1CDFD34522E2BD710018D694 /* XCRemoteSwiftPackageReference "Extension" */;
-			productName = Extension;
+			package = 1C5A05F92414D579008D3377 /* XCRemoteSwiftPackageReference "Refresh" */;
+			productName = Refresh;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

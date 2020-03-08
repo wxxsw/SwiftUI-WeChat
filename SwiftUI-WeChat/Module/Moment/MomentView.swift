@@ -45,7 +45,7 @@ struct MomentView: View {
         .edgesIgnoringSafeArea(.top)
         .navigationBarHidden(true)
         .navigationBarTitle("朋友圈", displayMode: .inline)
-        .onDisappear { UIApplication.shared.setStatusBar(style: .default) }
+        .onDisappear { self.statusBarStyle.current = .default }
     }
     
     func navigation(proxy: GeometryProxy, value: [Anchor<CGPoint>]) -> some View {
@@ -64,11 +64,13 @@ struct MomentView: View {
         }
 
         // 同时更新状态栏样式
-        UIApplication.shared.setStatusBar(style: progress > 0.3 ? .default : .lightContent)
+        statusBarStyle.current = progress > 0.3 ? .default : .lightContent
         
         return Navigation(progress: Double(progress))
             .frame(height: height)
     }
+    
+    @Environment(\.statusBarStyle) var statusBarStyle
 }
 
 struct MomentView_Previews: PreviewProvider {

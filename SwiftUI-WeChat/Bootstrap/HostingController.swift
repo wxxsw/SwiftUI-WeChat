@@ -9,37 +9,21 @@
 import SwiftUI
 import Combine
 
-extension UIApplication {
-    
-    /// 设置状态栏样式
-    /// - Parameter style: 样式
-    func setStatusBar(style: UIStatusBarStyle) {
-        NotificationCenter.default.post(name: .StatusBarDidChange, object: nil, userInfo: ["style": style])
-    }
-}
-
 class HostingController<Content: View>: UIHostingController<HostingMiddle<Content>> {
-    private var statusBarStyle: UIStatusBarStyle = .default
-    private var cancellableSet: Set<AnyCancellable> = []
+    
+    private var statusBarStyle: UIStatusBarStyle = .default {
+        didSet {
+            if oldValue != statusBarStyle {
+                setNeedsStatusBarAppearanceUpdate()
+            }
+        }
+    }
     
     init(rootView: Content) {
         super.init(rootView: HostingMiddle(content: rootView))
         
-        NotificationCenter.default
-            .publisher(for: .StatusBarDidChange)
-            .sink { [unowned self] notification in
-                guard
-                    let userInfo = notification.userInfo,
-                    let style = userInfo["style"] as? UIStatusBarStyle,
-                    self.statusBarStyle != style
-                    else { return }
-                
-                UIView.animate(withDuration: 0.25) {
-                    self.statusBarStyle = style
-                    self.setNeedsStatusBarAppearanceUpdate()
-                }
-            }
-            .store(in: &cancellableSet)
+        StatusBarStyle.Key.defaultValue.getter = { self.statusBarStyle }
+        StatusBarStyle.Key.defaultValue.setter = { self.statusBarStyle = $0 }
     }
     
     @objc required dynamic init?(coder aDecoder: NSCoder) {
@@ -59,9 +43,4 @@ struct HostingMiddle<Content: View>: View {
         content
             // 预留设置全局 modifier 的位置
     }
-}
-
-private extension Notification.Name {
-    
-    static let StatusBarDidChange = Notification.Name("StatusBarDidChange")
 }
