@@ -128,7 +128,7 @@ private struct ImageGrid: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 6) {
-            ForEach(0 ..< rows) { row in
+            ForEach(0 ..< rows, id: \.self) { row in
                 self.rowBody(row: row, isLast: false)
             }
             if lastRowCols > 0 {
@@ -139,7 +139,7 @@ private struct ImageGrid: View {
     
     func rowBody(row: Int, isLast: Bool) -> some View {
         HStack(spacing: 6) {
-            ForEach(0 ..< (isLast ? lastRowCols : self.cols)) { col in
+            ForEach(0 ..< (isLast ? lastRowCols : self.cols), id: \.self) { col in
                 Image(self.images[row * self.cols + col].cover)
                     .resizable()
                     .aspectRatio(contentMode: .fill)

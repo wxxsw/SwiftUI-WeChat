@@ -1,8 +1,8 @@
 {
     "data": {
         "background": "mock_moment_background",
-        "id": "sen_baby",
         "icon": "mock_avatar10",
+        "identifier": "sen_baby",
         "name": "森仔"
     }
 }

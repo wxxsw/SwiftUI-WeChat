@@ -6,8 +6,8 @@
         "repositoryURL": "https://github.com/wxxsw/GSPlayer.git",
         "state": {
           "branch": null,
-          "revision": "97584e9a7d8207fe0b01babebe1c0aa7eb8fda16",
-          "version": "0.2.9"
+          "revision": "1cb5fbb04d6bdfdfcc5948a41547fa3f3c584ea3",
+          "version": "0.2.10"
         }
       },
       {
@@ -15,7 +15,7 @@
         "repositoryURL": "https://github.com/wxxsw/Refresh",
         "state": {
           "branch": "master",
-          "revision": "6dd1087e19dd84916b2f26ac6706bcc97811a7f0",
+          "revision": "71971c3598d3df9be9e243dcdfe93e44c17103b7",
           "version": null
         }
       },
@@ -24,7 +24,7 @@
         "repositoryURL": "https://github.com/wxxsw/VideoPlayer",
         "state": {
           "branch": "master",
-          "revision": "e4fae3687715a12820b28fa3a3b19d733572ea8b",
+          "revision": "e0b6e48f3e0d0648e60a5a524a4c60126ba4fea9",
           "version": null
         }
       }

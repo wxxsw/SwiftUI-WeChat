@@ -88,7 +88,7 @@ private struct Header: View {
                         .font(.system(size: 22, weight: .medium))
                     
                     HStack {
-                        Text("微信号：\(member.id)")
+                        Text("微信号：\(member.identifier ?? "")")
                             .foregroundColor(Color.secondary)
                         
                         Spacer()

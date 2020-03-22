@@ -23,7 +23,7 @@ struct ContactView : View {
                     SearchEntryView()
                     Cell(icon: "contact_new_friend", title: "新的朋友", style: .system, isLast: true)
                     ForEach(contacts) { contact in
-                        Section(header: SectionHeader(title: contact.id)) {
+                        Section(header: SectionHeader(title: contact.letter)) {
                             ForEach(contact.members) { member in
                                 Cell(
                                     icon: member.icon,

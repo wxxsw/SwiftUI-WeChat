@@ -10,7 +10,7 @@ import Foundation
 
 struct Moment: Codable, Identifiable {
     
-    let id: String
+    let id = UUID()
     let author: Member
     let comments: [Comment]?
     let images: [Media]?

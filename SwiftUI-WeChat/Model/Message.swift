@@ -10,6 +10,7 @@ import Foundation
 
 struct Message: Codable {
     
+    let id = UUID()
     let desc: String?
     let time: Date
     

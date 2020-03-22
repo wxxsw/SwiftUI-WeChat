@@ -7,34 +7,45 @@
 //
 
 import SwiftUI
+import Refresh
 
 struct MomentView: View {
-    let moments: [Moment] = mock(name: "moments")
+    
+    @State private var moments: [Moment] = mock(name: "moments")
+    @State private var footerRefreshing: Bool = false
     
     var body: some View {
-        GeometryReader { proxy in
-            ZStack {
-                VStack {
-                    Color.black.frame(height: 300) // 下拉时露出的黑色背景
-                    Spacer() // 避免到底部上拉出现黑色背景
-                }
-                
-                List {
-                    Group {
-                        Header()
-                            // 将 Header 的底部坐标变化传递给上层，用于导航栏变化
-                            .anchorPreference(key: NavigationKey.self, value: .bottom) { [$0] }
-                        
-                        ForEach(self.moments) { moment in
-                            VStack(spacing: 0) {
-                                MomentCell(moment: moment)
-                                Separator()
-                            }
+        ZStack {
+            VStack {
+                Color.black.frame(height: 300) // 下拉时露出的黑色背景
+                Spacer() // 避免到底部上拉出现黑色背景
+            }
+            
+            List {
+                Group {
+                    Header()
+                        // 将 Header 的底部坐标变化传递给上层，用于导航栏变化
+                        .anchorPreference(key: NavigationKey.self, value: .bottom) { [$0] }
+                    
+                    ForEach(self.moments) { moment in
+                        VStack(spacing: 0) {
+                            MomentCell(moment: moment)
+                            Separator()
                         }
                     }
-                    .listRowInsets(.zero)
                 }
-                .overlayPreferenceValue(NavigationKey.self) { value in
+                .listRowInsets(.zero)
+                
+                RefreshFooter(refreshing: self.$footerRefreshing, action: {
+                    self.loadMore()
+                }) {
+                    ActivityIndicator(style: .medium).padding(.top)
+                }
+                .preload(offset: 50)
+            }
+            .enableRefresh()
+            .overlayPreferenceValue(NavigationKey.self) { value in
+                GeometryReader { proxy in
                     VStack {
                         self.navigation(proxy: proxy, value: value)
                         Spacer()
@@ -68,6 +79,15 @@ struct MomentView: View {
         
         return Navigation(progress: Double(progress))
             .frame(height: height)
+    }
+    
+    func loadMore() {
+        print("loadMore")
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.moments += mock(name: "moments")
+            self.footerRefreshing = false
+            print("loadMore finish")
+        }
     }
     
     @Environment(\.statusBarStyle) var statusBarStyle

@@ -10,9 +10,10 @@ import Foundation
 
 struct Member: Codable, Identifiable {
     
+    let id = UUID()
     let background: String?
-    let id: String
     let icon: String
+    let identifier: String?
     let name: String
     
 }
