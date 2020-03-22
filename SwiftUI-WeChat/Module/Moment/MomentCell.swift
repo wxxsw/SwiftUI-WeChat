@@ -139,12 +139,15 @@ private struct ImageGrid: View {
     
     func rowBody(row: Int, isLast: Bool) -> some View {
         HStack(spacing: 6) {
-            ForEach(0 ..< (isLast ? lastRowCols : self.cols), id: \.self) { col in
-                Image(self.images[row * self.cols + col].cover)
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 80, height: 80)
-                    .clipped()
+            ForEach(0 ..< (isLast ? self.lastRowCols : self.cols), id: \.self) { col in
+                HStack {
+                    Image(self.images[row * self.cols + col].cover)
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(minWidth: 60, maxWidth: 80, minHeight: 60, maxHeight: 80)
+                }
+                .aspectRatio(1, contentMode: .fill)
+                .clipped()
             }
         }
     }
