@@ -21,7 +21,6 @@
 		1C5A05F32414D4BE008D3377 /* StatusBarStyleEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5A05F22414D4BE008D3377 /* StatusBarStyleEnvironment.swift */; };
 		1C5A05F62414D514008D3377 /* EdgeInsets++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5A05F52414D514008D3377 /* EdgeInsets++.swift */; };
 		1C5A05F82414D53B008D3377 /* View++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5A05F72414D53B008D3377 /* View++.swift */; };
-		1C5A05FB2414D579008D3377 /* Refresh in Frameworks */ = {isa = PBXBuildFile; productRef = 1C5A05FA2414D579008D3377 /* Refresh */; };
 		1C82EA552427108700B80DA4 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C82EA542427108700B80DA4 /* ActivityIndicator.swift */; };
 		1C8EE813239103EE00BD60BE /* MockFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8EE812239103EE00BD60BE /* MockFunction.swift */; };
 		1C8EE81623910F4000BD60BE /* SearchEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8EE81523910F4000BD60BE /* SearchEntryView.swift */; };
@@ -45,6 +44,19 @@
 		A37BECFB23E91B10005C68F0 /* Separator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37BECFA23E91B10005C68F0 /* Separator.swift */; };
 		A3D300C023E7C28100DF4E89 /* MomentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D300BF23E7C28000DF4E89 /* MomentCell.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1C7B87352430E256001AAFA0 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1C081A6E22F69CF80077B811 /* Chat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
@@ -91,7 +103,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C5A05FB2414D579008D3377 /* Refresh in Frameworks */,
 				1C081A6D22F69A690077B811 /* VideoPlayer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,6 +347,7 @@
 				1CFDB18422DAD1FA00D22855 /* Sources */,
 				1CFDB18522DAD1FA00D22855 /* Frameworks */,
 				1CFDB18622DAD1FA00D22855 /* Resources */,
+				1C7B87352430E256001AAFA0 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -344,7 +356,6 @@
 			name = "SwiftUI-WeChat";
 			packageProductDependencies = (
 				1C081A6C22F69A690077B811 /* VideoPlayer */,
-				1C5A05FA2414D579008D3377 /* Refresh */,
 			);
 			productName = "SwiftUI-WeChat";
 			productReference = 1CFDB18822DAD1FA00D22855 /* SwiftUI-WeChat.app */;
@@ -655,11 +666,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1C081A6B22F69A690077B811 /* XCRemoteSwiftPackageReference "VideoPlayer" */;
 			productName = VideoPlayer;
-		};
-		1C5A05FA2414D579008D3377 /* Refresh */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1C5A05F92414D579008D3377 /* XCRemoteSwiftPackageReference "Refresh" */;
-			productName = Refresh;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

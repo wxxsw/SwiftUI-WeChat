@@ -7,7 +7,6 @@
 //
 
 import SwiftUI
-import Refresh
 
 struct MomentView: View {
     
@@ -35,15 +34,7 @@ struct MomentView: View {
                     }
                 }
                 .listRowInsets(.zero)
-                
-                RefreshFooter(refreshing: self.$footerRefreshing, action: {
-                    self.loadMore()
-                }) {
-                    ActivityIndicator(style: .medium).padding(.top)
-                }
-                .preload(offset: 50)
             }
-            .enableRefresh()
             .overlayPreferenceValue(NavigationKey.self) { value in
                 GeometryReader { proxy in
                     VStack {
