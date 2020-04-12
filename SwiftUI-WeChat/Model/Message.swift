@@ -11,7 +11,22 @@ import Foundation
 struct Message: Codable {
     
     let id = UUID()
-    let desc: String?
-    let time: Date
+    let createdAt: Date
+    let image: Media?
+    let member: Member
+    let text: String?
+    let type: MessageType
+    let voice: String?
+    let video: Media?
     
+}
+
+extension Message {
+    
+    enum MessageType: String, Codable {
+        case text
+        case image
+        case voice
+        case video
+    }
 }

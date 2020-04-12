@@ -9,9 +9,13 @@
 import SwiftUI
 
 struct ChatView: View {
+    let messages: [Message] = mock(name: "messages")
+    let me: Member = mock(name: "me")
+    
     var body: some View {
         Text("待开发")
             .navigationBarTitle("聊天", displayMode: .inline)
+            .onAppear { print(self.messages) }
     }
 }
 
@@ -22,3 +26,4 @@ struct ChatView_Previews: PreviewProvider {
     }
 }
 #endif
+

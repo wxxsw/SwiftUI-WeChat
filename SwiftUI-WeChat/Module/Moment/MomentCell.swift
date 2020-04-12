@@ -32,7 +32,7 @@ struct MomentCell: View {
                 }
                 
                 if moment.video != nil {
-                    Video(video: moment.video!)
+                    SingleVideo(video: moment.video!)
                 }
                 
                 HStack {
@@ -112,9 +112,9 @@ private struct SingleImage: View {
     
     var body: some View {
         // 按照最大区域 180x180 等比缩放
-        Image(image.cover)
+        Image(image.url)
             .resizable()
-            .aspectRatio(CGSize(width: image.width, height: image.height), contentMode: .fit)
+            .aspectRatio(CGSize(width: image.width!, height: image.height!), contentMode: .fit)
             .frame(maxWidth: 180, maxHeight: 180, alignment: .leading)
     }
 }
@@ -140,7 +140,7 @@ private struct ImageGrid: View {
     func rowBody(row: Int, isLast: Bool) -> some View {
         HStack(spacing: 6) {
             ForEach(0 ..< (isLast ? self.lastRowCols : self.cols), id: \.self) { col in
-                Image(self.images[row * self.cols + col].cover)
+                Image(self.images[row * self.cols + col].url)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(minWidth: 60, maxWidth: 80, minHeight: 60, maxHeight: 80)
@@ -151,7 +151,7 @@ private struct ImageGrid: View {
     }
 }
 
-private struct Video: View {
+private struct SingleVideo: View {
     let video: Media
     
     /// 控制开始播放 / 控制停止播放
@@ -162,7 +162,7 @@ private struct Video: View {
     
     var body: some View {
         ZStack {
-            VideoPlayer(url: URL(string: video.url!)!, play: $play)
+            VideoPlayer(url: URL(string: video.url)!, play: $play)
                 .onStateChanged { state in
                     switch state {
                     case .playing:  self.isPlaying = true
@@ -175,12 +175,12 @@ private struct Video: View {
             
             if !isPlaying {
                 // 非播放状态下显示封面图
-                Image(video.cover)
+                Image(video.cover!)
                     .resizable()
             }
         }
         // 按照最大区域 225x225 等比缩放
-        .aspectRatio(CGSize(width: video.width, height: video.height), contentMode: .fit)
+        .aspectRatio(CGSize(width: video.width!, height: video.height!), contentMode: .fit)
         .frame(maxWidth: 225, maxHeight: 225, alignment: .leading)
     }
 }

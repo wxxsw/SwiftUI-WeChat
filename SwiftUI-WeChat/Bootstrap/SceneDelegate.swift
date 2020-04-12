@@ -41,7 +41,11 @@ private extension SceneDelegate {
         UITableView.appearance().separatorStyle = .none
         
         // 统一导航栏样式
+        let backImage = UIImage(named: "back")?.withRenderingMode(.alwaysOriginal)
+        UINavigationBar.appearance().backIndicatorImage = backImage
+        UINavigationBar.appearance().backIndicatorTransitionMaskImage = backImage
         UINavigationBar.appearance().shadowImage = UIImage()
+        UINavigationBar.appearance().tintColor = UIColor(named: "navigation")
         UINavigationBar.appearance().barTintColor = UIColor(named: "navigation")
     }
     

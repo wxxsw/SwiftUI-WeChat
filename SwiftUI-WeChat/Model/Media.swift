@@ -11,9 +11,9 @@ import Foundation
 struct Media: Codable, Identifiable {
     
     let id = UUID()
-    let cover: String
-    let width: Double
-    let height: Double
-    let url: String?
+    let cover: String?
+    let width: Double?
+    let height: Double?
+    let url: String
 
 }
