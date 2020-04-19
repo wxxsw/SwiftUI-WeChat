@@ -13,9 +13,13 @@ struct ChatView: View {
     let me: Member = mock(name: "me")
     
     var body: some View {
-        Text("待开发")
-            .navigationBarTitle("聊天", displayMode: .inline)
-            .onAppear { print(self.messages) }
+        List {
+            ForEach(messages) { message in
+                ChatCell(message: message)
+            }
+        }
+        .navigationBarTitle("聊天", displayMode: .inline)
+        .onAppear { print(self.messages) }
     }
 }
 
@@ -26,4 +30,3 @@ struct ChatView_Previews: PreviewProvider {
     }
 }
 #endif
-

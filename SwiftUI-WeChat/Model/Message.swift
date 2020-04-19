@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Message: Codable {
+struct Message: Codable, Identifiable {
     
     let id = UUID()
     let createdAt: Date

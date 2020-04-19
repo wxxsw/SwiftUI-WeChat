@@ -70,8 +70,7 @@ struct MomentCell: View {
 struct MomentCell_Previews: PreviewProvider {
     static var previews: some View {
         let moments: [Moment] = mock(name: "moments")
-        return MomentCell(moment: moments[0])
-            .previewLayout(.sizeThatFits)
+        return MomentCell(moment: moments[0]).previewLayout(.sizeThatFits)
     }
 }
 
