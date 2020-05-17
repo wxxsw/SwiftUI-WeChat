@@ -10,18 +10,22 @@ import SwiftUI
 
 struct ChatCell: View {
     let message: Message
+    let isMe: Bool
     
     var body: some View {
-        HStack {
-            TextMessage(isMe: true, text: message.text ?? "")
+        HStack(alignment: .top) {
+            if isMe { Spacer() } else { Avatar(icon: message.member.icon) }
+            TextMessage(isMe: isMe, text: message.text ?? "")
+            if isMe { Avatar(icon: message.member.icon) } else { Spacer() }
         }
+        .padding(.init(top: 8, leading: 12, bottom: 8, trailing: 12))
     }
 }
 
 struct ChatCell_Previews: PreviewProvider {
     static var previews: some View {
         let messages: [Message] = mock(name: "messages")
-        return ChatCell(message: messages[0]).previewLayout(.sizeThatFits)
+        return ChatCell(message: messages[0], isMe: false).previewLayout(.sizeThatFits)
     }
 }
 
