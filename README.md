@@ -12,7 +12,7 @@
 - [Overview](#overview)
 - [Features](#features)
 - [Screenshots](#screenshots)
-- [Progress](#progress)
+- [TODO](#todo)
 - [Requirements](#requirements)
 - [License](#license)
 
@@ -40,24 +40,17 @@
 Light Mode|Dark Mode
 ---|---
 ![HomeView](https://github.com/wxxsw/SwiftUI-WeChat/blob/master/Images/screenshot_home_light.png?0301)|![HomeView](https://github.com/wxxsw/SwiftUI-WeChat/blob/master/Images/screenshot_home_dark.png?0301)
+![ChatView](https://github.com/wxxsw/SwiftUI-WeChat/blob/master/Images/screenshot_chat_light.png?0517)|![ChatView](https://github.com/wxxsw/SwiftUI-WeChat/blob/master/Images/screenshot_chat_dark.png?0517)
 ![ContactView](https://github.com/wxxsw/SwiftUI-WeChat/blob/master/Images/screenshot_contact_light.png?0301)|![ContactView](https://github.com/wxxsw/SwiftUI-WeChat/blob/master/Images/screenshot_contact_dark.png?0301)
 ![DiscoverView](https://github.com/wxxsw/SwiftUI-WeChat/blob/master/Images/screenshot_discover_light.png?0301)|![DiscoverView](https://github.com/wxxsw/SwiftUI-WeChat/blob/master/Images/screenshot_discover_dark.png?0301)
 ![MomentView](https://github.com/wxxsw/SwiftUI-WeChat/blob/master/Images/screenshot_moment_light.png?0204)|![MomentView](https://github.com/wxxsw/SwiftUI-WeChat/blob/master/Images/screenshot_moment_dark.png?0204)
 ![MeView](https://github.com/wxxsw/SwiftUI-WeChat/blob/master/Images/screenshot_me_light.png?0301)|![MeView](https://github.com/wxxsw/SwiftUI-WeChat/blob/master/Images/screenshot_me_dark.png?0301)
 
-## Progress
+## TODO
 
-界面|位置|状态
----|---|---
-标签栏|Module/Root/RootView|✅
-首页|Module/Home/HomeView|✅
-聊天|Module/Chat/ChatView|🔨
-联系人|Module/Contact/ContactView|✅
-发现|Module/Discover/DiscoverView|✅
-朋友圈|Module/Moment/MomentView|✅
-我的|Module/Me/MeView|✅
-搜索|Module/Search/SearchView|待开发
-其它|...|待开发
+- 聊天界面完善：键盘处理，文本框多行变高度，发送内容，更多媒体类型，emoji，语音等
+- 朋友圈界面完善：下拉刷新，上拉加载，图片视频全屏预览
+- 搜索界面
 
 ## Requirements
 
@@ -67,7 +60,7 @@ Light Mode|Dark Mode
 
 ## Contributors
 
-Create by [Gesen](https://github.com/wxxsw)
+Create by [森仔](https://github.com/wxxsw)
 
 Banner Design by [@aduqin](https://dribbble.com/aduqin)
 
