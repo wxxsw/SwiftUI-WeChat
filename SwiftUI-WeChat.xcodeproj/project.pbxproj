@@ -18,6 +18,7 @@
 		1C45C88222E19D56005722B9 /* MeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C45C88122E19D56005722B9 /* MeView.swift */; };
 		1C4C5C0D22FEC3C200AED61E /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4C5C0C22FEC3C200AED61E /* ChatView.swift */; };
 		1C51A50D247177F200EDD5D8 /* Date++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C51A50C247177F200EDD5D8 /* Date++.swift */; };
+		1C51A50F2471893700EDD5D8 /* UIImage++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C51A50E2471893700EDD5D8 /* UIImage++.swift */; };
 		1C59B97F23B6F4140001541C /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C59B97E23B6F4140001541C /* HostingController.swift */; };
 		1C5A05F32414D4BE008D3377 /* StatusBarStyleEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5A05F22414D4BE008D3377 /* StatusBarStyleEnvironment.swift */; };
 		1C5A05F62414D514008D3377 /* EdgeInsets++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5A05F52414D514008D3377 /* EdgeInsets++.swift */; };
@@ -72,6 +73,7 @@
 		1C45C88122E19D56005722B9 /* MeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeView.swift; sourceTree = "<group>"; };
 		1C4C5C0C22FEC3C200AED61E /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		1C51A50C247177F200EDD5D8 /* Date++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date++.swift"; sourceTree = "<group>"; };
+		1C51A50E2471893700EDD5D8 /* UIImage++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage++.swift"; sourceTree = "<group>"; };
 		1C59B97E23B6F4140001541C /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
 		1C5A05F22414D4BE008D3377 /* StatusBarStyleEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarStyleEnvironment.swift; sourceTree = "<group>"; };
 		1C5A05F52414D514008D3377 /* EdgeInsets++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EdgeInsets++.swift"; sourceTree = "<group>"; };
@@ -276,6 +278,7 @@
 			children = (
 				1C51A50C247177F200EDD5D8 /* Date++.swift */,
 				1C5A05F52414D514008D3377 /* EdgeInsets++.swift */,
+				1C51A50E2471893700EDD5D8 /* UIImage++.swift */,
 				1C5A05F72414D53B008D3377 /* View++.swift */,
 			);
 			path = Extension;
@@ -458,6 +461,7 @@
 				1C8EE8182391112B00BD60BE /* Contact.swift in Sources */,
 				A37BECFB23E91B10005C68F0 /* Separator.swift in Sources */,
 				1C5A05F82414D53B008D3377 /* View++.swift in Sources */,
+				1C51A50F2471893700EDD5D8 /* UIImage++.swift in Sources */,
 				1CDFD34222E1C9190018D694 /* SearchView.swift in Sources */,
 				1C8EE81623910F4000BD60BE /* SearchEntryView.swift in Sources */,
 			);

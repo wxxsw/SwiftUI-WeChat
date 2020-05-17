@@ -36,17 +36,19 @@ private extension SceneDelegate {
     
     func configureAppearance() {
         
+        let backImage = UIImage(named: "back")?
+            .withPadding(.init(top: -2, left: 0, bottom: 0, right: -4))
+        
         // 统一列表样式，因无法控制列表分割线及背景色，所以先去掉，全部由自己控制
         UITableView.appearance().backgroundColor = .clear
         UITableView.appearance().separatorStyle = .none
         
         // 统一导航栏样式
-        let backImage = UIImage(named: "back")?.withRenderingMode(.alwaysOriginal)
         UINavigationBar.appearance().backIndicatorImage = backImage
         UINavigationBar.appearance().backIndicatorTransitionMaskImage = backImage
         UINavigationBar.appearance().shadowImage = UIImage()
-        UINavigationBar.appearance().tintColor = UIColor(named: "navigation")
-        UINavigationBar.appearance().barTintColor = UIColor(named: "navigation")
+        UINavigationBar.appearance().tintColor = UIColor(named: "navigation_tint")
+        UINavigationBar.appearance().barTintColor = UIColor(named: "navigation_bar_tint")
     }
     
     func configureWindow(windowScene: UIWindowScene) {
@@ -56,5 +58,4 @@ private extension SceneDelegate {
         window!.rootViewController = HostingController(rootView: rootView)
         window!.makeKeyAndVisible()
     }
-    
 }
