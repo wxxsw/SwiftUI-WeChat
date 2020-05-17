@@ -11,7 +11,7 @@ import Foundation
 struct Message: Codable, Identifiable {
     
     let id = UUID()
-    let createdAt: Date
+    let createdAt: Date?
     let image: Media?
     let member: Member
     let text: String?

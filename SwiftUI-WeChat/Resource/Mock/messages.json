@@ -1,7 +1,7 @@
 {
     "data": [
         {
-            "createdAt": 1586650000,
+            "createdAt": 1559535000,
             "member": {
                 "icon": "mock_avatar1",
                 "name": "SwiftUI"
@@ -10,7 +10,7 @@
             "type": "text"
         },
         {
-            "createdAt": 1586660000,
+            "createdAt": 1559550000,
             "member": {
                 "icon": "mock_avatar1",
                 "name": "SwiftUI"
@@ -19,25 +19,23 @@
             "type": "text"
         },
         {
-            "createdAt": 1586670000,
             "member": {
                 "icon": "mock_avatar1",
                 "name": "SwiftUI"
             },
-            "text": "SwiftUI 采用简单易懂、编写方式自然的声明式 Swift 语法，可无缝支持新的 Xcode 设计工具，让您的代码与设计保持高度同步。",
+            "text": "采用简单易懂、编写方式自然的声明式 Swift 语法，可无缝支持新的 Xcode 设计工具，让您的代码与设计保持高度同步。",
             "type": "text"
         },
         {
-            "createdAt": 1586680000,
             "member": {
                 "icon": "mock_avatar1",
                 "name": "SwiftUI"
             },
-            "text": "SwiftUI 原生支持“动态字体”、“深色模式”、本地化和辅助功能——第一行您写出的 SwiftUI 代码，就已经是您编写过的、功能最强大的 UI 代码。",
+            "text": "原生支持“动态字体”、“深色模式”、本地化和辅助功能——第一行您写出的 SwiftUI 代码，就已经是您编写过的、功能最强大的 UI 代码。",
             "type": "text"
         },
         {
-            "createdAt": 1586690000,
+            "createdAt": 1559550000,
             "member": {
                 "icon": "mock_avatar1",
                 "name": "SwiftUI"
@@ -46,7 +44,6 @@
             "type": "text"
         },
         {
-            "createdAt": 1586690001,
             "member": {
                 "icon": "mock_avatar1",
                 "name": "SwiftUI"
@@ -55,7 +52,7 @@
             "type": "text"
         },
         {
-            "createdAt": 1586700000,
+            "createdAt": 1559555000,
             "member": {
                 "icon": "mock_avatar1",
                 "name": "SwiftUI"
@@ -64,13 +61,13 @@
             "type": "text"
         },
         {
-            "createdAt": 1586700001,
+            "createdAt": 1559560000,
             "member": {
                 "icon": "mock_avatar10",
                 "identifier": "sen_baby",
                 "name": "森仔"
             },
-            "text": "🤩",
+            "text": "🤩 啥也别说了，我这就去学！",
             "type": "text"
         }
     ]

@@ -20,6 +20,7 @@ func mock<T: Decodable>(name: String) -> T {
     do {
         let data = try Data(contentsOf: url)
         let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .secondsSince1970
         let result = try decoder.decode(Mock<T>.self, from: data)
         return result.data
     } catch {

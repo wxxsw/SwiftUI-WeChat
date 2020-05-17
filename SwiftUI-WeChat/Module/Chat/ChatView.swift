@@ -20,6 +20,10 @@ struct ChatView: View {
                 List {
                     Group {
                         ForEach(self.messages) { message in
+                            if message.createdAt != nil {
+                                Time(date: message.createdAt!)
+                            }
+                            
                             ChatCell(
                                 message: message,
                                 isMe: message.member.identifier == self.me.identifier
@@ -42,10 +46,22 @@ struct ChatView: View {
 #if DEBUG
 struct ChatView_Previews: PreviewProvider {
     static var previews: some View {
-        ChatView()
+        NavigationView { ChatView() }
     }
 }
 #endif
+
+private struct Time: View {
+    let date: Date
+    
+    var body: some View {
+        Text(date.formatString)
+            .foregroundColor(Color("chat_time"))
+            .font(.system(size: 14, weight: .medium))
+            .frame(maxWidth: .infinity)
+            .padding(.vertical, 4)
+    }
+}
 
 private struct Send: View {
     let proxy: GeometryProxy
