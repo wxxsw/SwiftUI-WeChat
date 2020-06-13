@@ -37,13 +37,7 @@
 - [x] Dynamic List uses `List`, custom styles (including styles that eliminate `NavigationLink`)
 - [x] Timeline: Picture layout. Play online video. The status bar navigation bar changes as you scroll through the list.
 - [x] Full support for Dark Mode
-
-- [x] 全部基于 SwiftUI 实现
-- [x] 首页切换时导航栏变化，二级页面隐藏 TabView
-- [x] 动态列表使用 List，自定义样式（包括消除 NavigationLink 的样式）
-- [x] 朋友圈图片宫格、在线视频播放、滚动列表时状态栏、导航栏跟随变化
-- [x] 特殊处理、知识点包含注释
-- [x] 完全支持 Dark Mode
+- [x] 特殊处理、知识点中文注释
 
 ## Screenshots
 
