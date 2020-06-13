@@ -18,15 +18,27 @@
 
 ## Overview
 
+- I will continue to follow the development of technology, the goal is to bring SwiftUI-WeChat to an infinitely close WeChat experience. Everyone is familiar with WeChat, so when you want to implement a function similar to WeChat, you can quickly find out how to implement this function in this project, so I believe this project will help everyone
+
+- The plan will be perfected until the popularity of `SwiftUI` and `iOS 13`, updated every weekend. If you have questions about the implementation, or have better ideas, please feel free to communicate with me in [issue](https://github.com/wxxsw/SwiftUI-WeChat/issues)
+
+- Your ★ Star is my biggest motivation
+
 - 此项目仅为 `SwiftUI` 学习交流，非商业项目
 
 - 本人会不断跟进技术发展，目标是将 `SwiftUI-WeChat` 达到无限接近微信的体验。因为微信大家都很熟悉，所以当你要实现一个和微信类似的功能，你可以在此项目中很快找到这个功能如何实现，所以相信这个项目会对大家有帮助
 
 - 计划会一直完善到 `SwiftUI` 和 `iOS 13` 普及，每周末更新。如果您对实现有疑问，或者有更好的想法，欢迎在 [issue](https://github.com/wxxsw/SwiftUI-WeChat/issues) 里与我交流探讨
 
-- 如果喜欢请 ★ Star
+- 你的 ★ Star 是我最大的动力
 
 ## Features
+
+- [x] All based on SwiftUI.
+- [x] The navigation bar changes when the homepage switches. TabView is hidden in the details page.
+- [x] Dynamic List uses `List`, custom styles (including styles that eliminate `NavigationLink`)
+- [x] Timeline: Picture layout. Play online video. The status bar navigation bar changes as you scroll through the list.
+- [x] Full support for Dark Mode
 
 - [x] 全部基于 SwiftUI 实现
 - [x] 首页切换时导航栏变化，二级页面隐藏 TabView
@@ -47,6 +59,11 @@ Light Mode|Dark Mode
 ![MeView](https://github.com/wxxsw/SwiftUI-WeChat/blob/master/Images/screenshot_me_light.png?0301)|![MeView](https://github.com/wxxsw/SwiftUI-WeChat/blob/master/Images/screenshot_me_dark.png?0301)
 
 ## TODO
+
+- [ ] Homepage: Support left slide to delete chat content
+- [ ] Chat: keyboard processing, multi-line text box height, send content, more media types, emoji, voice, etc.
+- [ ] Timeline: pull-down refresh, pull-up loading, full-screen preview of pictures and videos, comments, likes, etc.
+- [ ] Search interface
 
 - [ ] 主界面完善：可左滑删除聊天内容
 - [ ] 聊天界面完善：键盘处理，文本框多行变高度，发送内容，更多媒体类型，emoji，语音等
