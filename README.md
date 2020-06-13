@@ -57,11 +57,6 @@ Light Mode|Dark Mode
 - [ ] Timeline: pull-down refresh, pull-up loading, full-screen preview of pictures and videos, comments, likes, etc.
 - [ ] Search interface
 
-- [ ] 主界面完善：可左滑删除聊天内容
-- [ ] 聊天界面完善：键盘处理，文本框多行变高度，发送内容，更多媒体类型，emoji，语音等
-- [ ] 朋友圈界面完善：下拉刷新，上拉加载，图片视频全屏预览，评论、点赞等
-- [ ] 搜索界面
-
 ## Requirements
 
 - iOS 13+
