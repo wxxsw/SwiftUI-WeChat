@@ -22,11 +22,9 @@
 
 - The plan will be perfected until the popularity of `SwiftUI` and `iOS 13`, updated every weekend. If you have questions about the implementation, or have better ideas, please feel free to communicate with me in [issue](https://github.com/wxxsw/SwiftUI-WeChat/issues)
 
-- 此项目仅为 `SwiftUI` 学习交流，非商业项目
-
 - 本人会不断跟进技术发展，目标是将 `SwiftUI-WeChat` 达到无限接近微信的体验。因为微信大家都很熟悉，所以当你要实现一个和微信类似的功能，你可以在此项目中很快找到这个功能如何实现，所以相信这个项目会对大家有帮助
 
-- 计划会一直完善到 `SwiftUI` 和 `iOS 13` 普及，每周末更新。如果您对实现有疑问，或者有更好的想法，欢迎在 [issue](https://github.com/wxxsw/SwiftUI-WeChat/issues) 里与我交流探讨
+- 计划会一直完善到 `SwiftUI` 普及，每周末更新。如果您对实现有疑问，或者有更好的想法，欢迎在 [issue](https://github.com/wxxsw/SwiftUI-WeChat/issues) 里与我交流探讨
 
 - 你的 ★ Star 是我最大的动力
 
