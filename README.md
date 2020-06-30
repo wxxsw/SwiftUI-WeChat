@@ -1,3 +1,5 @@
+> Plan to rewrite this project after the official release of Xcode 12
+
 ![SwiftUI-WeChat](https://github.com/wxxsw/SwiftUI-WeChat/blob/master/Images/logo.png?1212)
 
 <p align="center">
