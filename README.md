@@ -22,7 +22,7 @@
 
 - I will continue to follow the development of technology, the goal is to bring SwiftUI-WeChat to an infinitely close WeChat experience. Everyone is familiar with WeChat, so when you want to implement a function similar to WeChat, you can quickly find out how to implement this function in this project, so I believe this project will help everyone
 
-- The plan will be perfected until the popularity of `SwiftUI` and `iOS 13`, updated every weekend. If you have questions about the implementation, or have better ideas, please feel free to communicate with me in [issue](https://github.com/wxxsw/SwiftUI-WeChat/issues)
+- The plan will be perfected until the popularity of `SwiftUI`, updated every weekend. If you have questions about the implementation, or have better ideas, please feel free to communicate with me in [issue](https://github.com/wxxsw/SwiftUI-WeChat/issues)
 
 - 本人会不断跟进技术发展，目标是将 `SwiftUI-WeChat` 达到无限接近微信的体验。因为微信大家都很熟悉，所以当你要实现一个和微信类似的功能，你可以在此项目中很快找到这个功能如何实现，所以相信这个项目会对大家有帮助
 
