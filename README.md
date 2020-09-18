@@ -1,4 +1,4 @@
-> Plan to rewrite this project after the official release of Xcode 12
+> Plan to rewrite this project after the official release of Xcode 12（重写中...）
 
 ![SwiftUI-WeChat](https://github.com/wxxsw/SwiftUI-WeChat/blob/master/Images/logo.png?1212)
 
