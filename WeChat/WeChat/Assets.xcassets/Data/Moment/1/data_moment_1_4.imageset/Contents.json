@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "example-design-large_2x.jpg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

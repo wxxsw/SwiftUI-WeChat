@@ -8,12 +8,13 @@
 
 import Foundation
 
-struct Media: Codable, Identifiable {
-    
-    let id = UUID()
+struct Media: Codable {
     let cover: String?
     let width: Double?
     let height: Double?
     let url: String
+}
 
+extension Media: Identifiable {
+    var id: UUID { UUID() }
 }

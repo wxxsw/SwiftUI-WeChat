@@ -8,10 +8,11 @@
 
 import Foundation
 
-struct Contact: Codable, Identifiable {
-    
-    let id = UUID()
+struct Contact: Codable {
     let letter: String
     let members: [Member]
-    
+}
+
+extension Contact: Identifiable {
+    var id: UUID { UUID() }
 }

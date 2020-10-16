@@ -8,9 +8,7 @@
 
 import Foundation
 
-struct Moment: Codable, Identifiable {
-    
-    let id = UUID()
+struct Moment: Codable {
     let author: Member
     let comments: [Comment]?
     let images: [Media]?
@@ -18,5 +16,9 @@ struct Moment: Codable, Identifiable {
     let text: String?
     let time: String
     let video: Media?
-    
 }
+
+extension Moment: Identifiable {
+    var id: UUID { UUID() }
+}
+

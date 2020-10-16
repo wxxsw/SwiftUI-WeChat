@@ -8,10 +8,11 @@
 
 import Foundation
 
-struct Comment: Codable, Identifiable {
-    
-    let id = UUID()
+struct Comment: Codable {
     let name: String
     let content: String
-    
+}
+
+extension Comment: Identifiable {
+    var id: UUID { UUID() }
 }

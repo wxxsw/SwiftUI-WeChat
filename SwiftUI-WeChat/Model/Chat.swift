@@ -8,12 +8,13 @@
 
 import Foundation
 
-struct Chat: Codable, Identifiable {
-    
-    let id = UUID()
+struct Chat: Codable {
     let icon: String
     let name: String
     let desc: String
     let time: String
-    
+}
+
+extension Chat: Identifiable {
+    var id: UUID { UUID() }
 }

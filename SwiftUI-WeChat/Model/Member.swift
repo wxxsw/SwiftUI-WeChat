@@ -8,12 +8,13 @@
 
 import Foundation
 
-struct Member: Codable, Identifiable {
-    
-    let id = UUID()
+struct Member: Codable {
     let background: String?
     let icon: String
     let identifier: String?
     let name: String
-    
+}
+
+extension Member: Identifiable {
+    var id: UUID { UUID() }
 }

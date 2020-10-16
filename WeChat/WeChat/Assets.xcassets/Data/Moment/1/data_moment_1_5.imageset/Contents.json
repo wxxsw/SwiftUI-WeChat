@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "swiftui-96x96_2x.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
