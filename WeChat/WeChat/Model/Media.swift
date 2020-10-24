@@ -9,7 +9,7 @@
 import Foundation
 
 struct Media: Codable, Identifiable {
-    var id: UUID { UUID() }
+    var id = UUID()
     let cover: String?
     let width: Double?
     let height: Double?

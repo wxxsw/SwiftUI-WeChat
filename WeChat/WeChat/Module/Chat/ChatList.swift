@@ -13,7 +13,7 @@ struct ChatList: View {
     
     var body: some View {
         ScrollView {
-            LazyVStack {
+            LazyVStack(spacing: 0) {
                 SearchEntry()
                 ForEach(chats) { chat in
                     NavigationLink(destination: ChatView(chat: chat)) {
@@ -22,6 +22,7 @@ struct ChatList: View {
                     Separator().padding(.leading, 76)
                 }
             }
+            .background(Color("cell"))
         }
     }
 }

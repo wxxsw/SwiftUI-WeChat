@@ -9,7 +9,7 @@
 import Foundation
 
 struct Chat: Codable, Identifiable {
-    var id: UUID { UUID() }
+    var id = UUID()
     let desc: String
     let sender: Member
     let time: String

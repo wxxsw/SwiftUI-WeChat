@@ -40,6 +40,8 @@ struct MeList: View {
     }
     
     struct Header: View {
+        @State var me = Member.me
+        
         var body: some View {
             VStack(spacing: 36) {
                 HStack {
@@ -50,17 +52,17 @@ struct MeList: View {
                 .frame(height: 44)
                 
                 HStack(spacing: 20) {
-                    Image(Member.me.icon)
+                    Image(me.icon)
                         .resizable()
                         .cornerRadius(6)
                         .frame(width: 62, height: 62)
                     
                     VStack(alignment: .leading, spacing: 12) {
-                        Text(Member.me.name)
+                        Text(me.name)
                             .font(.system(size: 22, weight: .medium))
                         
                         HStack {
-                            Text("微信号：\(Member.me.identifier ?? "")")
+                            Text("微信号：\(me.identifier ?? "")")
                                 .foregroundColor(Color.secondary)
                             
                             Spacer()

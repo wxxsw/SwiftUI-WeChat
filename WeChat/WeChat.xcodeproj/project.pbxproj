@@ -12,7 +12,6 @@
 		1C429DF0251F4F8200CC9693 /* MomentHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C429DDD251F4F8100CC9693 /* MomentHome.swift */; };
 		1C429DF1251F4F8200CC9693 /* MomentRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C429DDE251F4F8100CC9693 /* MomentRow.swift */; };
 		1C429DF2251F4F8200CC9693 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C429DE0251F4F8100CC9693 /* ProfileView.swift */; };
-		1C429DF3251F4F8200CC9693 /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C429DE2251F4F8200CC9693 /* RootViewModel.swift */; };
 		1C429DF4251F4F8200CC9693 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C429DE3251F4F8200CC9693 /* RootView.swift */; };
 		1C429DF5251F4F8200CC9693 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C429DE5251F4F8200CC9693 /* ChatView.swift */; };
 		1C429DF6251F4F8200CC9693 /* MessageRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C429DE6251F4F8200CC9693 /* MessageRow.swift */; };
@@ -54,7 +53,6 @@
 		1C429DDD251F4F8100CC9693 /* MomentHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MomentHome.swift; sourceTree = "<group>"; };
 		1C429DDE251F4F8100CC9693 /* MomentRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MomentRow.swift; sourceTree = "<group>"; };
 		1C429DE0251F4F8100CC9693 /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
-		1C429DE2251F4F8200CC9693 /* RootViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
 		1C429DE3251F4F8200CC9693 /* RootView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		1C429DE5251F4F8200CC9693 /* ChatView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		1C429DE6251F4F8200CC9693 /* MessageRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageRow.swift; sourceTree = "<group>"; };
@@ -151,7 +149,6 @@
 			isa = PBXGroup;
 			children = (
 				1C429DE3251F4F8200CC9693 /* RootView.swift */,
-				1C429DE2251F4F8200CC9693 /* RootViewModel.swift */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -390,7 +387,6 @@
 				1C6C5E39251F4CA8005C0FE8 /* StatusBarStyleEnvironment.swift in Sources */,
 				1C429DF1251F4F8200CC9693 /* MomentRow.swift in Sources */,
 				1C6C5E13251F49DB005C0FE8 /* WeChatApp.swift in Sources */,
-				1C429DF3251F4F8200CC9693 /* RootViewModel.swift in Sources */,
 				1C6C5E38251F4CA8005C0FE8 /* Separator.swift in Sources */,
 				1C429DF9251F4F8200CC9693 /* MeHome.swift in Sources */,
 				1C43B7B125399B610049FF38 /* DiscoverRow.swift in Sources */,

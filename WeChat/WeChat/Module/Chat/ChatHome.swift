@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct ChatHome: View {
-    @State var chats: [Chat] = Chat.all
+    @State var chats: [Chat] = []
     
     var body: some View {
         ZStack {
@@ -20,19 +20,12 @@ struct ChatHome: View {
             
             ChatList(chats: chats)
         }
-        .onAppear {
-            self.root.tabNavigationHidden = false
-            self.root.tabNavigationTitle = "微信"
-            self.root.tabNavigationBarTrailingItems = .init(Image(systemName: "plus.circle"))
-        }
+        .onAppear { if self.chats.isEmpty { self.chats = Chat.all } }
     }
-    
-    @EnvironmentObject var root: RootViewModel
 }
 
 struct ChatHome_Previews : PreviewProvider {
     static var previews: some View {
         ChatHome()
-            .environmentObject(RootViewModel())
     }
 }

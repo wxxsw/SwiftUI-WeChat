@@ -13,7 +13,7 @@ struct MessageList: View {
     
     var body: some View {
         ScrollView {
-            LazyVStack {
+            LazyVStack(spacing: 0) {
                 ForEach(messages) { message in
                     if message.createdAt != nil {
                         Time(date: message.createdAt!.date)

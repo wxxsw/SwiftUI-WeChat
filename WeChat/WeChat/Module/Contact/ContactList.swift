@@ -12,11 +12,12 @@ struct ContactList: View {
     let contacts: [Contact]
     
     var body: some View {
-        ScrollView {
-            LazyVStack {
+        List {
+            Group {
                 SearchEntry()
+                
                 ContactRow(icon: "contact_new_friend", title: "新的朋友", style: .system)
-                Separator().padding(.leading, 76)
+                
                 ForEach(contacts) { contact in
                     Section(header: SectionHeader(title: contact.letter)) {
                         ForEach(contact.members) { member in
@@ -27,14 +28,11 @@ struct ContactList: View {
                                     style: .member
                                 )
                             }
-                            
-                            if member.id != contact.members.last?.id {
-                                Separator().padding(.leading, 76)
-                            }
                         }
                     }
                 }
             }
+            .listRowInsets(.zero)
         }
     }
     

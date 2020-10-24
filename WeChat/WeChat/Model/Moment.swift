@@ -9,7 +9,7 @@
 import Foundation
 
 struct Moment: Codable, Identifiable {
-    var id: UUID { UUID() }
+    var id = UUID()
     let author: Member
     let comments: [Comment]?
     let images: [Media]?
@@ -19,7 +19,7 @@ struct Moment: Codable, Identifiable {
     let video: Media?
     
     struct Comment: Codable, Identifiable {
-        var id: UUID { UUID() }
+        var id = UUID()
         let name: String
         let content: String
     }

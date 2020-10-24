@@ -9,8 +9,6 @@
 import SwiftUI
 
 struct MeHome : View {
-    let me: Member = .me
-    
     var body: some View {
         ZStack {
             VStack {
@@ -20,19 +18,11 @@ struct MeHome : View {
             
             MeList()
         }
-        .onAppear {
-            self.root.tabNavigationHidden = true
-            self.root.tabNavigationTitle = ""
-            self.root.tabNavigationBarTrailingItems = .init(EmptyView())
-        }
     }
-    
-    @EnvironmentObject var root: RootViewModel
 }
 
 struct MeHome_Previews : PreviewProvider {
     static var previews: some View {
         MeHome()
-            .environmentObject(RootViewModel())
     }
 }

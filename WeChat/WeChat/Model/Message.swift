@@ -8,7 +8,8 @@
 
 import Foundation
 
-struct Message: Codable {
+struct Message: Codable, Identifiable {
+    var id = UUID()
     let createdAt: Double?
     let image: Media?
     let member: Member
@@ -23,10 +24,6 @@ struct Message: Codable {
         case voice
         case video
     }
-}
-
-extension Message: Identifiable {
-    var id: UUID { UUID() }
 }
 
 extension Message {

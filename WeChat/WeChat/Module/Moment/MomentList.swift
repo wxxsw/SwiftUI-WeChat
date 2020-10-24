@@ -13,7 +13,7 @@ struct MomentList: View {
     
     var body: some View {
         ScrollView {
-            LazyVStack {
+            LazyVStack(spacing: 0) {
                 Header()
                     // 将 Header 的底部坐标变化传递给上层，用于导航栏变化
                     .anchorPreference(key: MomentHome.NavigationKey.self, value: .bottom) { [$0] }
@@ -25,6 +25,7 @@ struct MomentList: View {
                     }
                 }
             }
+            .background(Color("cell"))
         }
     }
     

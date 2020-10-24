@@ -9,7 +9,7 @@
 import Foundation
 
 struct Contact: Codable, Identifiable {
-    var id: UUID { UUID() }
+    var id = UUID()
     let letter: String
     let members: [Member]
 }

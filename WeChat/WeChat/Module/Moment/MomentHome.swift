@@ -15,23 +15,23 @@ struct MomentHome: View {
     @State private var footerRefreshing: Bool = false
     
     var body: some View {
-        ZStack {
-            VStack {
-                Color.black.frame(height: 300) // 下拉时露出的黑色背景
-                Spacer() // 避免到底部上拉出现黑色背景
+        GeometryReader { proxy in
+            ZStack {
+                VStack {
+                    Color.black.frame(height: 300) // 下拉时露出的黑色背景
+                    Spacer() // 避免到底部上拉出现黑色背景
+                }
+                
+                MomentList(moments: moments)
             }
-            
-            
             .overlayPreferenceValue(NavigationKey.self) { value in
-                GeometryReader { proxy in
-                    VStack {
-                        self.navigation(proxy: proxy, value: value)
-                        Spacer()
-                    }
+                VStack {
+                    self.navigation(proxy: proxy, value: value)
+                    Spacer()
                 }
             }
+            .ignoresSafeArea()
         }
-        .edgesIgnoringSafeArea(.top)
         .navigationBarHidden(true)
         .navigationBarTitle("朋友圈", displayMode: .inline)
         .onAppear { if self.moments.isEmpty { self.moments = Moment.all } }
@@ -84,7 +84,7 @@ struct MomentHome: View {
                     Button(action: {
                         self.presentationMode.wrappedValue.dismiss()
                     }) {
-                        Image("back")
+                        Image("back").renderingMode(.template)
                     }
                     .padding()
                     
