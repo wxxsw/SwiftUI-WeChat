@@ -27,7 +27,7 @@
 
 ## Features
 
-- [x] All based on SwiftUI2.
+- [x] All based on SwiftUI2 ([SwiftUI1 Version](https://github.com/wxxsw/SwiftUI-WeChat/tree/swiftui1)).
 - [x] The navigation bar changes when the homepage switches. TabView is hidden in the details page.
 - [x] Timeline: Picture layout. Play online video. The status bar navigation bar changes as you scroll through the list.
 - [x] Full support for Dark Mode
@@ -97,7 +97,7 @@ SwiftUI-WeChat is released under the MIT license. [See LICENSE](https://github.c
 
 ## 功能特性
 
-- [x] 全部基于 SwiftUI2。
+- [x] 全部基于 SwiftUI2（[SwiftUI1 版本传送门](https://github.com/wxxsw/SwiftUI-WeChat/tree/swiftui1)）。
 - [x] 底部导航切换时顶部导航更新，进入二级界面时底部导航隐藏。
 - [x] 朋友圈：多种宫格布局、可播放在线视频、状态栏导航栏随列表滚动变化。
 - [x] 完全支持夜间模式。
