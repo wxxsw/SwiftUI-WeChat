@@ -89,7 +89,7 @@ SwiftUI-WeChat is released under the MIT license. [See LICENSE](https://github.c
 
 ## 项目概览
 
-- 我将持续关注 `SwiftUI` 技术的发展，目标是将 `SwiftUI-WeChat` 更新至无限接近微信的体验。每个人都熟悉微信，因此当您想实现类似于微信的功能时，您可以快速了解如何在此项目中实现此功能，因此我相信这个项目会对大家有帮助。
+- 我将持续关注 `SwiftUI` 技术的发展，目标是将 `SwiftUI-WeChat` 更新至无限接近微信的体验。每个人都熟悉微信，因此当您想实现类似于微信的功能时，可以通过此项目了解实现思路，因此我相信这个项目会对大家有帮助。
 
 - 此项目计划维护到 `SwiftUI` 真正流行为止。如果您对实现有疑问，或者有更好的想法，请随时在 [issue](https://github.com/wxxsw/SwiftUI-WeChat/issues) 中与我交流，或者提交 PR。
 
