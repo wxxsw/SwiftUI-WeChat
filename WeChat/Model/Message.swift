@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Message: Codable, Identifiable {
+struct Message: Codable, Equatable, Identifiable {
     var id = UUID()
     let createdAt: Double?
     let image: Media?
@@ -18,7 +18,7 @@ struct Message: Codable, Identifiable {
     let voice: String?
     let video: Media?
     
-    enum MessageType: String, Codable {
+    enum MessageType: String, Codable, Equatable {
         case text
         case image
         case voice

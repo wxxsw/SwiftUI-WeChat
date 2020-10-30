@@ -6,6 +6,7 @@
 //  Copyright © 2020 Gesen. All rights reserved.
 //
 
+import Combine
 import SwiftUI
 
 struct MessageList: View {
@@ -13,19 +14,27 @@ struct MessageList: View {
     
     var body: some View {
         ScrollView {
-            LazyVStack(spacing: 0) {
-                ForEach(messages) { message in
-                    if message.createdAt != nil {
-                        Time(date: message.createdAt!.date)
+            ScrollViewReader { proxy in
+                LazyVStack(spacing: 0) {
+                    ForEach(messages) { message in
+                        if message.createdAt != nil {
+                            Time(date: message.createdAt!.date)
+                        }
+                        
+                        MessageRow(
+                            message: message,
+                            isMe: message.member.identifier == Member.me.identifier
+                        )
+                        .id(message.id)
                     }
-                    
-                    MessageRow(
-                        message: message,
-                        isMe: message.member.identifier == Member.me.identifier
-                    )
+                }
+                .background(Color("light_gray"))
+                .onChange(of: messages) { messages in
+                    if let lastId = messages.last?.id {
+                        proxy.scrollTo(lastId) // 消息变化时跳到最后一条消息
+                    }
                 }
             }
-            .background(Color("light_gray"))
         }
     }
     

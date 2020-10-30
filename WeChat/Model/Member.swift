@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Member: Codable, Identifiable {
+struct Member: Codable, Equatable, Identifiable {
     var id = UUID()
     let background: String?
     let icon: String
