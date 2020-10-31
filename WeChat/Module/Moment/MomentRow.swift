@@ -243,7 +243,7 @@ struct MomentRow: View {
 
 struct MomentCell_Previews: PreviewProvider {
     static var previews: some View {
-        MomentRow(moment: Moment.all[0])
+        MomentRow(moment: Moment.page1[0])
             .previewLayout(.sizeThatFits)
     }
 }

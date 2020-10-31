@@ -10,7 +10,7 @@ import Combine
 import SwiftUI
 
 struct MessageList: View {
-    let messages: [Message]
+    @State private var messages: [Message] = []
     
     var body: some View {
         ScrollView {
@@ -36,6 +36,12 @@ struct MessageList: View {
                 }
             }
         }
+        .onAppear(perform: load)
+    }
+    
+    func load() {
+        guard messages.isEmpty else { return }
+        messages = Message.all
     }
     
     struct Time: View {
@@ -53,6 +59,6 @@ struct MessageList: View {
 
 struct MessageList_Previews: PreviewProvider {
     static var previews: some View {
-        MessageList(messages: Message.all)
+        MessageList()
     }
 }

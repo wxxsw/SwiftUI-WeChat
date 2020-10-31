@@ -9,8 +9,6 @@
 import SwiftUI
 
 struct ContactHome : View {
-    @State var contacts: [Contact] = []
-    
     var body: some View {
         ZStack {
             VStack {
@@ -18,10 +16,8 @@ struct ContactHome : View {
                 Spacer() // 避免到底部上拉出现背景
             }
             
-            ContactList(contacts: contacts)
+            ContactList()
         }
-        .onAppear { if self.contacts.isEmpty { self.contacts = Contact.all } }
-        .id(contacts.count)
     }
 }
 

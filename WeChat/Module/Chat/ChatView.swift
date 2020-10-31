@@ -11,14 +11,12 @@ import SwiftUI
 struct ChatView: View {
     let chat: Chat
     
-    @State var messages: [Message] = []
-    
     var body: some View {
         GeometryReader { proxy in
             VStack(spacing: 0) {
                 Separator(color: Color("navigation_separator"))
                 
-                MessageList(messages: messages)
+                MessageList()
                 
                 Send(proxy: proxy)
             }
@@ -26,7 +24,6 @@ struct ChatView: View {
         .background(Color("light_gray"))
         .edgesIgnoringSafeArea(.bottom)
         .navigationBarTitle(chat.sender.name, displayMode: .inline)
-        .onAppear { if self.messages.isEmpty { self.messages = Message.all } }
     }
     
     struct Send: View {

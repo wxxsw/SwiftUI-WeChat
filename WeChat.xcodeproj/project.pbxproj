@@ -45,6 +45,7 @@
 		1C6C5E37251F4CA8005C0FE8 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6C5E2E251F4CA8005C0FE8 /* ActivityIndicator.swift */; };
 		1C6C5E38251F4CA8005C0FE8 /* Separator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6C5E2F251F4CA8005C0FE8 /* Separator.swift */; };
 		1C6C5E39251F4CA8005C0FE8 /* StatusBarStyleEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6C5E31251F4CA8005C0FE8 /* StatusBarStyleEnvironment.swift */; };
+		1CB27DC5254C0CF900AAE9EB /* Refresh in Frameworks */ = {isa = PBXBuildFile; productRef = 1CB27DC4254C0CF900AAE9EB /* Refresh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CB27DC5254C0CF900AAE9EB /* Refresh in Frameworks */,
 				1C43B782253859850049FF38 /* VideoPlayer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,6 +302,7 @@
 			name = WeChat;
 			packageProductDependencies = (
 				1C43B781253859850049FF38 /* VideoPlayer */,
+				1CB27DC4254C0CF900AAE9EB /* Refresh */,
 			);
 			productName = WeChat;
 			productReference = 1C6C5E0F251F49DB005C0FE8 /* WeChat.app */;
@@ -331,6 +334,7 @@
 			mainGroup = 1C6C5E06251F49DB005C0FE8;
 			packageReferences = (
 				1C43B780253859850049FF38 /* XCRemoteSwiftPackageReference "VideoPlayer" */,
+				1CB27DC3254C0CF900AAE9EB /* XCRemoteSwiftPackageReference "Refresh" */,
 			);
 			productRefGroup = 1C6C5E10251F49DB005C0FE8 /* Products */;
 			projectDirPath = "";
@@ -589,6 +593,14 @@
 				kind = branch;
 			};
 		};
+		1CB27DC3254C0CF900AAE9EB /* XCRemoteSwiftPackageReference "Refresh" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/wxxsw/Refresh";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -596,6 +608,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1C43B780253859850049FF38 /* XCRemoteSwiftPackageReference "VideoPlayer" */;
 			productName = VideoPlayer;
+		};
+		1CB27DC4254C0CF900AAE9EB /* Refresh */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1CB27DC3254C0CF900AAE9EB /* XCRemoteSwiftPackageReference "Refresh" */;
+			productName = Refresh;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -6,8 +6,17 @@
         "repositoryURL": "https://github.com/wxxsw/GSPlayer.git",
         "state": {
           "branch": null,
-          "revision": "d0fa13a5e393bd033f2b47ca038b7b623613f95b",
-          "version": "0.2.17"
+          "revision": "95c5498ac7be1101cbe5520a2bf5536352a3b1a0",
+          "version": "0.2.18"
+        }
+      },
+      {
+        "package": "Refresh",
+        "repositoryURL": "https://github.com/wxxsw/Refresh",
+        "state": {
+          "branch": "master",
+          "revision": "05a4667b8250c7cce0156882bf6385a5108ae6f0",
+          "version": null
         }
       },
       {

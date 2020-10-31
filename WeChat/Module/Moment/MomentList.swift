@@ -7,9 +7,12 @@
 //
 
 import SwiftUI
+import Refresh
 
 struct MomentList: View {
-    let moments: [Moment]
+    @State private var moments: [Moment] = []
+    @State private var footerRefreshing = false
+    @State private var noMore = false
     
     var body: some View {
         ScrollView {
@@ -26,6 +29,31 @@ struct MomentList: View {
                 }
             }
             .background(Color("cell"))
+            
+            RefreshFooter(refreshing: $footerRefreshing, action: loadMore) {
+                Text(noMore ? "没有更多了" : "加载中...")
+                    .font(.system(size: 14, weight: .semibold))
+                    .foregroundColor(.secondary)
+                    .padding(.top, 6)
+                    .padding(.bottom, 20)
+            }
+            .preload(offset: 200)
+            .noMore(noMore) // 也可以在 Footer 外部判断 noMore，直接不显示 Footer
+        }
+        .enableRefresh()
+        .onAppear(perform: load)
+    }
+    
+    func load() {
+        guard moments.isEmpty else { return }
+        moments = Moment.page1
+    }
+    
+    func loadMore() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            self.moments.append(contentsOf: Moment.page2)
+            self.footerRefreshing = false
+            self.noMore = true
         }
     }
     
@@ -66,6 +94,6 @@ struct MomentList: View {
 
 struct MomentList_Previews: PreviewProvider {
     static var previews: some View {
-        MomentList(moments: Moment.all)
+        MomentList()
     }
 }

@@ -11,9 +11,6 @@ import SwiftUI
 struct MomentHome: View {
     @Environment(\.statusBarStyle) var statusBarStyle
     
-    @State private var moments: [Moment] = []
-    @State private var footerRefreshing: Bool = false
-    
     var body: some View {
         GeometryReader { proxy in
             ZStack {
@@ -22,7 +19,7 @@ struct MomentHome: View {
                     Spacer() // 避免到底部上拉出现黑色背景
                 }
                 
-                MomentList(moments: moments)
+                MomentList()
             }
             .overlayPreferenceValue(NavigationKey.self) { value in
                 VStack {
@@ -34,7 +31,6 @@ struct MomentHome: View {
         }
         .navigationBarHidden(true)
         .navigationBarTitle("朋友圈", displayMode: .inline)
-        .onAppear { if self.moments.isEmpty { self.moments = Moment.all } }
         .onDisappear { self.statusBarStyle.current = .default }
     }
     
@@ -58,15 +54,6 @@ struct MomentHome: View {
         
         return Navigation(progress: Double(progress))
             .frame(height: height)
-    }
-    
-    func loadMore() {
-        print("loadMore")
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            self.moments += Moment.all
-            self.footerRefreshing = false
-            print("loadMore finish")
-        }
     }
     
     struct Navigation: View {

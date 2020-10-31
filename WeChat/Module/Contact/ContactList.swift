@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct ContactList: View {
-    let contacts: [Contact]
+    @State private var contacts: [Contact] = []
     
     var body: some View {
         List {
@@ -34,6 +34,13 @@ struct ContactList: View {
             }
             .listRowInsets(.zero)
         }
+        .onAppear(perform: load)
+        .id(contacts.count)
+    }
+    
+    func load() {
+        guard contacts.isEmpty else { return }
+        contacts = Contact.all
     }
     
     struct SectionHeader: View {
@@ -50,6 +57,6 @@ struct ContactList: View {
 
 struct ContactList_Previews: PreviewProvider {
     static var previews: some View {
-        ContactList(contacts: Contact.all)
+        ContactList()
     }
 }

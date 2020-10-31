@@ -40,7 +40,7 @@ struct WeChatApp: App {
             statusBarManager.statusBarStyle
         }
         StatusBarStyle.Key.defaultValue.setter = {
-            /// 暂时还没有更好的方法
+            /// 暂时还没有找到更好的方法
             UIApplication.shared.statusBarStyle = $0
         }
     }

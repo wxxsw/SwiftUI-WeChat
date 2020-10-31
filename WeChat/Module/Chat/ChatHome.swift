@@ -9,8 +9,6 @@
 import SwiftUI
 
 struct ChatHome: View {
-    @State var chats: [Chat] = []
-    
     var body: some View {
         ZStack {
             VStack {
@@ -18,9 +16,8 @@ struct ChatHome: View {
                 Spacer() // 避免到底部上拉出现背景
             }
             
-            ChatList(chats: chats)
+            ChatList()
         }
-        .onAppear { if self.chats.isEmpty { self.chats = Chat.all } }
     }
 }
 

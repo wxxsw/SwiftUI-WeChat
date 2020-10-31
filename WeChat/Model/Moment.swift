@@ -26,7 +26,7 @@ struct Moment: Codable, Identifiable {
 }
 
 extension Moment {
-    static let all: [Moment] = [
+    static let page1: [Moment] = [
         Moment(
             author: .swiftui,
             comments: [
@@ -196,6 +196,109 @@ extension Moment {
                 height: 1290,
                 url: "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
             )
+        ),
+    ]
+    
+    static let page2: [Moment] = [
+        Moment(
+            author: .foodie,
+            comments: nil,
+            images: [
+                Media(
+                    cover: nil,
+                    width: 1000,
+                    height: 1500,
+                    url: "data_moment_4_1"
+                ),
+            ],
+            likes: nil,
+            text: "好吃的一张图",
+            time: "5 天前",
+            video: nil
+        ),
+        Moment(
+            author: .foodie,
+            comments: nil,
+            images: [
+                Media(
+                    cover: nil,
+                    width: 1000,
+                    height: 1500,
+                    url: "data_moment_4_1"
+                ),
+                Media(
+                    cover: nil,
+                    width: 1500,
+                    height: 1000,
+                    url: "data_moment_4_2"
+                ),
+            ],
+            likes: nil,
+            text: "好吃的两张图",
+            time: "5 天前",
+            video: nil
+        ),
+        Moment(
+            author: .foodie,
+            comments: nil,
+            images: [
+                Media(
+                    cover: nil,
+                    width: 1000,
+                    height: 1500,
+                    url: "data_moment_4_1"
+                ),
+                Media(
+                    cover: nil,
+                    width: 1500,
+                    height: 1000,
+                    url: "data_moment_4_2"
+                ),
+                Media(
+                    cover: nil,
+                    width: 1000,
+                    height: 1293,
+                    url: "data_moment_4_3"
+                ),
+            ],
+            likes: nil,
+            text: "好吃的三张图",
+            time: "5 天前",
+            video: nil
+        ),
+        Moment(
+            author: .foodie,
+            comments: nil,
+            images: [
+                Media(
+                    cover: nil,
+                    width: 1000,
+                    height: 1500,
+                    url: "data_moment_4_1"
+                ),
+                Media(
+                    cover: nil,
+                    width: 1500,
+                    height: 1000,
+                    url: "data_moment_4_2"
+                ),
+                Media(
+                    cover: nil,
+                    width: 1000,
+                    height: 1293,
+                    url: "data_moment_4_3"
+                ),
+                Media(
+                    cover: nil,
+                    width: 1000,
+                    height: 1418,
+                    url: "data_moment_4_4"
+                ),
+            ],
+            likes: nil,
+            text: "好吃的四张图",
+            time: "5 天前",
+            video: nil
         ),
     ]
 }

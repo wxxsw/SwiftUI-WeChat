@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct ChatList: View {
-    let chats: [Chat]
+    @State private var chats: [Chat] = []
     
     var body: some View {
         ScrollView {
@@ -24,11 +24,17 @@ struct ChatList: View {
             }
             .background(Color("cell"))
         }
+        .onAppear(perform: load)
+    }
+    
+    func load() {
+        guard chats.isEmpty else { return }
+        chats = Chat.all
     }
 }
 
 struct ChatList_Previews: PreviewProvider {
     static var previews: some View {
-        ChatList(chats: Chat.all)
+        ChatList()
     }
 }
