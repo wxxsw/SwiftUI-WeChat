@@ -17,8 +17,8 @@ struct MessageList: View {
             ScrollViewReader { proxy in
                 LazyVStack(spacing: 0) {
                     ForEach(messages) { message in
-                        if message.createdAt != nil {
-                            Time(date: message.createdAt!.date)
+                        if let createdAt = message.createdAt {
+                            Time(date: createdAt.date)
                         }
                         
                         MessageRow(

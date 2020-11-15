@@ -45,6 +45,7 @@
 		1C6C5E37251F4CA8005C0FE8 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6C5E2E251F4CA8005C0FE8 /* ActivityIndicator.swift */; };
 		1C6C5E38251F4CA8005C0FE8 /* Separator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6C5E2F251F4CA8005C0FE8 /* Separator.swift */; };
 		1C6C5E39251F4CA8005C0FE8 /* StatusBarStyleEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6C5E31251F4CA8005C0FE8 /* StatusBarStyleEnvironment.swift */; };
+		1C9D996A254FB589001A9271 /* UIApplication+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9D9969254FB589001A9271 /* UIApplication+Keyboard.swift */; };
 		1CB27DC5254C0CF900AAE9EB /* Refresh in Frameworks */ = {isa = PBXBuildFile; productRef = 1CB27DC4254C0CF900AAE9EB /* Refresh */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +89,7 @@
 		1C6C5E2E251F4CA8005C0FE8 /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		1C6C5E2F251F4CA8005C0FE8 /* Separator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Separator.swift; sourceTree = "<group>"; };
 		1C6C5E31251F4CA8005C0FE8 /* StatusBarStyleEnvironment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusBarStyleEnvironment.swift; sourceTree = "<group>"; };
+		1C9D9969254FB589001A9271 /* UIApplication+Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Keyboard.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -262,6 +264,7 @@
 				1C6C5E29251F4CA8005C0FE8 /* Date++.swift */,
 				1C43B7912539935E0049FF38 /* Double++.swift */,
 				1C6C5E28251F4CA8005C0FE8 /* EdgeInsets++.swift */,
+				1C9D9969254FB589001A9271 /* UIApplication+Keyboard.swift */,
 				1C6C5E27251F4CA8005C0FE8 /* UIImage++.swift */,
 			);
 			path = Extensions;
@@ -381,6 +384,7 @@
 				1C43B7922539935E0049FF38 /* Double++.swift in Sources */,
 				1C6C5E37251F4CA8005C0FE8 /* ActivityIndicator.swift in Sources */,
 				1C429DEE251F4F8200CC9693 /* ChatHome.swift in Sources */,
+				1C9D996A254FB589001A9271 /* UIApplication+Keyboard.swift in Sources */,
 				1C429DF2251F4F8200CC9693 /* ProfileView.swift in Sources */,
 				1C43B7BB25399C340049FF38 /* MeList.swift in Sources */,
 				1C43B769253856D30049FF38 /* Chat.swift in Sources */,

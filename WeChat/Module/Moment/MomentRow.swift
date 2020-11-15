@@ -19,20 +19,20 @@ struct MomentRow: View {
             VStack(alignment: .leading, spacing: 10) {
                 Name(name: moment.author.name)
                 
-                if moment.text != nil {
-                    TextContent(text: moment.text!)
+                if let text = moment.text {
+                    TextContent(text: text)
                 }
                 
-                if moment.images != nil {
-                    if moment.images!.count == 1 {
-                        SingleImage(image: moment.images![0])
+                if let images = moment.images {
+                    if images.count == 1 {
+                        SingleImage(image: images[0])
                     } else {
-                        ImageGrid(images: moment.images!)
+                        ImageGrid(images: images)
                     }
                 }
                 
-                if moment.video != nil {
-                    SingleVideo(video: moment.video!)
+                if let video = moment.video {
+                    SingleVideo(video: video)
                 }
                 
                 HStack {
@@ -45,16 +45,16 @@ struct MomentRow: View {
                 
                 if moment.likes != nil || moment.comments != nil {
                     VStack(alignment: .leading, spacing: 0) {
-                        if moment.likes != nil {
-                            Likes(likes: moment.likes!)
+                        if let likes = moment.likes {
+                            Likes(likes: likes)
                         }
                         
                         if moment.likes != nil && moment.comments != nil {
                             Separator(color: Color("moment_comment_separator"))
                         }
                         
-                        if moment.comments != nil {
-                            Comments(comments: moment.comments!)
+                        if let comments = moment.comments {
+                            Comments(comments: comments)
                         }
                     }
                     .frame(maxWidth: .infinity)
