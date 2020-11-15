@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import Combine
 
 struct ChatView: View {
     let chat: Chat
@@ -20,16 +21,16 @@ struct ChatView: View {
                 
                 Send(proxy: proxy)
             }
+            .edgesIgnoringSafeArea(.bottom)
         }
         .background(Color("light_gray"))
-        .edgesIgnoringSafeArea(.bottom)
         .navigationBarTitle(chat.sender.name, displayMode: .inline)
     }
     
     struct Send: View {
         let proxy: GeometryProxy
         
-        @State var text: String = ""
+        @State private var text: String = ""
         
         var body: some View {
             VStack(spacing: 0) {
@@ -42,7 +43,7 @@ struct ChatView: View {
                         HStack(spacing: 12) {
                             Image("chat_send_voice")
                             
-                            TextField("", text: $text)
+                            TextEditor(text: $text)
                                 .frame(height: 40)
                                 .background(Color("chat_send_text_background"))
                                 .cornerRadius(4)
