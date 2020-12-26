@@ -19,9 +19,9 @@
 
 ## Overview
 
-- I will continue to follow the development of technology, the goal is to bring SwiftUI-WeChat to an infinitely close WeChat experience. Everyone is familiar with WeChat, so when you want to implement a function similar to WeChat, you can quickly find out how to implement this function in this project, so I believe this project will help everyone
+- I will continue to follow the development of technology, the goal is to bring SwiftUI-WeChat to an infinitely close WeChat experience. When you want to implement a function similar to WeChat, you can quickly find out how to implement this function in this project, so I believe this project will help someone.
 
-- The plan will be perfected until the popularity of `SwiftUI`, updated every weekend. If you have questions about the implementation, or have better ideas, please feel free to communicate with me in [issue](https://github.com/wxxsw/SwiftUI-WeChat/issues)
+- The plan will be perfected until the popularity of `SwiftUI`, update occasionally. If you have questions about the implementation, or have better ideas, please feel free to communicate with me in [issue](https://github.com/wxxsw/SwiftUI-WeChat/issues)
 
 - Your ★ Star is my biggest motivation
 
