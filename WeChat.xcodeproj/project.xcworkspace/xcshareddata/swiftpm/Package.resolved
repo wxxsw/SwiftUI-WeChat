@@ -6,8 +6,8 @@
         "repositoryURL": "https://github.com/wxxsw/GSPlayer.git",
         "state": {
           "branch": null,
-          "revision": "95c5498ac7be1101cbe5520a2bf5536352a3b1a0",
-          "version": "0.2.18"
+          "revision": "5c368edb73e3e262b79da6cace1d6ce7b1efca54",
+          "version": "0.2.24"
         }
       },
       {
@@ -24,7 +24,7 @@
         "repositoryURL": "https://github.com/wxxsw/VideoPlayer",
         "state": {
           "branch": "master",
-          "revision": "73a30d2cc0b58e9a8e063b0333022dc636b45946",
+          "revision": "67d49ec24ef7fe2f20c5861367bd7ba7e365c7bd",
           "version": null
         }
       }
