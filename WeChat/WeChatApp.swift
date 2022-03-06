@@ -28,6 +28,19 @@ struct WeChatApp: App {
         UINavigationBar.appearance().shadowImage = UIImage()
         UINavigationBar.appearance().tintColor = UIColor(named: "navigation_tint")
         UINavigationBar.appearance().barTintColor = UIColor(named: "navigation_bar_tint")
+        
+        // 避免 iOS15 的行为导致 NavigationBar 没有背景色
+        let navigationBarAppearance = UINavigationBarAppearance()
+        navigationBarAppearance.configureWithDefaultBackground()
+        UINavigationBar.appearance().scrollEdgeAppearance = navigationBarAppearance
+        
+        // 避免 iOS15 的行为导致 TabBar 没有背景色
+        let tabBarAppearance = UITabBarAppearance()
+        tabBarAppearance.configureWithDefaultBackground()
+        UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
+        
+        // 避免 iOS15 增加的列表顶部空白
+        UITableView.appearance().sectionHeaderTopPadding = 0
     }
     
     func setupStatusBarStyle() {

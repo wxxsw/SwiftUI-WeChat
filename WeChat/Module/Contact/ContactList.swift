@@ -34,6 +34,7 @@ struct ContactList: View {
             }
             .listRowInsets(.zero)
         }
+        .listStyle(PlainListStyle())
         .onAppear(perform: load)
         .id(contacts.count)
     }
@@ -47,16 +48,24 @@ struct ContactList: View {
         let title: String
         
         var body: some View {
-            Text(title)
-                .font(.system(size: 14, weight: .medium))
-                .foregroundColor(.secondary)
-                .padding(EdgeInsets(top: 8, leading: 18, bottom: 8, trailing: 18))
+            ZStack(alignment: .leading) {
+                Color("light_gray")
+                    .frame(maxWidth: .infinity)
+                
+                Text(title)
+                    .font(.system(size: 14, weight: .medium))
+                    .foregroundColor(.secondary)
+                    .padding(EdgeInsets(top: 8, leading: 18, bottom: 8, trailing: 18))
+            }
         }
     }
 }
 
 struct ContactList_Previews: PreviewProvider {
     static var previews: some View {
-        ContactList()
+        NavigationView {
+            ContactList()
+                .navigationBarTitle("通讯录", displayMode: .inline)
+        }
     }
 }
