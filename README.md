@@ -1,7 +1,7 @@
 ![SwiftUI-WeChat](https://github.com/wxxsw/SwiftUI-WeChat/blob/master/Images/logo.png?1212)
 
 <p align="center">
-<a href="https://developer.apple.com/swift"><img src="https://img.shields.io/badge/language-Swift%205.3-f48041.svg?style=flat"></a>
+<a href="https://developer.apple.com/swift"><img src="https://img.shields.io/badge/language-Swift%205.5-f48041.svg?style=flat"></a>
 <a href="https://developer.apple.com/swiftui"><img src="https://img.shields.io/badge/framework-SwiftUI-blue.svg?style=flat"></a>
 <a href="https://developer.apple.com/ios"><img src="https://img.shields.io/badge/platform-iOS%2014%2b-blue.svg?style=flat"></a>
 <a href="https://codebeat.co/projects/github-com-wxxsw-swiftui-wechat-master"><img alt="codebeat badge" src="https://codebeat.co/badges/5b74e3e1-8235-4730-b3e9-82373c921301" /></a>
